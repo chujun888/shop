@@ -1879,3 +1879,128 @@ INFO: [ app_begin ] --END-- [ RunTime:0.000901s ]
 NOTIC: [2] session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot find save handler 'file' - session startup failed E:\php\http\fuxi\admin\ThinkPHP\Common\functions.php 第 1263 行.
 ERR: 无法加载控制器:Public
 
+[ 2016-09-17T12:39:13+08:00 ] 127.0.0.1 /admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001337s ]
+NOTIC: [2] session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot find save handler 'file' - session startup failed E:\php\http\fuxi\admin\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.019879s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.019950s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001798s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001888s ]
+
+[ 2016-09-17T12:39:13+08:00 ] 127.0.0.1 //admin/Public/js/utils.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+NOTIC: [2] session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot find save handler 'file' - session startup failed E:\php\http\fuxi\admin\ThinkPHP\Common\functions.php 第 1263 行.
+ERR: 无法加载控制器:Public
+
+[ 2016-09-17T12:39:18+08:00 ] 127.0.0.1 /admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+NOTIC: [2] session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot find save handler 'file' - session startup failed E:\php\http\fuxi\admin\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047306s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000847s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000900s ]
+
+[ 2016-09-17T12:39:18+08:00 ] 127.0.0.1 /admin/Back/Index/left
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot find save handler 'file' - session startup failed E:\php\http\fuxi\admin\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.140657s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003146s ]
+
+[ 2016-09-17T12:39:18+08:00 ] 127.0.0.1 /admin/Back/Index/top
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001243s ]
+NOTIC: [2] session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot find save handler 'file' - session startup failed E:\php\http\fuxi\admin\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000408s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.184144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.184268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002652s ]
+
+[ 2016-09-17T12:39:18+08:00 ] 127.0.0.1 /admin/Back/Index/main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+NOTIC: [2] session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot find save handler 'file' - session startup failed E:\php\http\fuxi\admin\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000230s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.197813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.197950s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000993s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001116s ]
+
+[ 2016-09-17T12:39:18+08:00 ] 127.0.0.1 /admin/Back//admin/Public/js/transport.org.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+NOTIC: [2] session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot find save handler 'file' - session startup failed E:\php\http\fuxi\admin\ThinkPHP\Common\functions.php 第 1263 行.
+ERR: 无法加载控制器:Admin
+

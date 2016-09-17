@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>ECSHOP 管理中心 - 商品列表 </title>
+<meta content="noindex, nofollow" name="robots">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link type="text/css" rel="stylesheet" href="/Web/Home/styles/general.css">
+<link type="text/css" rel="stylesheet" href="/Web/Home/styles/main.css">
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="index.php?c=goods&a=add">添加商品</a></span>
+<span class="action-span1"><a href="">ECSHOP 管理中心</a> </span><span class="action-span1" id="search_id"> - 商品分类 </span>
+<div style="clear:both"></div>
+</h1>
+
+
+<form name="listForm" action="" method="post">
+<!-- start ad position list -->
+<div id="listDiv" class="list-div">
+
+<table cellspacing="1" cellpadding="2" width="100%" id="list-table">
+  <tbody><tr>
+    <th>商品</th>
+    <th></th>
+    <th>排序</th>
+    <th>操作</th>
+  </tr>
+  <volist name="list" id="row">
+  <tr align="center" id="0_1" class="0">
+    <td align="left" class="first-cell" style="background-color: rgb(255, 255, 255);">
+      <span><a href="#"><?php echo $row['goods_name'];?></a></span>
+    </td>
+    <td width="10%" style="background-color: rgb(255, 255, 255);">0</td>
+    <td width="10%" align="right" style="background-color: rgb(255, 255, 255);"><span onclick="">{$row['sort_order']}</span></td>
+    <td width="24%" align="center" style="background-color: rgb(255, 255, 255);">
+        <assign name="goods_id" value="1" />
+      <a href="#">转移商品</a> |
+      <a href="{:U("ge/$goods_id")}">编辑</a> |
+      <a href="#">移除</a>
+    </td>
+  </tr>
+  </volist>
+  </tbody></table>
+  
+  <table cellspacing="0" id="page-table">
+  <tbody><tr>
+    <td align="right" nowrap="true" style="background-color: rgb(255, 255, 255);">
+            <div id="turn-page">
+      	{$page_html}
+      </div>
+    </td>
+  </tr>
+</tbody></table>
+
+</div>
+</form>
+
+<div id="footer">
+版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+</div>
+</body></html>
