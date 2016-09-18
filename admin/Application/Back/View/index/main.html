@@ -254,27 +254,27 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 <div style="height:0px;line-height:0px;clear:both"></div>
 <br />
 <!-- end order statistics -->
-<div class="list-div">
+<!--<div class="list-div">
 	<div class="order_count">
         <p><span class="tab_front">订单来源统计</span></p>
         <div style='height:400px;width:50%;margin-left:auto;margin-right:auto;' id='froms_chart_div'></div>
     </div>
-</div>																<!-- 订单排行统计 -->
+</div>																 订单排行统计 -->
 <br />
 <!-- end order statistics -->
-<div class="list-div">
+<!--<div class="list-div">
 	<div class="order_count">
         <p><span class="tab_front">订单排行统计</span></p>
         <div style='height:400px;width:90%;margin-left:auto;margin-right:auto;' id='order_chart_div'></div>
     </div>
-</div>
+</div>-->
 <br />
-<div class="list-div">
+<!--<div class="list-div">
 	<div class="order_count">
         <p><span class="tab_front">销售额统计</span></p>
         <div style='height:400px;width:90%;margin-left:auto;margin-right:auto;' id='sales_chart_div'></div>
     </div>
-</div>
+</div>-->
 <br />
 <div class="list-div">
 <table cellspacing='1' cellpadding='3'>
