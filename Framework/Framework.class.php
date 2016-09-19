@@ -14,8 +14,8 @@ class Framework{
     *
     **/
     private static function set_ini(){
-    	 ini_set('session.save_handler','memcache');
-    	 ini_set('session.save_path','tcp://127.0.0.1:11211');
+    	 // ini_set('session.save_handler','memcache');
+    	 // ini_set('session.save_path','tcp://127.0.0.1:11211');
     }
     //定义文件常量
     private static function _initRoot(){

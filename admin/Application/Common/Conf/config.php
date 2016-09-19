@@ -14,4 +14,9 @@ return array(
         'DB_PREFIX'             =>  'php34_',    // 数据库表前缀
        /* I函数过滤规则 */
         'DEFAULT_FILTER'        =>  'htmlspecialchars,trim', // 默认参数过滤方法 用于I函数...
+       'TMPL_ACTION_ERROR'     =>  ':tmp', // 默认错误跳转对应的模板文件
+       'TMPL_ACTION_SUCCESS'   =>  ':tmp', // 默认成功跳转对应的模板文件
+      /**文件上传**/
+       'UPLOAD_PATH'           =>'./Uploads/',  //文件上传地址        
+       'SHOW_PATH'             =>'/admin/Uploads/'    //文件显示地址
 );

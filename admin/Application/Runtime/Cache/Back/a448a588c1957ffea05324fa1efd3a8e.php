@@ -1,7 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 商品添加 </title>
+<title>商之翼 管理中心 - 商品修改 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
@@ -39,8 +40,8 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 }
 </script>
 <h1>
-<span class="action-span"><a href="goods.php?act=list">商品列表</a></span>
-<span class="action-span1"><a href="index.php?act=main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加新商品 </span>
+<span class="action-span"><a href="/admin/Back/Goods/lst">商品列表</a></span>
+<span class="action-span1"><a href="index.php?act=main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品修改 </span>
 <div style="clear:both"></div>
 </h1>
  <script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="/admin/Public/js/selectzone_bd.js"></script><script type="text/javascript" src="/admin/Public/js/colorselector.js"></script><!-- 修改 by www.68ecshop.com 百度编辑器 end -->
@@ -67,13 +68,13 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 	<div id="tabbody-div">
 		<form enctype="multipart/form-data" action="" method="post" name="theForm">
 			<!-- 鏈€澶ф枃浠堕檺鍒 -->
-			<input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
+			<input type='hidden' name='id' value='<?php echo ($data["id"]); ?>'/>
 			<!-- 閫氱敤淇℃伅 -->
 			<table width="100%" id="general-table" align="center">
 				<tr>
 					<td class="label">商品名称：</td>
 					<td>
-						<input type="text" name="goods_name" value="" style="float:left;color:;" size="30" />
+						<input type="text" name="goods_name" value="<?php echo ($data["goods_name"]); ?>" style="float:left;color:;" size="30" />
 						<div style="background-color:;float:left;margin-left:2px;" id="font_color" onclick="ColorSelecter.Show(this);">
 							<img src="/admin/Public/images/color_selecter.gif" style="margin-top:-1px;" />
 						</div>
@@ -109,7 +110,7 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 								<tr>
 					<td class="label">本店售价：</td>
 					<td>
-						<input type="text" name="shop_price" value="0" size="20" onblur="priceSetted()" />
+						<input type="text" name="shop_price" value="<?php echo ($data["shop_price"]); ?>" size="20" onblur="priceSetted()" />
 						<input type="button" value="按市场价计算" onclick="marketPriceSetted()" />
 						<span class="require-field">*</span>					</td>
 				</tr>
@@ -134,7 +135,7 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 				<tr>
 					<td class="label">市场售价：</td>
 					<td>
-						<input type="text" name="market_price" value="0" size="20" />
+						<input type="text" name="market_price" value="<?php echo ($data["market_price"]); ?>" size="20" />
 						<input type="button" value="取整数" onclick="integral_market_price()" />
 					</td>
 				</tr>
@@ -192,7 +193,7 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 					<td class="label">上传商品图片：</td>
 					<td>
 						<input type="file" name="logo" size="35" />
-												<img src="/admin/Public/images/no.gif" />
+                                                <?php if($data['logo']) echo "<a href='/admin/Uploads/".$data['logo']."' style='border:0px;' target='_blank'>";?> <img src="/admin/Public/images/<?php echo empty($data['logo'])?'no':'yes'; ?>.gif"/><?php if($data['logo']) echo '</a/>';?>
 												<br />
 						
 					</td>

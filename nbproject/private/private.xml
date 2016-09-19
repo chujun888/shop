@@ -4,13 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Goods/add.html</file>
-            <file>file:/E:/php/http/fuxi/admin/ThinkPHP/Library/Think/Db.class.php</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Goods/edit.html</file>
             <file>file:/E:/php/http/fuxi/admin/Application/Back/Controller/GoodsController.class.php</file>
             <file>file:/E:/php/http/fuxi/admin/Application/Common/Common/function.php</file>
             <file>file:/E:/php/http/fuxi/admin/Application/Back/Model/GoodsModel.class.php</file>
             <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Goods/lst.html</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Libs/Page.class.php</file>
             <file>file:/E:/php/http/fuxi/admin/Application/Common/Conf/config.php</file>
-            <file>file:/E:/php/http/fuxi/admin/ThinkPHP/Conf/convention.php</file>
         </group>
     </open-files>
 </project-private>
