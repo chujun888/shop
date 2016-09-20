@@ -3511,3 +3511,30 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000731s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
 
+[ 2016-09-19T14:15:34+08:00 ] 127.0.0.1 /admin/Ger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+ERR: 无法加载控制器:Ger
+
+[ 2016-09-19T14:15:50+08:00 ] 127.0.0.1 /admin/Ger/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+ERR: 无法加载控制器:Ger
+
+[ 2016-09-19T14:15:55+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+ERR: 无法加载控制器:Ger
+

@@ -14,4 +14,7 @@ class IndexController extends Controller {
     public function main(){
         $this->display();
     }
+    public function test(){
+        $this->display('add');
+    }
 }
