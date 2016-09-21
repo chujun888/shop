@@ -97,6 +97,10 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 						 <span class="require-field">*</span>						
 					</td>
 				</tr>
+                                <td class="label">品牌：</td>
+					<td>			
+						<?php getSelect('brand_id','brand','brand_name','id',$data['brand_id']);?>
+					</td>
 				<tr>
 					<td class="label">扩展分类：</td>
 					<td>
@@ -114,16 +118,15 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 						<input type="button" value="按市场价计算" onclick="marketPriceSetted()" />
 						<span class="require-field">*</span>					</td>
 				</tr>
-								<tr>
+											<tr>
 					<td class="label">
 						<a href="javascript:showNotice('noticeUserPrice');" title="点击此处查看提示信息">
 							<img src="__PUBLIC__/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
 						</a>
 						会员价格：					</td>
-					<td>
-						 普通会员						<span id="nrank_1"></span>
-						<input type="text" id="rank_1" name="user_price[]" value="-1" onkeyup="if(parseInt(this.value)<-1){this.value='-1';};set_price_note(1)" size="8" />
-						<input type="hidden" name="user_rank[]" value="1" />
+					<td><?php foreach($levels as $k=>$v):?>
+						{$v.level_name}				<span id="nrank_1"></span>
+                                                <input type="text" name="level[{$v.id}]" value='<?php if($v['price']) echo $v['price'];?>' '/><?php if(($k+1)%2==0) echo '<br/>';?><?php endforeach;?>
 
 												<br />
 						<span class="notice-span" style="display:block"  id="noticeUserPrice">会员价格为-1时表示会员价格按会员等级折扣率计算。你也可以为每个等级指定一个固定价格</span>
@@ -318,33 +321,31 @@ src="/includes/ueditor/ueditor.all.js"></script>
 	padding: 6px 15px 6px 18px;
 	border-right: 1px solid #FFF;
 }
+.imgUl{list-style-type: none;}
+.imgUl li{float:left;padding-left:10px;}
 </style>
-												<script>
-			
-			function changeCurrentColor(n)
-			{
-			for(i=1;i<=1;i++)
-			{
-				document.getElementById("color_" + i).className = "attr-back";
-			}
-			document.getElementById("color_" + n).className = "attr-front";
-			}
-			
-			</script>
-						<font color=#ff3300>请选择商品颜色</font>
-						（点击下面不同颜色切换到该颜色对应的相册）
+												
+						
 						<br>
 						<br>
 						<div class="attr-color-div">
 														<span class="attr-front" id="color_1">
-								<a href="attr_img_upload.php?goods_id=0&goods_attr_id=" onclick="javascript:changeCurrentColor(1)" target="attr_upload">通用</a>
-							</span>
+										<a href="javascript:void(0);" onclick="javascript:add(this)">添加图片</a>
+							</span><input type='file' name='pics[]'/>
 													</div>
-						<iframe name="attr_upload" src="attr_img_upload.php?goods_id=0&goods_attr_id=" frameborder=1 scrolling=no width="100%" height="auto" style="min-height:630px; border:1px #eee solid; margin-top:5px;"> </iframe>
+                                                    <div width="100%"  style="border:1px #eee solid; margin-top:5px;">
+                                                        <!--展示已添加的图片-->
+                                                        <ul class='imgUl'>
+                                                            <?php $path=C("SHOW_PATH"); foreach($pics as $k=>$v):?>
+                                                            <li><input onclick='removeImg(this)' type="button" value=" 删除图片" id='<?php echo $v['id'];?>' class="button" /><br/><?php showImage($path.$v['small_pic']);?></li>
+                                                            <?php endforeach;?>
+                                                        </ul>
+                                                    </div>
 					</td>
 				</tr>
 				<tr>
-					<td>&nbsp;</td>
+					<td>&nbsp;<input id="goods_info_submit" type="submit" value=" 确定 " class="button" />
+				<input id="goods_info_reset" type="reset" value=" 重置 " class="button" /></td>
 				</tr>
 			</table>
 
@@ -468,7 +469,26 @@ src="/includes/ueditor/ueditor.all.js"></script>
       sel.onChange = function() {checkIsLeaf(this);};
   }
 
+//添加按钮
+function add(e){
+    $(e).parent().parent().append("<input type='file' name='pics[]' />");
+}
 
+//ajxa删除图片
+function removeImg(e){
+    var id=$(e).attr('id');
+    
+    $.ajax({
+        type:'get',
+        dataType:'json',
+        url:'__URL__/ajaxDel/goods_id/<?php echo I('get.id');?>/id/'+id,
+        success:function(res){
+            if(res.ok==1){
+                $(e).parent().remove();
+            }
+        }
+    });
+}
 
 
   

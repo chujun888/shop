@@ -1,30 +1,30 @@
-<!-- $Id: goods_list.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
+<?php if (!defined('THINK_PATH')) exit();?><!-- $Id: goods_list.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtmltransitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - <?=$config['tableCN']?>列表 </title>
+<title>商之翼 管理中心 - 商品品牌列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__PUBLIC__/styles/general.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="__PUBLIC__/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="__PUBLIC__/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
 </head>
 <body>
 <h1>
-<span class="action-span"><a href="__URL__/add">添加新<?=$config['tableCN']?></a></span>
-<span class="action-span1"><a href="__MODULE__/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
+<span class="action-span"><a href="/admin/Back/Brand/add">添加新商品品牌</a></span>
+<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
 <div style="clear:both"></div>
 </h1>
 <script type="text/javascript" src="/js/utils.js"></script>
 <!-- 商品搜索 
  $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ 
-<link href="__PUBLIC__/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="__PUBLIC__/js/jquery.ztree.all-3.5.min.js"></script><script type="text/javascript" src="__PUBLIC__/js/category_selecter.js"></script><div class="form-div">
-    <form action="__ACTION__" name='search' method="post">
-    <img src="__PUBLIC__/images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+<link href="/admin/Public/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/admin/Public/js/jquery.ztree.all-3.5.min.js"></script><script type="text/javascript" src="/admin/Public/js/category_selecter.js"></script><div class="form-div">
+    <form action="/admin/Back/Brand/lst" name='search' method="post">
+    <img src="/admin/Public/images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
          关键字 
-        关键字 <input type="text" name="keyword" size="15" value="<?php echo I('post.keyword');?>"/>
+        关键字 <input type="text" name="keyword" size="15" value=""/>
           <input type="submit" value=" 搜索" class="button" />
   </form>
 </div>-->
@@ -36,33 +36,29 @@
   <tr>
     <th>
      
-      <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="__PUBLIC__/images/sort_desc.gif"/>    </th>
-       <?php foreach($config['fields'] as $k=>$v):?>
-       <th><a href='#'><?=$v['name']?></a></th>
-       <?php endforeach;?>
-       
+      <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="/admin/Public/images/sort_desc.gif"/>    </th>
+              <th><a href='#'>品牌名称</a></th>
+              <th><a href='#'>品牌官网</a></th>
+              
     <th>操作</th>
     
 <!-- 循环输出-->    
     
-<?php echo '<?php foreach($data as $k=>$v):?>';?>
-  <tr>
+<?php foreach($data as $k=>$v):?>  <tr>
     <tr>
-    <td>{$v.id}</td>
-         <?php foreach($config['fields'] as $k1=>$v1):?>
-	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)">{<?php echo '$v'?>.<?=$v1['text']?>}</span></td>
-         <?php endforeach;?>
-   
+    <td><?php echo ($v["id"]); ?></td>
+         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo ($v["brand_name"]); ?></span></td>
+         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo ($v["url"]); ?></span></td>
+            
         
     <td align="center">
-      
-      <a href="__URL__/edit/id/{$v.id}" title="编辑"><img src="__PUBLIC__/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
-      <a href="javascript:;" onclick="remove(this,<?php echo '{$v.id}';?>);" title="删除"><img src="__PUBLIC__/images/icon_trash.gif" width="16" height="16" border="0" /></a>
-      <img src="__PUBLIC__/images/empty.gif" width="16" height="16" border="0" />          
+      <a href="/goods.php?id=233" target="_blank" title="查看"><img src="/admin/Public/images/icon_view.gif" width="16" height="16" border="0" /></a>
+      <a href="/admin/Back/Brand/edit/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/admin/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
+      <a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="删除"><img src="/admin/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
+      <img src="/admin/Public/images/empty.gif" width="16" height="16" border="0" />          
     </td>
     </tr>
-<?php echo '<?php endforeach;?>';?>
-  </table>
+<?php endforeach;?>  </table>
 
 <!-- end goods list -->
 
@@ -70,7 +66,7 @@
 <table id="page-table" cellspacing="0">
   <tr>
     <td align="right" nowrap="true">
-         {$fpage}
+         <?php echo ($fpage); ?>
     </td>
   </tr>
 </table>
@@ -89,12 +85,12 @@
 
 
 <!--
-<embed src="__PUBLIC__/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
+<embed src="/admin/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
-  <param name="movie" value="__PUBLIC__/images/online.swf">
+  <param name="movie" value="/admin/Public/images/online.swf">
   <param name="quality" value="high">
-  <embed src="__PUBLIC__/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  <embed src="/admin/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
 <script language="JavaScript">
@@ -242,7 +238,7 @@ function remove(e,id){
         
         //数据库删除
         $.ajax({
-            url:"__URL__/delete/id/"+id,
+            url:"/admin/Back/Brand/delete/id/"+id,
             type:'get',
             dataType:'json',
             success:function(data){

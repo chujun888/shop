@@ -1,28 +1,29 @@
+<?php 
 namespace Back\Controller;
 use Think\Controller;
-class <?php echo $config['TPName'];?>Controller extends Controller{
+class BrandController extends Controller{
     
     //添加
     public function add(){
       if(IS_POST){
-          $m_<?=$config['tpName']?>=D('Back/<?=$config['tpName']?>');
+          $m_brand=D('Back/brand');
           //create第二个参数1:添加2.修改
           
-          if($m_<?=$config['tpName']?>->create(I('post.'),1)){
-              if($m_<?=$config['tpName']?>->add()){
+          if($m_brand->create(I('post.'),1)){
+              if($m_brand->add()){
                 $this->success('添加成功', U('lst'));
                 exit;                
               }
           }
-          $this->error($m_<?=$config['tpName']?>->getError());
+          $this->error($m_brand->getError());
       }
       $this->display();   
     }
     
     //显示列表
     public function lst(){
-        $m_<?=$config['tpName']?>=D('Back/<?=$config['tpName']?>');
-        $data=$m_<?=$config['tpName']?>->search();
+        $m_brand=D('Back/brand');
+        $data=$m_brand->search();
       
         $this->assign('data',$data['data']);
         #分页信息
@@ -34,17 +35,17 @@ class <?php echo $config['TPName'];?>Controller extends Controller{
      * 修改
      */
     public function edit(){
-        $m_<?=$config['tpName']?>=D('Back/<?=$config['tpName']?>');
+        $m_brand=D('Back/brand');
         if(IS_POST){
-            if($m_<?=$config['tpName']?>->create(I('post.'),2)!==false){       
-                if($m_<?=$config['tpName']?>->save()){
+            if($m_brand->create(I('post.'),2)){       
+                if($m_brand->save()){
                     $this->success ('修改成功', U('lst'));
                     exit;
                 }
             }
-            $this->error($m_<?=$config['tpName']?>->getError());
+            $this->error($m_brand->getError());
         }
-        $data=$m_<?=$config['tpName']?>->find(I('get.id'));
+        $data=$m_brand->find(I('get.id'));
         $this->assign('data',$data);
         $this->display();
         
@@ -54,8 +55,8 @@ class <?php echo $config['TPName'];?>Controller extends Controller{
      * 删除
      */
     public function delete(){
-        $m_<?=$config['tpName']?>=D('Back/<?=$config['tpName']?>');
-        if($m_<?=$config['tpName']?>->delete(I('get.<?=$config['_pk']?>')))
+        $m_brand=D('Back/brand');
+        if($m_brand->delete(I('get.id')))
             $data=array('ok'=>1);
         else
             $data=array('ok'=>0);

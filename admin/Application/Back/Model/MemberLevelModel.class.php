@@ -1,19 +1,23 @@
+<?php 
 namespace Back\Model;
 use Think\Model;
-class   <?=$config['TPName']?>Model extends Model{
+class   MemberLevelModel extends Model{
     #添加时允许插入的字段
-     protected $insertFields='<?=$config['insertField']?>';
-    protected $updateFields='<?=$config['updateField']?>';
+     protected $insertFields='level_name,bottom_num,top_num,rate';
+    protected $updateFields='id,level_name,bottom_num,top_num,rate';
     #自动验证
-     protected $_validate=<?=$config['validate']?>;
+     protected $_validate=array(
+		 array('level_name','require','级别名称不能为空',1),
+		 array('level_name','0,30','级别名称应小于30',0,'length'),
+		 array('bottom_num','require','积分下线不能为空',1),
+		 array('bottom_num','number','积分下线必须是数字'),
+		 array('top_num','require','积分下限不能为空',1),
+		 array('top_num','number','积分下限必须是数字'),
+		 array('rate','number','必须是数字'),
+);
      #自动完成
      protected $_auto=array(
       array('addtime','time','','function'),
-<?php 
-foreach($config[fields] as $k=>$v): if($v['type']=='password'):?>
-      array('<?=$v['text']?>','md5','','function'),
-<?php endif;?>
-<?php endforeach;?>
 
  
      );
@@ -40,7 +44,7 @@ foreach($config[fields] as $k=>$v): if($v['type']=='password'):?>
         $where['is_delete']=array('eq',$is_delete);
         /*****排序*****/
         #排序对象
-        $way='<?=$config['_pk']?>';
+        $way='id';
         if(I('get.way'))
            $way=I('get.way');
         #排序升降

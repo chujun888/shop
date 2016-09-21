@@ -26,7 +26,7 @@ class IndexController  extends Controller{
                                     $config=require $config_path;
                                     
                                    /**********生成控制器********/
-                                   $c_path=APP_PATH.'Back/Controller/'.$this->getName($v).'Controller.class.php';   
+                                   $c_path=APP_PATH.'Back/Controller/'.$config['TPName'].'Controller.class.php';   
                                    ob_start();
                                    require CODE_PATH.'Controller.php';
                                    $str=ob_get_clean();
@@ -36,7 +36,7 @@ class IndexController  extends Controller{
                                      $this->error ("{$v}代码控制器生成失败");
                                      
                                    /*********生成模型*************/
-                                     $m_path=APP_PATH.'Back/Model/'.$this->getName($v).'Model.class.php';   
+                                     $m_path=APP_PATH.'Back/Model/'.$config['TPName'].'Model.class.php';   
                                    ob_start();
                                    require CODE_PATH.'Model.php';
                                    $str=ob_get_clean();
