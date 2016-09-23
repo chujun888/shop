@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtmltransitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 商品列表 </title>
+<title>商之翼 管理中心 - 商品分类列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="__PUBLIC__/styles/general.css" rel="stylesheet" type="text/css" />
@@ -11,33 +11,23 @@
 <script type="text/javascript" src="__PUBLIC__/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="__PUBLIC__/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
 </head>
 <body>
-
-
-
 <h1>
-<span class="action-span"><a href="__URL__/add">添加新商品</a></span>
+<span class="action-span"><a href="__URL__/add">添加新商品分类</a></span>
 <span class="action-span1"><a href="__MODULE__/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
 <div style="clear:both"></div>
 </h1>
 <script type="text/javascript" src="/js/utils.js"></script>
-<!-- 商品搜索 -->
-<!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
+<!-- 商品搜索 
+ $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ 
 <link href="__PUBLIC__/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="__PUBLIC__/js/jquery.ztree.all-3.5.min.js"></script><script type="text/javascript" src="__PUBLIC__/js/category_selecter.js"></script><div class="form-div">
     <form action="__ACTION__" name='search' method="post">
     <img src="__PUBLIC__/images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
-<!--         分类 
-     <input type="text" id="cat_name" name="cat_name" nowvalue="" value="" >
-	<input type="hidden" id="cat_id" name="cat_id" value="">-->
-    <!-- 推荐 -->
-    <select name="is_how"><option value="0">全部</option><option value="is_best" <?php if(I('post.is_how')=='is_best') echo 'selected';?>>精品</option><option value="is_new" <?php if(I('post.is_how')=='is_new') echo 'selected';?>>新品</option><option value="is_hot" <?php if(I('post.is_how')=='is_hot') echo 'selected';?>>热销</option><option value="is_promote" <?php if(I('post.is_how')=='is_promote') echo 'selected';?>>特价</option></select>
-	           <!-- 上架 -->
-      <select name="is_on_sale"><option value='-1'>全部</option><option value="1" <?php if(I('post.is_on_sale')==1) echo 'selected';?>>上架</option><option value="0" <?php if(I('post.is_on_sale')==='0') echo 'selected';?>>下架</option></select>
-        <!-- 关键字 -->
-        关键字 <input type="text" name="keyword" size="15" value="<?php echo I('post.keyword');?>"/>
+         关键字 
+        关键字 <input type="text" name="keyword" size="15" value=""/>
           <input type="submit" value=" 搜索" class="button" />
   </form>
-</div>
+</div>-->
 <!-- 商品列表 -->
 <form method="post" action="" name="listForm" onsubmit="return confirmSubmit(this)">
   <!-- start goods list -->
@@ -47,43 +37,27 @@
     <th>
      
       <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="__PUBLIC__/images/sort_desc.gif"/>    </th>
-	    <th><a href="javascript:listTable.sort('goods_name'); ">商品名称</a></th>
-    <th><a href="javascript:listTable.sort('shop_price'); ">价格</a></th>
-    <th><a href="javascript:listTable.sort('is_on_sale'); ">上架</a></th>
-    <th><a href="javascript:listTable.sort('is_best'); ">精品</a></th>
-    <th><a href="javascript:listTable.sort('is_new'); ">新品</a></th>
-    <th><a href="javascript:listTable.sort('is_hot'); ">热销</a></th>
-
-        <th>商品分类</th> <!-- 晒单插件 增加 by www.68ecshop.com -->
-        <th>扩展分类</th> <!-- 晒单插件 增加 by www.68ecshop.com -->
+              <th><a href='#'>商品类别名称</a></th>          
+              <th><a href='#'>是否显示</a></th>
+              
     <th>操作</th>
     
 <!-- 循环输出-->    
     
- <?php foreach($data as $k=>$v):?>
-  <tr>
+<?php foreach($data as $k=>$v):?>  <tr>
     <tr>
     <td>{$v.id}</td>
-	    <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)">{$v.goods_name}</span></td>
-   
-    <td align="right"><span onclick="listTable.edit(this, 'edit_goods_price', 233)">{$v.shop_price}
-    </span></td>
-            <td align="center"><img src="__PUBLIC__/images/<?php if($v['is_on_sale']) echo 'yes';else echo 'no'; ?>.gif" onclick="listTable.toggle(this, 'toggle_on_sale', 233)" /></td>
-    <td align="center"><img src="__PUBLIC__/images/<?php if($v['is_best']) echo 'yes';else echo 'no';?>.gif" onclick="listTable.toggle(this, 'toggle_best', 233)" /></td>
-    <td align="center"><img src="__PUBLIC__/images/<?php if($v['is_new']) echo 'yes';else echo 'no';?>.gif" onclick="listTable.toggle(this, 'toggle_new', 233)" /></td>
-    <td align="center"><img src="__PUBLIC__/images/<?php if($v['is_hot']) echo 'yes';else echo 'no'; ?>.gif" onclick="listTable.toggle(this, 'toggle_hot', 233)" /></td>
-    <td align="center">{$v.cat_name}</td> <!-- 晒单插件 增加 by www.68ecshop.com -->
-    <td align="center">{$v.ext_name}</td> <!-- 晒单插件 增加 by www.68ecshop.com -->
-    
+         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo str_repeat("&nbsp;",10*$v['level']).$v['cat_name'];?></span></td>
+         	
+         <td class="first-cell" style="text-align: center;"><img src="__PUBLIC__/images/<?php if($v['is_show']) echo 'yes';else echo 'no';?>.gif"  /></td>  
     <td align="center">
-      <a href="/goods.php?id=233" target="_blank" title="查看"><img src="__PUBLIC__/images/icon_view.gif" width="16" height="16" border="0" /></a>
-      <a href="__URL__/edit/id/{$v.id}" title="编辑"><img src="__PUBLIC__/images/icon_edit.gif" width="16" height="16" border="0" /></a>
-      <a href="javascript:;" onclick="remove(this,{$v.id});" title="回收站"><img src="__PUBLIC__/images/icon_trash.gif" width="16" height="16" border="0" /></a>
+      
+      <a href="__URL__/edit/id/{$v.id}" title="编辑"><img src="__PUBLIC__/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
+      <a href="javascript:;" onclick="remove(this,{$v.id});" title="删除"><img src="__PUBLIC__/images/icon_trash.gif" width="16" height="16" border="0" /></a>
       <img src="__PUBLIC__/images/empty.gif" width="16" height="16" border="0" />          
     </td>
     </tr>
-<?php endforeach;?>
-  </table>
+<?php endforeach;?>  </table>
 
 <!-- end goods list -->
 
@@ -259,16 +233,20 @@ if (document.getElementById("listDiv"))
 
 }
 function remove(e,id){
-    if(confirm('确定要将商品放入回收站吗？')){
-        
+    if(confirm('确定要删除吗？')){
+          
         //数据库删除
         $.ajax({
-            url:"__URL__/recycle/id/"+id,
+            url:"__URL__/delete/id/"+id,
             type:'get',
             dataType:'json',
             success:function(data){
-                if(data.ok==1)
-                $(e).parent().parent().remove();
+                if(data.ok==1){
+                    var p=$(e).parent().parent();
+                    var len=data.len+1;
+                    p.nextAll("tr:lt("+len+")").remove();
+                    p.remove();
+                }
             }
         });
 //        

@@ -20,7 +20,8 @@ class GoodsModel extends Model{
          $data['addtime']=time();
          //过滤goods_desc
          $data['goods_desc']=  removeXSS($_POST['goods_desc']);
-         //上传正确
+         
+         /********上传图片********/
          if($_FILES['logo']['error']==0){
              $upload=new \Think\Upload();
              $upload->rootPath='./Uploads/';
@@ -59,8 +60,9 @@ class GoodsModel extends Model{
                     $m_price->add(array('goods_id'=>$id,'youhui_price'=>(int)$v,'youhui_num'=>(int)$k));
              }                      
          }
-         /*******商品图片*******/    
-         if($_FILES['pics']){
+         /*******商品图片*******/
+        
+         if($_FILES['pics']['name'][0]){
              //将pic整理成数组
               $arr=array();
             foreach($_FILES['pics']['name'] as $k=>$v){
@@ -77,6 +79,14 @@ class GoodsModel extends Model{
                 $pic->add(array('goods_id'=>$id,'pic'=>$res['logo'],'small_pic'=>$res['sm_logo']));
             }
          }
+         
+         /********扩展分类********/
+         if($ext_cat=I('post.ext_cat')){
+             $m_ext=M('extCat');
+             foreach($ext_cat as $k=>$v){
+                 $m_ext->add(array('goods_id'=>$id,'cat_id'=>$v));
+             }
+         }
      }
      
      /**
@@ -84,9 +94,12 @@ class GoodsModel extends Model{
       */
      protected function _before_update(&$data, $options) {
          parent::_before_update($data, $options);
-         $id=$options['where']['id'];
+        
+         $id=$options['where']['id']; 
          /*******图片********/
-         if($_FILES['logo']['error']==0){
+        
+         if($_FILES['logo'] && $_FILES['logo']['error']==0){
+            
              $res=uploadOne($_FILES['logo']);
              if(!isset($res['error'])){
                  $data['logo']=$res['logo'];
@@ -112,9 +125,10 @@ class GoodsModel extends Model{
                     $youhui->add(array('goods_id'=>$id,'youhui_num'=>(int)$k,'youhui_price'=>(int)$v));
                  }         
              }
-         }
+         } 
          /*******商品图片*******/    
-         if($_FILES['pics']){
+         if($_FILES['pics']['name'][0]){
+            
              //将pic整理成数组
               $arr=array();
             foreach($_FILES['pics']['name'] as $k=>$v){
@@ -131,8 +145,51 @@ class GoodsModel extends Model{
                 $pic->add(array('goods_id'=>$id,'pic'=>$res['logo'],'small_pic'=>$res['sm_logo']));
             }
          }
+         
+         /******扩展分类*******/
+         if($exts=I('post.ext_cat')){
+             //删除原分类
+             $m_ext=M('extCat');
+             $m_ext->where(array('goods_id'=>array('eq',$id)))->delete();
+             foreach($exts as $k=>$v){
+                 if($v)
+                 $m_ext->add(array('goods_id'=>$id,'cat_id'=>$v));
+             }
+         }
      }
      
+     /**
+      * 删除后
+      */
+     protected function _before_delete($data, $options) {
+         parent::_before_delete($data, $options);
+         $id=$data['where']['id'];
+         //文件上传目录
+          $path=C('UPLOAD_PATH');
+         /*********删除图片*********/
+        $row=$this->find($id);
+       
+        unlink($path.$row['logo']);
+       
+        unlink($path.$row['sm_logo']);
+                  
+         /*********删除扩展分类*********/
+         $m_ext=M('extCat');
+         $m_ext->where(array('goods_id'=>$id))->delete();
+         
+         /*********删除扩展图片*********/
+         $m_pic=M('pic');
+         $where['goods_id']=array('eq',$id);
+         $pics=$m_pic->where($where)->select();
+         $m_pic->where($where)->delete();
+         
+         //删除图片    
+         foreach($pics as $k=>$v){
+             unlink($path.$v['pic']);
+             unlink($path.$v['small_pic']);
+         }
+         
+     }
      
      
      /**
@@ -162,13 +219,27 @@ class GoodsModel extends Model{
         $order='desc';
         if(I('get.order'))
             $order=I('get.order');
+        
+      
+        
+        
         /****分页*****/
         #总记录数
-        $count=$this->count();
-        #获取分页信息 total per pa 
-        $page=new \Libs\Page($count,$per);       
-        $fpage=$page->fpage();    
-        $data=$this->where($where)->order("$way $order")->select();
+       $count=$this->where($where)->count();
+       #获取分页信息 total per pa   
+       $page=new \Libs\Page($count,$per);       
+       $fpage=$page->fpage();    
+       //获取的数据数
+       $offset=(I('get.page',1)-1)*$per;
+       
+        
+        $data=$this->where($where)->alias('a')
+        ->field('a.*,b.cat_name,group_concat(d.cat_name SEPARATOR "<br/>") ext_name')
+        ->join("LEFT JOIN __CATEGORY__ as b on a.cat_id=b.id "
+                . "LEFT JOIN __EXT_CAT__ as c on c.goods_id=a.id "
+                . "LEFT JOIN __CATEGORY__ as d on d.id =c.cat_id")
+             
+        ->order("$way $order")->limit($offset,$per)->group('a.id')->select();
         return array('data'=>$data,'fpage'=>$fpage);
      }
      

@@ -4,11 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Goods/add.html</file>
-            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Goods/edit.html</file>
-            <file>file:/E:/php/http/fuxi/admin/Application/Ger/Code_tmp/Controller.php</file>
             <file>file:/E:/php/http/fuxi/admin/Application/Back/Controller/GoodsController.class.php</file>
-            <file>file:/E:/php/http/fuxi/admin/Application/Common/Common/function.php</file>
             <file>file:/E:/php/http/fuxi/admin/Application/Back/Model/GoodsModel.class.php</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Goods/lst.html</file>
             <file>file:/E:/php/http/fuxi/admin/Application/Common/Conf/config.php</file>
         </group>
     </open-files>

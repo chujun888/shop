@@ -24,7 +24,9 @@ class GoodsController extends Controller{
           //取出所有会员价格
           $levels=M('memberLevel')->field('id,level_name')->select();
           $this->assign('levels',$levels);
-          
+          //取出所有商品分类
+          $cats=D('Back/Category')->getTree();
+          $this->assign('cats',$cats);
           $this->display();   
     }
     
@@ -34,6 +36,7 @@ class GoodsController extends Controller{
         $data=$m_goods->search();
       
         $this->assign('data',$data['data']);
+       
         #分页信息
        $this->assign('fpage',$data['fpage']);
         $this->display();
@@ -56,6 +59,7 @@ class GoodsController extends Controller{
         }
         $id=I('get.id');
         $data=$m_goods->find($id);
+        
         /*******会员价格********/
         $member=M('memberLevel');
         $levels=$member->alias('a')->field('a.id,a.level_name,b.youhui_price as price')->join("left join php34_youhui_price as b on a.id=b.youhui_num and b.goods_id=$id")->select();             
@@ -65,21 +69,41 @@ class GoodsController extends Controller{
         $pics=M('pic')->where(array('goods_id'=>array('eq',$id)))->select();
         $this->assign('pics',$pics);
         
+        /*****商品分类******/
+        $cats=D('Back/Category')->getTree();
+        $this->assign('cats',$cats);
+        
+        /****获取扩展分类****/
+        $ext=M('extCat');
+        $exts=$ext->where(array('goods_id'=>array('eq',I('get.id'))))->select();
+        
+        $this->assign('exts',$exts);
         $this->assign('data',$data);
         $this->display();
         
     }
     
     /**
-     * 删除
+     * 放入回收站
      */
-    public function delete(){
+    public function recycle(){
         $m_goods=D('Back/goods');
-        if($m_goods->save(array('id'=>I('get.id'),'is_delete'=>1)))
-            $data=array('ok'=>1);
+       if($m_goods->save(array('id'=>I('get.id'),'is_delete'=>1))!==false)
+           $data=array('ok'=>1);
         else
             $data=array('ok'=>0);
         echo  json_encode($data);
+    }
+    
+    /**
+     * 删除商品
+     */
+    public function delete(){
+        $m_goods=D('Back/Goods');
+        if($m_goods->delete(I('get.id'))!==false){
+            $this->success('删除成功',U('lst'));
+            exit;
+        }
     }
     
     /**

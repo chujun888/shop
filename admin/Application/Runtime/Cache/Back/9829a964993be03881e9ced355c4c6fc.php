@@ -11,33 +11,7 @@
 </head>
 <body>
 
-<div id="menu_list"  onmouseover="show_popup()" onmouseout="hide_popup()">
-<ul>
-<li><a href="goods.php?act=add" target="main_frame">添加新商品</a></li>
-<li><a href="category.php?act=add" target="main_frame">添加商品分类</a></li>
-<li><a href="order.php?act=add" target="main_frame">添加订单</a></li>
-<li><a href="article.php?act=add" target="main_frame">添加新文章</a></li>
-<li><a href="users.php?act=add" target="main_frame">添加会员</a></li>
-</ul>
-</div>
-<script>
-function show_popup(){
-frmBody = parent.document.getElementById('frame-body');
-if (frmBody.cols == "37, 12, *")
-{
-parent.main_frame.document.getElementById('menu_list').style.left = '195px';
-}
-else
-{
-parent.main_frame.document.getElementById('menu_list').style.left = '40px';
-}
-parent.main_frame.document.getElementById('menu_list').style.display = 'block';
-}
-function hide_popup(){
 
-parent.main_frame.document.getElementById('menu_list').style.display = 'none';
-}
-</script>
 <h1>
 <span class="action-span"><a href="goods.php?act=list">商品列表</a></span>
 <span class="action-span1"><a href="index.php?act=main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加新商品 </span>
@@ -83,17 +57,17 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 
 				<tr>
 					<td class="label">商品分类：</td>
-					<td>
-						<input type="text" id="cat_name" name="cat_name" nowvalue="0" value="">
-						<input type="hidden" id="cat_id" name="cat_id" value="0">
-												<a href="javascript:void(0)" onclick="rapidCatAdd()" title="添加分类" class="special">添加分类</a>
-						<span id="category_add" style="display:none;">
-							<input class="text" size="10" name="addedCategoryName" />
-							<a href="javascript:void(0)" onclick="addCategory()" title=" 确定 " class="special"> 确定 </a>
-							<a href="javascript:void(0)" onclick="return goCatPage()" title="分类管理" class="special">分类管理</a>
-							<a href="javascript:void(0)" onclick="hideCatDiv()" title="隐藏" class="special"></a>
-						</span>
+                                        <td>
+                                            <select name='cat_id'><option value=''>请选择...</option><?php foreach($cats as $k=>$v):?><option value='<?php echo ($v["id"]); ?>'><?php echo str_repeat('&nbsp;',$v['level']*5); echo ($v["cat_name"]); ?></option><?php endforeach;?></select>
+		
 						 <span class="require-field">*</span>						
+					</td>
+				</tr>
+                            	<tr>
+					<td class="label">扩展分类：</td>
+					<td>
+						   <input type="button" value="添加" onclick="addCat(this);" class="button" />
+                                                   <select name='ext_cat[]'><option value=''>请选择...</option><?php foreach($cats as $k=>$v):?><option value='<?php echo ($v["id"]); ?>' ><?php echo str_repeat('&nbsp;',$v['level']*5); echo ($v["cat_name"]); ?></option><?php endforeach;?></select>
 					</td>
 				</tr>
                                 <tr>
@@ -102,13 +76,7 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 						<?php getSelect('brand_id','brand','brand_name','id');?>
 					</td>
 				</tr>
-				<tr>
-					<td class="label">扩展分类：</td>
-					<td>
-						<input type="button" value="添加" onclick="addOtherCat(this.parentNode)" class="button" />
-												<select name="ext_cat[]" onchange="hideCatDiv()" ><option value="0">请选择...</option><option value="1" >食品生鲜</option><option value="14" >&nbsp;&nbsp;&nbsp;&nbsp;进口水果</option></select>
-					</td>
-				</tr>
+			
 
 					</td>
 				</tr>
@@ -372,98 +340,19 @@ src="/includes/ueditor/ueditor.all.js"></script>
       document.forms['theForm'].elements['selbtn2'].disabled = !checked;
   }
 
-
-  function rapidCatAdd()
-  {
-      var cat_div = document.getElementById("category_add");
-
-      if(cat_div.style.display != '')
-      {
-          var cat =document.forms['theForm'].elements['addedCategoryName'];
-          cat.value = '';
-          cat_div.style.display = '';
-      }
-  }
-
-
-  function addCategory()
-  {
-      var parent_id = document.forms['theForm'].elements['cat_id'];
-      var cat = document.forms['theForm'].elements['addedCategoryName'];
-      if(cat.value.replace(/^\s+|\s+$/g, '') == '')
-      {
-          alert(category_cat_not_null);
-          return;
-      }
-      
-      var params = 'parent_id=' + parent_id.value;
-      params += '&cat=' + cat.value;
-      Ajax.call('category.php?is_ajax=1&act=add_category', params, addCatResponse, 'GET', 'JSON');
-  }
-
-  function hideCatDiv()
-  {
-      var category_add_div = document.getElementById("category_add");
-      if(category_add_div.style.display != null)
-      {
-          category_add_div.style.display = 'none';
-      }
-  }
-
-
-
-  /**
-   * 鍒犻櫎蹇?€熷垎绫
-   */
-  function removeCat()
-  {
-      if(!document.forms['theForm'].elements['parent_cat'] || !document.forms['theForm'].elements['new_cat_name'])
-      {
-          return;
-      }
-
-      var cat_select = document.forms['theForm'].elements['parent_cat'];
-      var cat = document.forms['theForm'].elements['new_cat_name'];
-
-      cat.parentNode.removeChild(cat);
-      cat_select.parentNode.removeChild(cat_select);
-  }
-
-  /**
-   * 娣诲姞鎵╁睍鍒嗙被
-   */
-  function addOtherCat(conObj)
-  {
-      var sel = document.createElement("SELECT");
-      var selCat = document.forms['theForm'].elements['other_cat[]'][0];
-      
-      if(selCat.length == undefined)
-      {
-    	  selCat = document.forms['theForm'].elements['other_cat[]'];
-      }
-
-      for (i = 0; i < selCat.length; i++)
-      {
-          var opt = document.createElement("OPTION");
-          opt.text = selCat.options[i].text;
-          opt.value = selCat.options[i].value;
-          if (Browser.isIE)
-          {
-              sel.add(opt);
-          }
-          else
-          {
-              sel.appendChild(opt);
-          }
-      }
-      conObj.appendChild(sel);
-      sel.name = "other_cat[]";
-      sel.onChange = function() {checkIsLeaf(this);};
-  }
+//添加图片
 function add(e){
     $(e).parent().parent().append("<input type='file' name='pics[]' />");
 }
 
+//添加扩展分类
+function addCat(e){
+    var clone=$(e).next().clone();
+    
+    $(e).parent().append(clone);
+    
+ 
+}
 
 
 

@@ -34,10 +34,9 @@ foreach($config[fields] as $k=>$v): if($v['type']=='password'):?>
       * 获取数据
       * @return $data array $data['data']数据信息 $data['fpage'] 分页信息
       */
-     public function search($is_delete=0,$per=10){
+     public function search($per=10){
         /*****条件*****/
         $where=array();
-        $where['is_delete']=array('eq',$is_delete);
         /*****排序*****/
         #排序对象
         $way='<?=$config['_pk']?>';
