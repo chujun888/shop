@@ -1,7 +1,7 @@
 <?php 
 return array(
 'tableName'=>'php34_type',#表名
-'tableCN' =>'',#表中文名
+'tableCN' =>'商品类型',#表中文名
 'TPName'=>'Type',#tp中使用的表名(首字母大写)
 'tpName'=>'type',#tp中使用的表名(首字母大写)
 

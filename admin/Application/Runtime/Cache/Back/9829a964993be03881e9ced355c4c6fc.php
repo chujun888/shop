@@ -13,8 +13,8 @@
 
 
 <h1>
-<span class="action-span"><a href="goods.php?act=list">商品列表</a></span>
-<span class="action-span1"><a href="index.php?act=main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加新商品 </span>
+<span class="action-span"><a href="/admin/Back/Goods/lst">商品列表</a></span>
+<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加新商品 </span>
 <div style="clear:both"></div>
 </h1>
  <script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="/admin/Public/js/selectzone_bd.js"></script><script type="text/javascript" src="/admin/Public/js/colorselector.js"></script><!-- 修改 by www.68ecshop.com 百度编辑器 end -->
@@ -83,7 +83,7 @@
 								<tr>
 					<td class="label">本店售价：</td>
 					<td>
-						<input type="text" name="shop_price" value="0" size="20" onblur="priceSetted()" />
+						<input type="text" name="shop_price"  size="20" onblur="priceSetted()" />
 						<input type="button" value="按市场价计算" onclick="marketPriceSetted()" />
 						<span class="require-field">*</span>					</td>
 				</tr>
@@ -107,7 +107,7 @@
 				<tr>
 					<td class="label">市场售价：</td>
 					<td>
-						<input type="text" name="market_price" value="0" size="20" />
+						<input type="text" name="market_price"  size="20" />
 						<input type="button" value="取整数" onclick="integral_market_price()" />
 					</td>
 				</tr>
@@ -118,7 +118,7 @@
 						</a>
 						赠送消费积分数：					</td>
 					<td>
-						<input type="text" name="jifen" value="-1" size="20" />
+						<input type="text" name="jifen"  size="20" />
 						<br />
 						<span class="notice-span" style="display:block"  id="giveIntegral">购买该商品时赠送消费积分数,-1表示按商品价格赠送</span>
 					</td>
@@ -130,7 +130,7 @@
 						</a>
 						赠送等级积分数：					</td>
 					<td>
-						<input type="text" name="jyz" value="-1" size="20" />
+						<input type="text" name="jyz"  size="20" />
 						<br />
 						<span class="notice-span" style="display:block"  id="rankIntegral">购买该商品时赠送等级积分数,-1表示按商品价格赠送</span>
 					</td>
@@ -139,21 +139,21 @@
 				<tr>
 					<td class="label">
 						<label for="is_promote">
-							<input type="checkbox" id="is_promote" name="is_promote" value="1"  onclick="handlePromote(this.checked);" />
+							<input type="checkbox" id="is_promote" name="is_promote"   onclick="handlePromote(this.checked);" />
 							促销价：						</label>
 					</td>
 					<td id="promote_3">
-						<input type="text" id="promote_1" name="promote_price" value="0" size="20" />
+						<input type="text" id="promote_1" name="promote_price"  value='0.00' size="20" />
 					</td>
 				</tr>
 
 				<tr id="promote_4">
 					<td class="label" id="promote_5">促销日期：</td>
 					<td id="promote_6">
-						<input name="promote_start_time" type="text" id="promote_start_date" size="12" value='2016-09-17' readonly="readonly" />
+						<input name="promote_start_time" type="text" id="promote_start_date" size="12"  readonly="readonly" />
 						<input name="selbtn1" type="button" id="selbtn1" onclick="return showCalendar('promote_start_date', '%Y-%m-%d', false, false, 'selbtn1');" value="选择" class="button" />
 						-
-						<input name="promote_end_time" type="text" id="promote_end_date" size="12" value='2016-10-17' readonly="readonly" />
+						<input name="promote_end_time" type="text" id="promote_end_date" size="12" readonly="readonly" />
 						<input name="selbtn2" type="button" id="selbtn2" onclick="return showCalendar('promote_end_date', '%Y-%m-%d', false, false, 'selbtn2');" value="选择" class="button" />
 					</td>
 				</tr>
@@ -207,7 +207,7 @@ src="/includes/ueditor/ueditor.all.js"></script>
 						商品库存数量：					</td>
 					<!--            <td><input type="text" name="goods_number" value="1" size="20"  /><br />-->
 					<td>
-						<input type="text" name="goods_number" value="1" size="20" />
+						<input type="text" name="goods_number" size="20" />
 						<br />
 						<span class="notice-span" style="display:block"  id="noticeStorage">库存在商品为虚货或商品存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量</span>
 					</td>
@@ -241,25 +241,23 @@ src="/includes/ueditor/ueditor.all.js"></script>
 
 			<!-- 灞炴€т笌瑙勬牸 -->
 						<table width="100%" id="properties-table" style="display:none" align="center">
-				<tr>
+				<tr >
 					<td class="label">
 						<a href="javascript:showNotice('noticeGoodsType');" title="点击此处查看提示信息">
 							<img src="/admin/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
 						</a>
 						商品类型：					</td>
 					<td>
-						<select name="goods_type" onchange="getAttrList(0)">
+						<select name="type_id" onchange="getAttrList(this)">
 							<option value="0">请选择商品类型</option>
-
-							<option value='1'>手机数码</option><option value='2'>服饰鞋帽</option>
+                                                        <?php foreach($types as $k=>$v):?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["type_name"]); ?></option><?php endforeach;?>
+					
 						</select>
 						<br />
-						<span class="notice-span" style="display:block"  id="noticeGoodsType">请选择商品的所属类型，进而完善此商品的属性</span>
+                                                <span class="notice-span" style="display:block"  id="noticeGoodsType">请选择商品的所属类型，进而完善此商品的属性</span>                                      
 					</td>
 				</tr>
-				<tr>
-					<td id="tbody-goodsAttr" colspan="2" style="padding:0"><table width="100%" id="attrTable"></table><div id="input_txm"></div></td>
-				</tr>
+				
 			</table>
 			
 			<!--代码修改_start By www.ecshop68.com  将 商品相册 这部分代码完全修改成下面这样-->
@@ -352,6 +350,61 @@ function addCat(e){
     $(e).parent().append(clone);
     
  
+}
+//获取属性列表
+function getAttrList(e){
+   var value=$(e).val();
+    $.ajax({
+        type:'get',
+        dataType:'json',
+        success:function(data){
+            $.each(data,function(k,v){
+                //清空属性值
+                 $('#properties-table').find('tr:gt(0)').remove();
+                var add='';
+                if(v.attr_type!=0){
+                    add='<a href="javascript:void(0);" onclick=addNew(this)><span >[+]</span></a>';
+                }
+                    //输出文本框
+                if(!v.attr_option_value)
+                  $('#properties-table').append('<tr ><td class="label">'+add+v.attr_name+'：</td><td><input type="text" name="attr['+v.id+'][]"/><br /></td></tr>');
+                else{
+                //下拉列表
+                    var str='<tr ><td class="label">'+add+v.attr_name+'：</td><td><select name="attr['+v.id+'][]"><option value="">请选择...</option>';
+                    var arr=v.attr_option_value.split(',');
+                    $.each(arr,function(k1,v2){
+                        str+="<option value='"+v2+"'>"+v2+"</option>";
+                    });
+                    str+="</select><br /></td></tr>";
+                    $('#properties-table').append(str);
+
+                }
+            });
+           
+        },
+        url:'/admin/Back/Goods/ajaxAttr/type_id/'+value,
+        
+    });
+}
+
+//克隆或删除新的属性
+function addNew(e){
+     var flag=$(e).find('span').text();
+     var p=$(e).parent().parent()
+     
+     //减号删除
+     if(flag=='[-]'){
+         p.remove();
+     }
+    //加号克隆复制
+    else{
+        var clone=p.clone();
+        clone.find('span').text('[-]');
+        //清除clone的选中状态
+        console.log(clone.find('option'));
+        clone.find('option').attr('selected',false);
+        p.after(clone);
+    }
 }
 
 

@@ -1,14 +1,18 @@
 <?php 
 namespace Back\Model;
 use Think\Model;
-class   TypeModel extends Model{
+class   AttrModel extends Model{
     #添加时允许插入的字段
-     protected $insertFields='type_name';
-    protected $updateFields='id,type_name';
+     protected $insertFields='attr_name,attr_type,attr_option_value,type_id,sele';
+    protected $updateFields='id,attr_name,attr_type,attr_option_value,type_id,sele';
     #自动验证
      protected $_validate=array(
-		 array('type_name','require','不能为空',1),
-		 array('type_name','0,30','应小于30',0,'length'),
+		 array('attr_name','require','属性名称不能为空',1),
+		 array('attr_name','0,30','属性名称应小于30',0,'length'),
+		 array('attr_option_value','0,150','可选值：多个用,分开应小于150',0,'length'),
+		 array('type_id','require','所属类型不能为空',1),
+		 array('type_id','number','所属类型必须是数字'),
+		 array('sele','number','必须是数字'),
 );
      #自动完成
      protected $_auto=array(
@@ -19,6 +23,9 @@ class   TypeModel extends Model{
      //插入前钩子函数
      protected function _before_insert(&$data, $options) {
          parent::_before_insert($data, $options);
+         //，替换,
+         $value=$data['attr_option_value'];
+         $data['attr_option_value']=  str_replace('，', ',', $value);
      }
      
      /**
@@ -28,15 +35,6 @@ class   TypeModel extends Model{
          parent::_before_update($data, $options);
      }
      
-     /**
-      * 删除前钩子
-      */
-     protected function _before_delete($options) {
-         parent::_before_delete($options);
-         //删除该分类下的属性
-         $id=$options['where']['id'];
-         M('Attr')->where(array('type_id'=>array('eq',$id)))->delete();
-     }
      
      /**
       * 获取数据
@@ -54,14 +52,17 @@ class   TypeModel extends Model{
         $order='desc';
         if(I('get.order'))
             $order=I('get.order');
-         /*****分页*****/
+        #商品类型
+        $where['type_id']=array('eq',I('get.type_id'));
+        /*****分页*****/
         #总记录数
-        $count=$this->count();
-        #获取分页信息 total per pa 
+        $count=$this->where($where)->count();
+        #获取分页信息 total per 
         $page=new \Libs\Page($count,$per);
-        
+        #分页角标
+        $offset=(I('get.page',1)-1)*$per;
         $fpage=$page->fpage();        
-        $data=$this->where($where)->order("$way $order ")->select();
+        $data=$this->where($where)->limit($offset,$per)->order("$way $order ")->select();
         return array('data'=>$data,'fpage'=>$fpage);
      }
      

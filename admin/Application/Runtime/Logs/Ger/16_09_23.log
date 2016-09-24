@@ -1,0 +1,206 @@
+[ 2016-09-23T16:56:23+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001540s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000890s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001461s ]
+
+[ 2016-09-23T16:56:31+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002993s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001431s ]
+SQL: show table status where name like 'php34_type' [ RunTime:0.1978s ]
+SQL: show full fields from php34_type [ RunTime:0.0089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000871s ]
+
+[ 2016-09-23T16:56:32+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000501s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000805s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2016-09-23T17:21:20+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+NOTIC: [8] Use of undefined constant LINE_FEED - assumed 'LINE_FEED' E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 34 行.
+NOTIC: [8] Use of undefined constant fields - assumed 'fields' E:\php\http\fuxi\admin\Application\Ger\Code_tmp\Model.php 第 13 行.
+NOTIC: [8] ob_end_clean() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer. No buffer to delete E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant LINE_FEED - assumed 'LINE_FEED' E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 44 行.
+NOTIC: [8] ob_end_clean() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer. No buffer to delete E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 57 行.
+NOTIC: [8] ob_end_clean() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer. No buffer to delete E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 66 行.
+NOTIC: [8] ob_end_clean() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer. No buffer to delete E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 75 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016082s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000938s ]
+
+[ 2016-09-23T17:21:21+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2016-09-23T17:26:52+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000780s ]
+SQL: show table status where name like 'php34_attr' [ RunTime:0.0719s ]
+SQL: show full fields from php34_attr [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013701s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001172s ]
+
+[ 2016-09-23T17:26:53+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2016-09-23T17:33:17+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000857s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001445s ]
+NOTIC: [8] Use of undefined constant LINE_FEED - assumed 'LINE_FEED' E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 34 行.
+NOTIC: [8] Use of undefined constant fields - assumed 'fields' E:\php\http\fuxi\admin\Application\Ger\Code_tmp\Model.php 第 13 行.
+NOTIC: [8] ob_end_clean() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer. No buffer to delete E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant LINE_FEED - assumed 'LINE_FEED' E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 44 行.
+NOTIC: [8] ob_end_clean() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer. No buffer to delete E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 57 行.
+NOTIC: [8] ob_end_clean() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer. No buffer to delete E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 66 行.
+NOTIC: [8] ob_end_clean() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer. No buffer to delete E:\php\http\fuxi\admin\Application\Ger\Controller\IndexController.class.php 第 75 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000455s ]
+
+[ 2016-09-23T17:33:18+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015757s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001532s ]
+
+[ 2016-09-23T21:29:23+08:00 ] 127.0.0.1 /admin/Ger/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000649s ]
+

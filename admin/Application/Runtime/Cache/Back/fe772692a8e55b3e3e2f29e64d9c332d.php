@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtmltransitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 商品类型列表 </title>
+<title>商之翼 管理中心 - 属性列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
@@ -12,22 +12,17 @@
 </head>
 <body>
 <h1>
-<span class="action-span"><a href="/admin/Back/Type/add">添加新商品类型</a></span>
+    <span class="action-span"><a href="/admin/Back/Attr/add/type_id/<?php echo I('get.type_id');?>">添加新属性</a></span>
 <span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
 <div style="clear:both"></div>
 </h1>
 <script type="text/javascript" src="/js/utils.js"></script>
-<!-- 商品搜索 
- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ 
-<link href="/admin/Public/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery.ztree.all-3.5.min.js"></script><script type="text/javascript" src="/admin/Public/js/category_selecter.js"></script><div class="form-div">
-    <form action="/admin/Back/Type/lst" name='search' method="post">
+<div class="form-div">
+  <form action="" name="searchForm">
     <img src="/admin/Public/images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
-         关键字 
-        关键字 <input type="text" name="keyword" size="15" value=""/>
-          <input type="submit" value=" 搜索" class="button" />
+    按商品类型显示：<select name='type_id' onchange="change(this)"><?php foreach($types as $k=>$v):?><option value='<?php echo ($v["id"]); ?>' <?php if($v['id']==I('get.type_id')) echo 'selected="selected"';?>><?php echo ($v["type_name"]); ?></option>><?php endforeach;?></select>
   </form>
-</div>-->
+</div>
 <!-- 商品列表 -->
 <form method="post" action="" name="listForm" onsubmit="return confirmSubmit(this)">
   <!-- start goods list -->
@@ -37,21 +32,25 @@
     <th>
      
       <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="/admin/Public/images/sort_desc.gif"/>    </th>
-              <th><a href='#'></a>类型名称</th>
+              <th><a href='#'>属性名称</a></th>
+              <th><a href='#'>属性类型</a></th>
+              <th><a href='#'>可选值：（多个用,分开）</a></th>
               
     <th>操作</th>
-    
+  </tr> 
 <!-- 循环输出-->    
     
-<?php foreach($data as $k=>$v):?>  <tr>
-    <tr>
+<?php foreach($data as $k=>$v):?> 
+<tr align="center">
     <td><?php echo ($v["id"]); ?></td>
-         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo ($v["type_name"]); ?></span></td>
+         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo ($v["attr_name"]); ?></span></td>
+         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php if($v['attr_type']) echo '多选';else echo '唯一';?></span></td>
+         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo ($v["attr_option_value"]); ?></span></td>
             
         
     <td align="center">
-        <span style="margin-bottom: 20px;"><u><a href="/admin/Back/attr/lst/type_id/<?php echo ($v["id"]); ?>">属性列表</a></u></span>  
-      <a href="/admin/Back/Type/edit/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/admin/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
+      
+        <a href="/admin/Back/Attr/edit/type_id/<?php echo I('get.type_id');?>/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/admin/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
       <a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="删除"><img src="/admin/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
       <img src="/admin/Public/images/empty.gif" width="16" height="16" border="0" />          
     </td>
@@ -236,7 +235,7 @@ function remove(e,id){
         
         //数据库删除
         $.ajax({
-            url:"/admin/Back/Type/delete/id/"+id,
+            url:"/admin/Back/Attr/delete/id/"+id,
             type:'get',
             dataType:'json',
             success:function(data){
@@ -247,7 +246,11 @@ function remove(e,id){
 //        
     }
 }    
-//-->
+
+//商品类型改变
+function change(e){
+    location.href="/admin/Back/Attr/lst/type_id/"+$(e).val();
+}
 </script>
 </body>
 </html>

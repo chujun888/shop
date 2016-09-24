@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Goods/add.html</file>
-            <file>file:/E:/php/http/fuxi/admin/Application/Back/Controller/GoodsController.class.php</file>
-            <file>file:/E:/php/http/fuxi/admin/Application/Back/Model/GoodsModel.class.php</file>
-            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Goods/lst.html</file>
-            <file>file:/E:/php/http/fuxi/admin/Application/Common/Conf/config.php</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Attr/add.html</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Type/lst.html</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Back/Model/AttrModel.class.php</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Attr/lst.html</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Ger/Conf/php34_attr.php</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/Attr/edit.html</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Back/Controller/AttrController.class.php</file>
+            <file>file:/E:/php/http/fuxi/admin/Application/Back/View/index/left.html</file>
         </group>
     </open-files>
 </project-private>

@@ -249,18 +249,34 @@ src="/includes/ueditor/ueditor.all.js"></script>
 						</a>
 						商品类型：					</td>
 					<td>
-						<select name="goods_type" onchange="getAttrList(0)">
+						<select name="type_id" onchange="getAttrList(this)">
 							<option value="0">请选择商品类型</option>
-
-							<option value='1'>手机数码</option><option value='2'>服饰鞋帽</option>
+                                                        <?php foreach($types as $k=>$v):?><option value='<?php echo ($v["id"]); ?>' <?php if($v['id']==$data['type_id']) echo 'selected';?>><?php echo ($v["type_name"]); ?></option><?php endforeach;?>
 						</select>
 						<br />
 						<span class="notice-span" style="display:block"  id="noticeGoodsType">请选择商品的所属类型，进而完善此商品的属性</span>
 					</td>
+                                <?php
+ $list=array(); foreach($attrs as $k=>$v): $add=''; if($v['attr_type']==1){ if(in_array($v['attr_id'],$list)) $flag='[-]'; else{ $flag='[+]'; $list[]=$v['attr_id']; } $add='<a href="javascript:void(0);" onclick=addNew(this)><span >'.$flag.'</span></a>'; } ?>
 				</tr>
-				<tr>
-					<td id="tbody-goodsAttr" colspan="2" style="padding:0"><table width="100%" id="attrTable"></table><div id="input_txm"></div></td>
+                                				<tr>
+					<td class="label">
+						<?php echo $add.$v['attr_name'];?>：					</td>
+					<td>
+						<?php if($v['option']): $arr=explode(',',$v['option']);?>
+                                                <select name="attr[<?php echo ($v["attr_id"]); ?>][<?php echo ($v["id"]); ?>]">
+                                                    <option value="">请选择...</option>
+                                                    <?php foreach($arr as $k1=>$v1):?>
+                                                    <option value="<?php echo ($v1); ?>" <?php if($v['attr_value']==$v1) echo 'selected';?>><?php echo ($v1); ?></option>
+                                                    <?php endforeach;?>
+                                                </select>
+                                                
+                                                <?php else:?>
+                                                <input type='text' name="attr[<?php echo ($v["attr_id"]); ?>][<?php echo ($v["id"]); ?>]" value='<?php echo ($v["attr_value"]); ?>'>
+                                                 <?php endif;?>
+					</td>
 				</tr>
+                                <?php endforeach;?>
 			</table>
 			
 			<!--代码修改_start By www.ecshop68.com  将 商品相册 这部分代码完全修改成下面这样-->
@@ -465,6 +481,66 @@ function addCat(e){
     var clone=$(e).next().clone();
     clone.find('option').removeAttr('selected');
     $(e).parent().append(clone);
+}
+
+//获取属性列表
+function getAttrList(e){
+   var value=$(e).val();
+    $.ajax({
+        type:'get',
+        dataType:'json',
+        success:function(data){
+            $.each(data,function(k,v){
+                //清空属性值
+                 $('#properties-table').find('tr:gt(0)').remove();
+                var add='';
+                if(v.attr_type!=0){
+                    add='<a href="javascript:void(0);" onclick=addNew(this) ><span >[+]</span></a>';
+                }
+                    //输出文本框
+                if(!v.attr_option_value)
+                  $('#properties-table').append('<tr ><td class="label">'+add+v.attr_name+'：</td><td><input type="text" name="attr['+v.id+'][]"/><br /></td></tr>');
+                else{
+                //下拉列表
+                    var str='<tr ><td class="label">'+add+v.attr_name+'：</td><td><select name="attr['+v.id+'][]"><option value="">请选择...</option>';
+                    var arr=v.attr_option_value.split(',');
+                    $.each(arr,function(k1,v2){
+                        str+="<option value='"+v2+"'>"+v2+"</option>";
+                    });
+                    str+="</select><br /></td></tr>";
+                    $('#properties-table').append(str);
+
+                }
+            });
+           
+        },
+        url:'/admin/Back/Goods/ajaxAttr/type_id/'+value,
+        
+    });
+}
+
+//克隆或删除新的属性
+function addNew(e){
+     var flag=$(e).find('span').text();
+     var p=$(e).parent().parent()
+     
+     //减号删除
+     if(flag=='[-]'){
+         p.remove();
+     }
+    //加号克隆复制
+    else{
+        var clone=p.clone();
+        clone.find('span').text('[-]');
+        
+        //清除clone的选中状态
+        var str=clone.find('select').attr('name');
+        var preg=/[(\d+)]/g;
+        preg=str.match(preg);
+        clone.find('select').attr('name','new_attr['+preg[0]+'][]');
+        clone.find('option').attr('selected',false);
+        p.after(clone);
+    }
 }
 
 

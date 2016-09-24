@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtmltransitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 列表 </title>
+<title>商之翼 管理中心 - 商品类型列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="__PUBLIC__/styles/general.css" rel="stylesheet" type="text/css" />
@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>
-<span class="action-span"><a href="__URL__/add">添加新</a></span>
+<span class="action-span"><a href="__URL__/add">添加新商品类型</a></span>
 <span class="action-span1"><a href="__MODULE__/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
 <div style="clear:both"></div>
 </h1>
@@ -37,7 +37,7 @@
     <th>
      
       <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="__PUBLIC__/images/sort_desc.gif"/>    </th>
-              <th><a href='#'></a></th>
+              <th><a href='#'></a>类型名称</th>
               
     <th>操作</th>
     
@@ -50,7 +50,7 @@
             
         
     <td align="center">
-      <a href="/goods.php?id=233" target="_blank" title="查看"><img src="__PUBLIC__/images/icon_view.gif" width="16" height="16" border="0" /></a>
+        <span style="margin-bottom: 20px;"><u><a href="__MODULE__/attr/lst/type_id/{$v.id}">属性列表</a></u></span>  
       <a href="__URL__/edit/id/{$v.id}" title="编辑"><img src="__PUBLIC__/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
       <a href="javascript:;" onclick="remove(this,{$v.id});" title="删除"><img src="__PUBLIC__/images/icon_trash.gif" width="16" height="16" border="0" /></a>
       <img src="__PUBLIC__/images/empty.gif" width="16" height="16" border="0" />          

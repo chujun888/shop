@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 添加商品类型 </title>
+<title>商之翼 管理中心 - 修改属性 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="__PUBLIC__/styles/general.css" rel="stylesheet" type="text/css" />
@@ -10,28 +10,9 @@
 <script type="text/javascript" src="__PUBLIC__/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="__PUBLIC__/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
 </head>
 <body>
-
-<script>
-function show_popup(){
-frmBody = parent.document.getElementById('frame-body');
-if (frmBody.cols == "37, 12, *")
-{
-parent.main_frame.document.getElementById('menu_list').style.left = '195px';
-}
-else
-{
-parent.main_frame.document.getElementById('menu_list').style.left = '40px';
-}
-parent.main_frame.document.getElementById('menu_list').style.display = 'block';
-}
-function hide_popup(){
-
-parent.main_frame.document.getElementById('menu_list').style.display = 'none';
-}
-</script>
 <h1>
-<span class="action-span"><a href="__URL__/lst">商品类型列表</a></span>
-<span class="action-span1"><a href="__MODULE__/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加商品类型 </span>
+    <span class="action-span"><a href="__URL__/lst/type_id/<?php echo I('get.type_id');?>">属性列表</a></span>
+<span class="action-span1"><a href="__MODULE__/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 修改属性 </span>
 <div style="clear:both"></div>
 </h1>
 <script type="text/javascript" src="/js/transport.org.js"></script><script type="text/javascript" src="/js/region.js"></script><div class="main-div">
@@ -40,8 +21,28 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
 <table width="100%" >
   <tr>
-    <td class="label">类型名称:</td>
-    <td><input type="text" name="type_name" maxlength="60" value="" /><span class="require-field">*</span></td>
+      <input type='hidden' value='{$data.id}' name='id'/>
+    <td class="label">属性名称:</td>
+    <td><input type="text" name="attr_name" maxlength="60" value="{$data["attr_name"]}" /><span class="require-field">*</span></td>
+  </tr>
+  <tr>
+      <input type='hidden' value='{$data.id}' name='id'/>
+    <td class="label">商品类型:</td>
+    <td>
+        <select name='type_id'><?php foreach($types as $k=>$v):?><option value='{$v.id}' <?php if($data['type_id']==$v['id']) echo 'selected';?>>{$v.type_name}</option><?php endforeach;?></select>
+    </td>
+  </tr>
+  <tr>
+  <tr>
+      <input type='hidden' value='{$data.id}' name='id'/>
+    <td class="label">属性类型:</td>
+    <td><input type="text" name="attr_type" maxlength="60" value="{$data["attr_type"]}" /><span class="require-field"></span></td>
+  </tr>
+  <tr>
+      
+      <input type='hidden' value='{$data.id}' name='id'/>
+    <td class="label">可选值：（多个用,分开）:</td>
+    <td><input type="text" name="attr_option_value" maxlength="60" value="{$data["attr_option_value"]}" /><span class="require-field"></span></td>
   </tr>
   <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
       <tr>

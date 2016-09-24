@@ -37,7 +37,7 @@ class TypeController extends Controller{
     public function edit(){
         $m_type=D('Back/type');
         if(IS_POST){
-            if($m_type->create(I('post.'),2)){       
+            if($m_type->create(I('post.'),2)!==false){       
                 if($m_type->save()){
                     $this->success ('修改成功', U('lst'));
                     exit;

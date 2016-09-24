@@ -8,6 +8,7 @@ class GoodsController extends Controller{
       if(IS_POST){
           $m_goods=D('Back/goods');
           //create第二个参数1:添加2.修改
+        
           if($m_goods->create(I('post.'),1)){
               if($m_goods->add()){
                 $this->success('添加成功', U('lst'));
@@ -27,6 +28,9 @@ class GoodsController extends Controller{
           //取出所有商品分类
           $cats=D('Back/Category')->getTree();
           $this->assign('cats',$cats);
+          //取出所有类型
+          $types=D('Back/Type')->select();
+          $this->assign('types',$types);
           $this->display();   
     }
     
@@ -53,10 +57,18 @@ class GoodsController extends Controller{
                     $this->success ('修改成功', U('lst'));
                     exit;
                 }
-                var_dump($flag);exit;
+               
             }
             $this->error($m_goods->getError());
         }
+        //取出所有商品类型
+        $types=M('type')->select();
+        $this->assign('types',$types);
+        
+        //取出所有的商品属性
+        $attrs=M('goodsAttr')->field("a.*,b.attr_name,b.attr_type,b.attr_option_value as `option`")->where(array('goods_id'=>array('eq',I('get.id'))))->alias('a')->join("__ATTR__ as b on b.id=a.attr_id")->select();
+        $this->assign('attrs',$attrs);
+        
         $id=I('get.id');
         $data=$m_goods->find($id);
         
@@ -118,6 +130,14 @@ class GoodsController extends Controller{
             echo json_encode (array('ok'=>1));
         else 
             echo json_encode (array('ok'=>0));
+    }
+    
+    /**
+     * ajax请求获取属性
+     */
+    function ajaxAttr(){
+        $attr=D('Back/Attr')->where(array('type_id'=>array('eq',I('get.type_id'))))->select();
+        echo json_encode($attr);
     }
     
 }

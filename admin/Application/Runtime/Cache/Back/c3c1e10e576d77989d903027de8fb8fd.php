@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 添加 </title>
+<title>商之翼 管理中心 - 添加商品类型 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
@@ -30,8 +30,8 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 }
 </script>
 <h1>
-<span class="action-span"><a href="/admin/Back/Type/lst">列表</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加 </span>
+<span class="action-span"><a href="/admin/Back/Type/lst">商品类型列表</a></span>
+<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加商品类型 </span>
 <div style="clear:both"></div>
 </h1>
 <script type="text/javascript" src="/js/transport.org.js"></script><script type="text/javascript" src="/js/region.js"></script><div class="main-div">
@@ -40,7 +40,7 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
 <table width="100%" >
   <tr>
-    <td class="label">:</td>
+    <td class="label">类型名称:</td>
     <td><input type="text" name="type_name" maxlength="60" value="" /><span class="require-field">*</span></td>
   </tr>
   <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->

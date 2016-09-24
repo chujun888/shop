@@ -48,12 +48,12 @@ foreach($config[fields] as $k=>$v): if($v['type']=='password'):?>
             $order=I('get.order');
          /*****分页*****/
         #总记录数
-        $count=$this->count();
+        $count=$this->where($where)->count();
         #获取分页信息 total per pa 
         $page=new \Libs\Page($count,$per);
-        
+        $offset=(I('get.page',1)-1)*$per;
         $fpage=$page->fpage();        
-        $data=$this->where($where)->order("$way $order ")->select();
+        $data=$this->where($where)->limit($offset,$per)->order("$way $order ")->select();
         return array('data'=>$data,'fpage'=>$fpage);
      }
      
