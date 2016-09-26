@@ -102,6 +102,15 @@ class GoodsModel extends Model{
              }
          }
          
+         /*****插入库存数量******/
+         $goods_number=M('goodsNumber');
+         if($number=I('post.number')){
+             foreach($number as $k=>$v){
+                 if($v)
+                 $goods_number->add(array('id'=>$id,'goods_number'=>$v));
+             }
+         }
+         
      }
      
      /**
@@ -179,9 +188,11 @@ class GoodsModel extends Model{
         $m_goods_attr=M('goodsAttr');
         foreach($attrs as $k=>$v){
             foreach($v as $k1=>$v1){
-                $list[]=$k1;
-                //修改商品属性
-                $m_goods_attr->save(array('id'=>$k1,'attr_value'=>$v1));                
+                if($v1){
+                    $list[]=$k1;
+                    //修改商品属性
+                    $m_goods_attr->save(array('id'=>$k1,'attr_value'=>$v1));    
+                }
             }
         }
         //删除未修改的属性
@@ -193,6 +204,7 @@ class GoodsModel extends Model{
         if($new_attr){
             foreach($new_attr as $k=>$v){
                 foreach($v as $k1=>$v1){
+                    if($v1)
                      $m_goods_attr->add(array('goods_id'=>$id,'attr_id'=>$k,'attr_value'=>$v1));
                 }
             }

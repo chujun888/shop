@@ -401,7 +401,7 @@ function addNew(e){
         var clone=p.clone();
         clone.find('span').text('[-]');
         //清除clone的选中状态
-        console.log(clone.find('option'));
+     
         clone.find('option').attr('selected',false);
         p.after(clone);
     }

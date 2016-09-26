@@ -60,17 +60,20 @@ class GoodsController extends Controller{
                
             }
             $this->error($m_goods->getError());
-        }
+        }      
+        
+        $id=I('get.id');
         //取出所有商品类型
         $types=M('type')->select();
         $this->assign('types',$types);
         
+        $data=$m_goods->find($id);
         //取出所有的商品属性
-        $attrs=M('goodsAttr')->field("a.*,b.attr_name,b.attr_type,b.attr_option_value as `option`")->where(array('goods_id'=>array('eq',I('get.id'))))->alias('a')->join("__ATTR__ as b on b.id=a.attr_id")->select();
+        $attrs=M('attr')->field("a.*,b.*,a.id a_id")->where("type_id={$data['type_id']}")->alias('a')->join("left join __GOODS_ATTR__ b on b.attr_id = a.id")->having("b.goods_id=$id or b.goods_id IS NULL")->select();
+       
         $this->assign('attrs',$attrs);
         
-        $id=I('get.id');
-        $data=$m_goods->find($id);
+       
         
         /*******会员价格********/
         $member=M('memberLevel');
@@ -105,6 +108,83 @@ class GoodsController extends Controller{
         else
             $data=array('ok'=>0);
         echo  json_encode($data);
+    }
+    
+    /**
+     * 商品库存
+     */
+    public function goodsNumber(){
+       if($_POST){
+           /*****插入库存数量******/
+           $id=I('post.id');
+         $goods_number=M('goodsNumber');
+         //删除
+         $goods_number->where(array('goods_id'=>array('eq',$id)))->delete();
+         if($number=I('post.number')){
+             foreach($number as $k=>$v){
+                 $k=trim($k,"'");
+                 if($v)
+                 $goods_number->add(array('goods_id'=>$id,'goods_attr_id'=>$k,'goods_number'=>$v));
+             }
+         }
+         $this->success('库存修改成功',U('lst'));
+         exit;
+       }
+        //获取商品下不止一个属性的商品属性
+        $attrs=M('goodsAttr')->field('group_concat(a.id) ids,group_concat(a.attr_value) attr_value,b.attr_name')->where(array('goods_id'=>array('eq',I('get.id'))))->alias('a')->join('__ATTR__ b on b.id=a.attr_id')->group('a.attr_id')->having("count(*)>1")->select();
+        //整理得 array(array(array(1,2,3),array('1','2','3'),'attr_name));
+        $arr=array();
+        foreach($attrs as $k=>$v){
+            $arr1=array();
+            $ids=  explode(',', $v['ids']);
+            $values=explode(',',$v['attr_value']);
+            foreach($ids as $k1=>$v1){
+                $arr1[]=array('id'=>$v1,'value'=>$values[$k1],'attr_name'=>$v['attr_name']);        
+            }
+           $arr[$k]=$arr1;
+        }
+        $arr=$this->getDcar($arr); 
+        //取出已有数据
+        $goods_number=M('goodsNumber');   
+        $res=$goods_number->where(array('goods_id'=>array('eq',I('get.id'))))->select();
+        $arr_1=array();
+        foreach($res as $k=>$v){
+           $arr_1[$v['goods_attr_id']]=$v['goods_number']; 
+        }
+       
+        $this->assign('res',$arr_1);
+        
+        $this->assign('data',$arr);
+        $this->display();
+    }
+    
+    /**
+     * 获取数组的笛卡尔积
+     */
+    function getDcar($data){
+       
+        $count=count($data);
+        $result=$data[0];
+       
+        for($i=1;$i<$count;$i++){
+            $result=$this->getTwo($result, $data[$i]);
+        }
+       
+        return $result;
+    }
+    
+    /**
+     * 获取两个数组的笛卡尔积
+     */
+    function getTwo($one,$two){
+        $result=array();
+      
+        foreach($one as $k=>$v){
+            foreach($two as $k1=>$v1){
+                $result[]=array($v,$v1);
+            }
+        } 
+        return $result;
     }
     
     /**

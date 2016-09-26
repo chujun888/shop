@@ -260,7 +260,12 @@ src="/includes/ueditor/ueditor.all.js"></script>
                                   //已经出现的列表
                                   $list=array();
                                   foreach($attrs as $k=>$v):
+                                  //是否有多个
                                   $add='';
+                                  //是否是新属性
+                                  $new='';
+                                  if(!$v['attr_value'])
+                                    $new='new_';
                                   
                                   if($v['attr_type']==1){
                                  
@@ -278,8 +283,8 @@ src="/includes/ueditor/ueditor.all.js"></script>
 					<td class="label">
 						<?php echo $add.$v['attr_name'];?>：					</td>
 					<td>
-						<?php if($v['option']): $arr=explode(',',$v['option']);?>
-                                                <select name="attr[{$v.attr_id}][{$v.id}]">
+						<?php if($v['attr_option_value']): $arr=explode(',',$v['attr_option_value']);?>
+                                                <select name="{$new}attr[{$v.a_id}][{$v.id}]">
                                                     <option value="">请选择...</option>
                                                     <?php foreach($arr as $k1=>$v1):?>
                                                     <option value="{$v1}" <?php if($v['attr_value']==$v1) echo 'selected';?>>{$v1}</option>
@@ -287,7 +292,7 @@ src="/includes/ueditor/ueditor.all.js"></script>
                                                 </select>
                                                 
                                                 <?php else:?>
-                                                <input type='text' name="attr[{$v.attr_id}][{$v.id}]" value='{$v.attr_value}'>
+                                                <input type='text' name="{$new}attr[{$v['a_id']}][{$v.id}]" value='{$v.attr_value}'>
                                                  <?php endif;?>
 					</td>
 				</tr>
@@ -550,8 +555,9 @@ function addNew(e){
         
         //清除clone的选中状态
         var str=clone.find('select').attr('name');
-        var preg=/[(\d+)]/g;
+        var preg=/(\d)+/g;
         preg=str.match(preg);
+      
         clone.find('select').attr('name','new_attr['+preg[0]+'][]');
         clone.find('option').attr('selected',false);
         p.after(clone);

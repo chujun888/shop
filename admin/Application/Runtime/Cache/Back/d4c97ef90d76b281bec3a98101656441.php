@@ -76,7 +76,7 @@
     <td align="center"><?php echo ($v["ext_name"]); ?></td> <!-- 晒单插件 增加 by www.68ecshop.com -->
     
     <td align="center">
-      <a href="/goods.php?id=233" target="_blank" title="查看"><img src="/admin/Public/images/icon_view.gif" width="16" height="16" border="0" /></a>
+        <a href="/admin/Back/Goods/goodsNumber/id/<?php echo ($v["id"]); ?>">商品库存</a>
       <a href="/admin/Back/Goods/edit/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/admin/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>
       <a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="回收站"><img src="/admin/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
       <img src="/admin/Public/images/empty.gif" width="16" height="16" border="0" />          

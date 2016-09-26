@@ -257,14 +257,14 @@ src="/includes/ueditor/ueditor.all.js"></script>
 						<span class="notice-span" style="display:block"  id="noticeGoodsType">请选择商品的所属类型，进而完善此商品的属性</span>
 					</td>
                                 <?php
- $list=array(); foreach($attrs as $k=>$v): $add=''; if($v['attr_type']==1){ if(in_array($v['attr_id'],$list)) $flag='[-]'; else{ $flag='[+]'; $list[]=$v['attr_id']; } $add='<a href="javascript:void(0);" onclick=addNew(this)><span >'.$flag.'</span></a>'; } ?>
+ $list=array(); foreach($attrs as $k=>$v): $add=''; $new=''; if(!$v['attr_value']) $new='new_'; if($v['attr_type']==1){ if(in_array($v['attr_id'],$list)) $flag='[-]'; else{ $flag='[+]'; $list[]=$v['attr_id']; } $add='<a href="javascript:void(0);" onclick=addNew(this)><span >'.$flag.'</span></a>'; } ?>
 				</tr>
                                 				<tr>
 					<td class="label">
 						<?php echo $add.$v['attr_name'];?>：					</td>
 					<td>
-						<?php if($v['option']): $arr=explode(',',$v['option']);?>
-                                                <select name="attr[<?php echo ($v["attr_id"]); ?>][<?php echo ($v["id"]); ?>]">
+						<?php if($v['attr_option_value']): $arr=explode(',',$v['attr_option_value']);?>
+                                                <select name="<?php echo ($new); ?>attr[<?php echo ($v["a_id"]); ?>][<?php echo ($v["id"]); ?>]">
                                                     <option value="">请选择...</option>
                                                     <?php foreach($arr as $k1=>$v1):?>
                                                     <option value="<?php echo ($v1); ?>" <?php if($v['attr_value']==$v1) echo 'selected';?>><?php echo ($v1); ?></option>
@@ -272,7 +272,7 @@ src="/includes/ueditor/ueditor.all.js"></script>
                                                 </select>
                                                 
                                                 <?php else:?>
-                                                <input type='text' name="attr[<?php echo ($v["attr_id"]); ?>][<?php echo ($v["id"]); ?>]" value='<?php echo ($v["attr_value"]); ?>'>
+                                                <input type='text' name="<?php echo ($new); ?>attr[<?php echo ($v['a_id']); ?>][<?php echo ($v["id"]); ?>]" value='<?php echo ($v["attr_value"]); ?>'>
                                                  <?php endif;?>
 					</td>
 				</tr>
@@ -535,8 +535,9 @@ function addNew(e){
         
         //清除clone的选中状态
         var str=clone.find('select').attr('name');
-        var preg=/[(\d+)]/g;
+        var preg=/(\d)+/g;
         preg=str.match(preg);
+      
         clone.find('select').attr('name','new_attr['+preg[0]+'][]');
         clone.find('option').attr('selected',false);
         p.after(clone);
