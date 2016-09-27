@@ -1,7 +1,7 @@
 <?php 
 namespace Back\Controller;
-use Think\Controller;
-class MemberLevelController extends Controller{
+use Base\Controller;
+class MemberLevelController extends BaseController{
     
     //添加
     public function add(){

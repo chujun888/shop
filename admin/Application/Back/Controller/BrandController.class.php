@@ -1,7 +1,7 @@
 <?php 
 namespace Back\Controller;
-use Think\Controller;
-class BrandController extends Controller{
+use Base\Controller;
+class BrandController extends BaseController{
     
     //添加
     public function add(){

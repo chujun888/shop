@@ -1,7 +1,7 @@
 <?php 
 namespace Back\Controller;
-use Think\Controller;
-class AttrController extends Controller{
+use Back\Controller;
+class AttrController extends BaseController{
     
     //添加
     public function add(){

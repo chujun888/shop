@@ -1,19 +1,20 @@
-<!-- $Id: user_info.htm 16854 2009-12-07 06:20:09Z sxc_shop $ -->
+<?php if (!defined('THINK_PATH')) exit();?><!-- $Id: user_info.htm 16854 2009-12-07 06:20:09Z sxc_shop $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 添加管理员 </title>
+<title>商之翼 管理中心 - 添加权限 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__PUBLIC__/styles/general.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="__PUBLIC__/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="__PUBLIC__/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
 </head>
 <body>
 
+
 <h1>
-<span class="action-span"><a href="__URL__/lst">管理员列表</a></span>
-<span class="action-span1"><a href="__MODULE__/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加管理员 </span>
+<span class="action-span"><a href="/admin/Back/Privilege/lst">权限列表</a></span>
+<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加权限 </span>
 <div style="clear:both"></div>
 </h1>
 <script type="text/javascript" src="/js/transport.org.js"></script><script type="text/javascript" src="/js/region.js"></script><div class="main-div">
@@ -22,21 +23,28 @@
 <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
 <table width="100%" >
   <tr>
-    <td class="label">管理员姓名:</td>
-    <td><input type="text" name="admin_name" maxlength="60" value="" /><span class="require-field">*</span></td>
+    <td class="label">权限名称:</td>
+    <td><input type="text" name="pri_name" maxlength="60" value="" /><span class="require-field">*（同时插入多个权限，用，隔开|下面各项对应）</span></td>
   </tr>
   <tr>
-    <td class="label">密码:</td>
-    <td><input type="password" name="admin_pwd" maxlength="60" value="" /><span class="require-field">*</span></td>
+    <td class="label">上级权限的ID :</td>
+    <td><select name='parent_id'><option value='0'>顶级权限</option><?php foreach($data as $k=>$v):?><option value='<?php echo ($v["id"]); ?>'><?php echo str_repeat('&nbsp;',($v['level']+1)*5); echo ($v["pri_name"]); ?></option><?php endforeach;?></select><span class="require-field"></span></td>
   </tr>
   <tr>
-    <td class="label">确认密码:</td>
-    <td><input type="password" name="re_admin_pwd" maxlength="60" value="" /><span class="require-field">*</span></td>
+    <td class="label">模块名称:</td>
+    <td><input type="text" name="module_name" maxlength="60" value="" /><span class="require-field">*</span></td>
   </tr>
-    
-   <tr>
-    <td class="label">角色:</td>
-    <td><select name='role_id'><option value=''>请选择角色...<?php foreach($roles as $k=>$v):?><option value='{$v.id}'>{$v.role_name}</option><?php endforeach;?></option></select></td>
+  <tr>
+    <td class="label">控制器名称:</td>
+    <td><input type="text" name="controller_name" maxlength="60" value="" /><span class="require-field">*</span></td>
+  </tr>
+  <tr>
+    <td class="label">动作名称:</td>
+    <td><input type="text" name="action_name" maxlength="60" value="" /><span class="require-field">*</span></td>
+  </tr>
+    <tr>
+    <td class="label">是否显示菜单:</td>
+    <td>显示：<input type='radio' name='is_show' checked value='1'>不显示:<input type='radio' name='is_show'  value='0'></td>
   </tr>
   <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
       <tr>
@@ -48,7 +56,7 @@
 
 </form>
 </div>
-<script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="__PUBLIC__/js/validator.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="/admin/Public/js/validator.js"></script>
 <script language="JavaScript">
 <!--
 region.isAdmin = true;
@@ -60,12 +68,12 @@ region.isAdmin = true;
 
 
 <!--
-<embed src="__PUBLIC__/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
+<embed src="/admin/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
-  <param name="movie" value="__PUBLIC__/images/online.swf">
+  <param name="movie" value="/admin/Public/images/online.swf">
   <param name="quality" value="high">
-  <embed src="__PUBLIC__/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  <embed src="/admin/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
 
@@ -99,11 +107,11 @@ function showTodoList(adminid)
     global.onload = global.onreadystatechange= function()
     {
       if(this.readyState && this.readyState=="loading")return;
-      var md5 = $import("__PUBLIC__/js/md5.js","js");
+      var md5 = $import("/admin/Public/js/md5.js","js");
       md5.onload = md5.onreadystatechange= function()
       {
         if(this.readyState && this.readyState=="loading")return;
-        var todolist = $import("__PUBLIC__/js/todolist.js","js");
+        var todolist = $import("/admin/Public/js/todolist.js","js");
         todolist.onload = todolist.onreadystatechange = function()
         {
           if(this.readyState && this.readyState=="loading")return;

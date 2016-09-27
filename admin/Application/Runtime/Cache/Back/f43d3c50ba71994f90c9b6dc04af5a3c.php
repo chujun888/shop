@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 修改 </title>
+<title>商之翼 管理中心 - 修改管理员 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
@@ -11,8 +11,8 @@
 </head>
 <body>
 <h1>
-<span class="action-span"><a href="/admin/Back/Manage/lst">列表</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 修改 </span>
+<span class="action-span"><a href="/admin/Back/Manage/lst">管理员列表</a></span>
+<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 修改管理员 </span>
 <div style="clear:both"></div>
 </h1>
 <script type="text/javascript" src="/js/transport.org.js"></script><script type="text/javascript" src="/js/region.js"></script><div class="main-div">
@@ -26,9 +26,19 @@
     <td><input type="text" name="admin_name" maxlength="60" value="<?php echo ($data["admin_name"]); ?>" /><span class="require-field">*</span></td>
   </tr>
   <tr>
-      <input type='hidden' value='<?php echo ($data["id"]); ?>' name='id'/>
-    <td class="label">密码md5加密:</td>
-    <td><input type="password" name="admin_pwd" maxlength="60" value="<?php echo ($data["admin_pwd"]); ?>" /><span class="require-field">*</span></td>
+      
+    <td class="label">密码:</td>
+    <td><input type="password" name="admin_pwd" maxlength="60" /><span class="require-field">*</span></td>
+  </tr>
+  <tr>
+      
+    <td class="label">确认密码:</td>
+    <td><input type="password" name="re_admin_pwd" maxlength="60" /><span class="require-field">*</span></td>
+  </tr>
+   <tr>
+     
+    <td class="label">角色:</td>
+    <td><select name='role_id'><?php foreach($roles as $k=>$v):?><option value='<?php echo ($v["id"]); ?>' <?php if($v['id']==$data['role_id']) echo 'selected';?>><?php echo ($v["role_name"]); ?></option><?php endforeach;?></select><span class="require-field">*</span></td>
   </tr>
   <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
       <tr>

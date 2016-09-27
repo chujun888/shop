@@ -351,11 +351,11 @@ frmBody1.rows="113,*";
          </div> 
 <div id="submenu-div">
 <ul>
-<li class="show_9"><a href="privilege.php?act=logout" target="_top">退出</a></li>
+<li class="show_9"><a href="/admin/Back/Index/logout" target="_top">退出</a></li>
 <!--<li class="show_8"><a href="javascript:web_address();">帮助</a></li>-->
 <li class="show_8"><a href="http://www.68ecshop.com/ecshop_school.html" target="_blank">帮助</a></li>
 <li class="show_7"><a href="http://www.68ecshop.com/ecshop_topic/company/"  target="_blank">关于我们</a></li>
-<li class="show_6"><a href="privilege.php?act=modif" target="main_frame">个人设置</a></li>
+<li class="show_6"><a href="/admin/Back/manage/edit/id/<?php echo session('id');?>" target="main_frame">个人设置</a></li>
 
 
 <li class="show_5"><a href="message.php?act=list" target="main_frame">管理留言</a></li>
@@ -405,8 +405,8 @@ setTimeout("parent.main_frame.document.getElementById('menu_list').style.display
     
 -->    <li class="midd_22"><a href="/admin/Back/Index/main" target="main_frame">起始页</a></li>
 <!--    <li class="midd_23"><a href="privilege.php?act=modif" target="main_frame">设置导航栏</a></li>-->
-    <li class="midd_1"><a href="goods.php?act=list" target="main_frame">商品列表<span><em></em>117</span></a></li>
-    <li class="midd_2"><a href="order.php?act=list" target="main_frame">订单列表<span><em></em>0</span></a></li>
+    <li class="midd_1"><a href="/admin/Back/goods/lst" target="main_frame">商品列表<span><em></em>117</span></a></li>
+    <li class="midd_2"><a href="javascript:void(0);" target="main_frame">订单列表<span><em></em>0</span></a></li>
 <!--    <li class="midd_3"><a href="comment_manage.php?act=list" target="main_frame">用户评论<span><em></em>143</span></a></li>
     <li class="midd_4"><a href="users.php?act=list" target="main_frame">会员列表</a></li>
     <li class="midd_5"><a href="shop_config.php?act=list_edit" target="main_frame">商店设置</a></li>-->

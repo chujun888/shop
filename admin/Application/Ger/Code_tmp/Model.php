@@ -54,8 +54,82 @@ foreach($config[fields] as $k=>$v): if($v['type']=='password'):?>
         $offset=(I('get.page',1)-1)*$per;
         $fpage=$page->fpage();        
         $data=$this->where($where)->limit($offset,$per)->order("$way $order ")->select();
+        <?php if($config['digui']):?>$data=$this->getTree($data);<?php endif;?>
         return array('data'=>$data,'fpage'=>$fpage);
      }
+     
+     <?php if($config['digui']):?>
+      /**
+      * 数据树装排列
+      */
+     public function getTree($data=array()){
+         if(empty($data))
+            $data=$this->field('<?=$config['_pk']?>,<?=$config['diguiName']?>,parent_id')->select();
+          return $this->_getTree($data);
+     }
+     
+     private function _getTree($data,$id=0,$level=0){
+         //存储排序好的数组
+         static $arr=array();
+         foreach($data as $k=>$v){
+             if($v['parent_id']==$id){      
+                 $v['level']=$level;
+                 $arr[]=$v;
+                 $this->_getTree($data, $v['id'], $level+1);         
+             }
+         }
+         return $arr;
+     }
+     
+     /**
+      * 获取子类ID
+      * @param $Id int int
+      * @param $data array 筛选的数据
+      */
+     function getChildren($id,$data=array())
+     {
+         //所有数据
+         if(empty($data))
+             $data=$this->select ();
+         return $this->_getChildren($id,$data);
+     }
+     
+     private function _getChildren($id,$data){
+        static $arr=array();
+        foreach($data as $k=>$v){
+           if($v['parent_id']==$id){
+               $arr[]=$v['id'];
+               $this->_getChildren($v['id'], $data);
+           }  
+        }
+        return $arr;
+     }
+     
+      public function getNest($data=array()){
+         if(empty($data)){
+             $data=$this->select();
+         }
+         return $this->_getNest($data);
+     }
+     
+     public function _getNest($data,$pid=0){
+         //存放数据
+         
+         $arr=array();
+        
+         foreach($data as $k=>$v){
+             if($v['parent_id']==$pid)
+             {
+               
+                 $v['children']=$this->_getNest($data,$v['id']);
+                 $arr[]=$v;
+             }
+         }
+         return $arr;
+     }
+     
+     
+     <?php endif;?>
      
      
      

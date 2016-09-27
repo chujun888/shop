@@ -3,6 +3,8 @@ return array(
 'tableCN' =>'<?php echo $tableInfo['comment'];?>',#表中文名
 'TPName'=>'<?php $arr=explode('_', $tableInfo['name']);echo ucfirst($arr[1]);?>',#tp中使用的表名(首字母大写)
 'tpName'=>'<?php $arr=explode('_', $tableInfo['name']);echo $arr[1];?>',#tp中使用的表名(首字母大写)
+'digui'=>'',//是否无限极
+'diguiName'=>'',//无限循环的字段名
 
 <?php
    $_pk='id';#主键

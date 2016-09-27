@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtmltransitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 列表 </title>
+<title>商之翼 管理中心 - 管理员列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>
-<span class="action-span"><a href="/admin/Back/Manage/add">添加新</a></span>
+<span class="action-span"><a href="/admin/Back/Manage/add">添加新管理员</a></span>
 <span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
 <div style="clear:both"></div>
 </h1>
@@ -38,24 +38,24 @@
      
       <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="/admin/Public/images/sort_desc.gif"/>    </th>
               <th><a href='#'>管理员姓名</a></th>
-              <th><a href='#'>密码md5加密</a></th>
+              <th><a href='#'>角色</a></th>
               
     <th>操作</th>
     
 <!-- 循环输出-->    
     
 <?php foreach($data as $k=>$v):?>  <tr>
-    <tr>
+    <tr align="center">
     <td><?php echo ($v["id"]); ?></td>
          	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo ($v["admin_name"]); ?></span></td>
-         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo ($v["admin_pwd"]); ?></span></td>
+         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo ($v["role_name"]); ?></span></td>
             
         
     <td align="center">
-      <a href="/goods.php?id=233" target="_blank" title="查看"><img src="/admin/Public/images/icon_view.gif" width="16" height="16" border="0" /></a>
+      
       <a href="/admin/Back/Manage/edit/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/admin/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
-      <a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="删除"><img src="/admin/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
-      <img src="/admin/Public/images/empty.gif" width="16" height="16" border="0" />          
+      <?php if($v['id']!=1):?><a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="删除"><img src="/admin/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
+      <img src="/admin/Public/images/empty.gif" width="16" height="16" border="0" /><?php endif;?>
     </td>
     </tr>
 <?php endforeach;?>  </table>

@@ -1,14 +1,13 @@
 <?php 
 namespace Back\Controller;
-use Think\Controller;
-class ManageController extends Controller{
+use Base\Controller;
+class ManageController extends BaseController{
     
     //添加
     public function add(){
       if(IS_POST){
           $m_manage=D('Back/manage');
-          //create第二个参数1:添加2.修改
-          
+          //create第二个参数1:添加2.修改      
           if($m_manage->create(I('post.'),1)){
               if($m_manage->add()){
                 $this->success('添加成功', U('lst'));
@@ -17,6 +16,10 @@ class ManageController extends Controller{
           }
           $this->error($m_manage->getError());
       }
+      //取出所有角色
+      $roles=M('role')->select();
+      $this->assign('roles',$roles);
+      
       $this->display();   
     }
     
@@ -37,7 +40,7 @@ class ManageController extends Controller{
     public function edit(){
         $m_manage=D('Back/manage');
         if(IS_POST){
-            if($m_manage->create(I('post.'),2)){       
+            if($m_manage->create(I('post.'),2)!==false){       
                 if($m_manage->save()){
                     $this->success ('修改成功', U('lst'));
                     exit;
@@ -45,6 +48,10 @@ class ManageController extends Controller{
             }
             $this->error($m_manage->getError());
         }
+        //获取所有角色
+        $roles=D('Back/role')->select();
+        $this->assign('roles',$roles);
+        
         $data=$m_manage->find(I('get.id'));
         $this->assign('data',$data);
         $this->display();

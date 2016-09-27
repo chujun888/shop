@@ -1,8 +1,9 @@
-<?php if (!defined('THINK_PATH')) exit();?><!-- $Id: user_info.htm 16854 2009-12-07 06:20:09Z sxc_shop $ -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!-- $Id: goods_list.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtmltransitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>商之翼 管理中心 - 添加管理员 </title>
+<title>商之翼 管理中心 - 列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
@@ -10,52 +11,74 @@
 <script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
 </head>
 <body>
-
 <h1>
-<span class="action-span"><a href="/admin/Back/Manage/lst">管理员列表</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加管理员 </span>
+<span class="action-span"><a href="/admin/Back/Role/add">添加角色</a></span>
+<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> -角色列表 </span>
 <div style="clear:both"></div>
 </h1>
-<script type="text/javascript" src="/js/transport.org.js"></script><script type="text/javascript" src="/js/region.js"></script><div class="main-div">
-<!-- #代码增加2014-12-23 by www.68ecshop.com  _star -->
-<form method="post" action="" name="theForm" onsubmit="return validate()" enctype="multipart/form-data">
-<!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
-<table width="100%" >
+<script type="text/javascript" src="/js/utils.js"></script>
+<!-- 商品搜索 
+ $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ 
+<link href="/admin/Public/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/admin/Public/js/jquery.ztree.all-3.5.min.js"></script><script type="text/javascript" src="/admin/Public/js/category_selecter.js"></script><div class="form-div">
+    <form action="/admin/Back/Role/lst" name='search' method="post">
+    <img src="/admin/Public/images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+         关键字 
+        关键字 <input type="text" name="keyword" size="15" value=""/>
+          <input type="submit" value=" 搜索" class="button" />
+  </form>
+</div>-->
+<!-- 商品列表 -->
+<form method="post" action="" name="listForm" onsubmit="return confirmSubmit(this)">
+  <!-- start goods list -->
+  <div class="list-div" id="listDiv">
+<table cellpadding="3" cellspacing="1">
   <tr>
-    <td class="label">管理员姓名:</td>
-    <td><input type="text" name="admin_name" maxlength="60" value="" /><span class="require-field">*</span></td>
-  </tr>
-  <tr>
-    <td class="label">密码:</td>
-    <td><input type="password" name="admin_pwd" maxlength="60" value="" /><span class="require-field">*</span></td>
-  </tr>
-  <tr>
-    <td class="label">确认密码:</td>
-    <td><input type="password" name="re_admin_pwd" maxlength="60" value="" /><span class="require-field">*</span></td>
-  </tr>
+    <th>
+     
+      <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="/admin/Public/images/sort_desc.gif"/>    </th>
+              <th><a href='#'>角色名称</a></th>
+              
+    <th>操作</th>
     
-   <tr>
-    <td class="label">角色:</td>
-    <td><select name='role_id'><option value=''>请选择角色...<?php foreach($roles as $k=>$v):?><option value='<?php echo ($v["id"]); ?>'><?php echo ($v["role_name"]); ?></option><?php endforeach;?></option></select></td>
-  </tr>
-  <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
-      <tr>
-    <td colspan="2" align="center">
-      <input type="submit" value=" 确定 " class="button" />
-      <input type="reset" value=" 重置 " class="button" />
+<!-- 循环输出-->    
+    
+<?php foreach($data as $k=>$v):?>  <tr>
+    <tr>
+    <td><?php echo ($v["id"]); ?></td>
+         	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo ($v["role_name"]); ?></span></td>
+            
+        
+    <td align="center">
+      
+      <a href="/admin/Back/Role/edit/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/admin/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
+      <a href="/admin/Back/Role/delete/id/<?php echo ($v["id"]); ?>" title="删除"><img src="/admin/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
+      <img src="/admin/Public/images/empty.gif" width="16" height="16" border="0" />          
+    </td>
+    </tr>
+<?php endforeach;?>  </table>
+
+<!-- end goods list -->
+
+<!-- 分页 -->
+<table id="page-table" cellspacing="0">
+  <tr>
+    <td align="right" nowrap="true">
+         <?php echo ($fpage); ?>
+    </td>
   </tr>
 </table>
 
-</form>
 </div>
-<script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="/admin/Public/js/validator.js"></script>
-<script language="JavaScript">
-<!--
-region.isAdmin = true;
 
 
+</form>
+
+
+
+  
 <div id="footer">
-共执行 7 个查询，用时 0.302643 秒，Gzip 已禁用，内存占用 2.812 MB<br />
+共执行 7 个查询，用时 0.460674 秒，Gzip 已禁用，内存占用 6.910 MB<br />
 版权所有 &copy; 2008-2015 秦皇岛商之翼网络科技有限公司，并保留所有权利。</div>
 
 
@@ -68,7 +91,6 @@ region.isAdmin = true;
   <embed src="/admin/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
-
 <script language="JavaScript">
 document.onmousemove=function(e)
 {
@@ -95,15 +117,15 @@ function showTodoList(adminid)
 {
   if(!MyTodolist)
   {
-    var global = $import("/js/global.js","js");
+    var global = $import("../js/global.js","js");
     global.onload = global.onreadystatechange= function()
     {
       if(this.readyState && this.readyState=="loading")return;
-      var md5 = $import("/admin/Public/js/md5.js","js");
+      var md5 = $import("js/md5.js","js");
       md5.onload = md5.onreadystatechange= function()
       {
         if(this.readyState && this.readyState=="loading")return;
-        var todolist = $import("/admin/Public/js/todolist.js","js");
+        var todolist = $import("js/todolist.js","js");
         todolist.onload = todolist.onreadystatechange = function()
         {
           if(this.readyState && this.readyState=="loading")return;
@@ -209,7 +231,22 @@ if (document.getElementById("listDiv"))
   }
 
 }
-
+function remove(e,id){
+    if(confirm('确定要删除吗？')){
+        
+        //数据库删除
+        $.ajax({
+            url:"/admin/Back/Role/delete/id/"+id,
+            type:'get',
+            dataType:'json',
+            success:function(data){
+                if(data.ok==1)
+                $(e).parent().parent().remove();
+            }
+        });
+//        
+    }
+}    
 //-->
 </script>
 </body>
