@@ -176,12 +176,18 @@ class GoodsController extends BaseController{
     /**
      * 获取两个数组的笛卡尔积
      */
-    function getTwo($one,$two){
+        function getTwo($one,$two){
         $result=array();
       
         foreach($one as $k=>$v){
             foreach($two as $k1=>$v1){
-                $result[]=array($v,$v1);
+            	
+               $arr=$v;
+               if(isset($v['id'])){
+                   $arr=array($v);
+               }
+                $arr[]=$v1; 
+                $result[]=$arr;
             }
         } 
         return $result;

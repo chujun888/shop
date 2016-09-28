@@ -1,0 +1,252 @@
+[ 2016-09-16T23:26:09+08:00 ] 127.0.0.1 /login_act_ajax.php?1474039568906906
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+ERR: 无法加载模块:Login_act_ajax
+
+[ 2016-09-16T23:26:09+08:00 ] 127.0.0.1 /api/okgoods.php?1474039569264264
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+ERR: 无法加载模块:Api
+
+[ 2016-09-16T23:26:11+08:00 ] 127.0.0.1 /data/brandlogo/1437430309280593896.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:26:11+08:00 ] 127.0.0.1 /data/brandlogo/1437430279260423099.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:26:11+08:00 ] 127.0.0.1 /data/brandlogo/1437430574094435270.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000954s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:26:11+08:00 ] 127.0.0.1 /data/brandlogo/1437430433744102612.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:26:12+08:00 ] 127.0.0.1 /captcha.php?is_login=1&
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+ERR: 无法加载模块:Captcha
+
+[ 2016-09-16T23:26:32+08:00 ] 127.0.0.1 /user.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+ERR: 无法加载模块:User
+
+[ 2016-09-16T23:26:45+08:00 ] 127.0.0.1 /login_act_ajax.php?1474039605536536
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+ERR: 无法加载模块:Login_act_ajax
+
+[ 2016-09-16T23:26:45+08:00 ] 127.0.0.1 /data/brandlogo/1437430309280593896.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:26:45+08:00 ] 127.0.0.1 /data/brandlogo/1437430574094435270.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:26:45+08:00 ] 127.0.0.1 /data/brandlogo/1437430433744102612.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:26:45+08:00 ] 127.0.0.1 /data/brandlogo/1437430279260423099.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:26:45+08:00 ] 127.0.0.1 /captcha.php?is_login=1&
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+ERR: 无法加载模块:Captcha
+
+[ 2016-09-16T23:26:45+08:00 ] 127.0.0.1 /api/okgoods.php?1474039605832832
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+ERR: 无法加载模块:Api
+
+[ 2016-09-16T23:26:54+08:00 ] 127.0.0.1 /user.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+ERR: 无法加载模块:User
+
+[ 2016-09-16T23:27:12+08:00 ] 127.0.0.1 /login_act_ajax.php?1474039632805805
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+ERR: 无法加载模块:Login_act_ajax
+
+[ 2016-09-16T23:27:12+08:00 ] 127.0.0.1 /data/brandlogo/1437430574094435270.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:27:12+08:00 ] 127.0.0.1 /data/brandlogo/1437430279260423099.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:27:12+08:00 ] 127.0.0.1 /data/brandlogo/1437430309280593896.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:27:12+08:00 ] 127.0.0.1 /data/brandlogo/1437430433744102612.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+ERR: 无法加载模块:Data
+
+[ 2016-09-16T23:27:12+08:00 ] 127.0.0.1 /api/okgoods.php?1474039632961961
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+ERR: 无法加载模块:Api
+
+[ 2016-09-16T23:27:12+08:00 ] 127.0.0.1 /captcha.php?is_login=1&
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+ERR: 无法加载模块:Captcha
+
+[ 2016-09-16T23:27:15+08:00 ] 127.0.0.1 /user.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+ERR: 无法加载模块:User
+
+[ 2016-09-16T23:27:17+08:00 ] 127.0.0.1 /login_act_ajax.php?1474039637282282
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+ERR: 无法加载模块:Login_act_ajax
+
+[ 2016-09-16T23:27:17+08:00 ] 127.0.0.1 /api/okgoods.php?1474039637531531
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+ERR: 无法加载模块:Api
+
+[ 2016-09-16T23:27:27+08:00 ] 127.0.0.1 /login_act_ajax.php?1474039647125125
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+ERR: 无法加载模块:Login_act_ajax
+
+[ 2016-09-16T23:27:27+08:00 ] 127.0.0.1 /api/okgoods.php?1474039647344344
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+ERR: 无法加载模块:Api
+
+[ 2016-09-16T23:27:45+08:00 ] 127.0.0.1 /category.php?id=118
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+ERR: 无法加载模块:Category
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /themes/68ecshopcom_360buy/css/category.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+ERR: 无法加载模块:Themes
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /themes/68ecshopcom_360buy/js/jquery_006.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+ERR: 无法加载模块:Themes
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /themes/68ecshopcom_360buy/js/base-2011.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+ERR: 无法加载模块:Themes
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /themes/68ecshopcom_360buy/js/search_goods.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+ERR: 无法加载模块:Themes
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /login_act_ajax.php?1474039678597597
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+ERR: 无法加载模块:Login_act_ajax
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /themes/68ecshopcom_360buy/images/display_mode_list.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+ERR: 无法加载模块:Themes
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /themes/68ecshopcom_360buy/images/display_mode_grid_act.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+ERR: 无法加载模块:Themes
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /themes/68ecshopcom_360buy/images/display_mode_text.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+ERR: 无法加载模块:Themes
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /captcha.php?is_login=1&
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+ERR: 无法加载模块:Captcha
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /user.php?act=re_collect&id=0&1474039678629629
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+ERR: 无法加载模块:User
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /api/okgoods.php?1474039678707707
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+ERR: 无法加载模块:Api
+
+[ 2016-09-16T23:27:58+08:00 ] 127.0.0.1 /pre_sale.php?act=check_order&1474039678707707
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+ERR: 无法加载模块:Pre_sale
+
+[ 2016-09-16T23:38:41+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+ERR: 无法加载模块:Favicon
+
