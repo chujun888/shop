@@ -5,9 +5,9 @@
 <title>商之翼 管理中心 - 添加商品分类 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="__PUBLIC__/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
+<link href="/Public/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/Public/js/common.js"></script>
 </head>
 <body>
 
@@ -30,11 +30,11 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 }
 </script>
 <h1>
-<span class="action-span"><a href="/admin/Back/Category/lst">商品分类列表</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加商品分类 </span>
+<span class="action-span"><a href="/Back/Category/lst">商品分类列表</a></span>
+<span class="action-span1"><a href="/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加商品分类 </span>
 <div style="clear:both"></div>
 </h1>
-<script type="text/javascript" src="__PUBLIC__/js/transport.org.js"></script><script type="text/javascript" src="__PUBLIC__/js/region.js"></script><div class="main-div">
+<script type="text/javascript" src="/js/transport.org.js"></script><script type="text/javascript" src="/js/region.js"></script><div class="main-div">
 <!-- #代码增加2014-12-23 by www.68ecshop.com  _star -->
 <form method="post" action="" name="theForm" onsubmit="return validate()" enctype="multipart/form-data">
 <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
@@ -47,6 +47,10 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
     <td class="label">上级分类:</td>
     <td><select name="parent_id"><option value='0' selected>顶级分类</option><?php foreach($data as $k=>$v):?><option value='<?php echo ($v["id"]); ?>'><?php echo str_repeat('&nbsp;',$v['level']*4).$v['cat_name'];?></option><?php endforeach;?></select></td>
   </tr>
+      <tr>
+          <td class="label">是否推荐楼层:</td>
+          <td>是：<input type="radio" name="is_floor"  value="1" />否：<input type='radio' name='is_floor' value='0'/></td>
+    </tr>
     <tr>
           <td class="label">是否显示:</td>
           <td>是：<input type="radio" name="is_show"  value="1" />否：<input type='radio' name='is_show' value='0'/></td>
@@ -61,7 +65,7 @@ parent.main_frame.document.getElementById('menu_list').style.display = 'none';
 
 </form>
 </div>
-<script type="text/javascript" src="__PUBLIC__/js/utils.js"></script><script type="text/javascript" src="/admin/Public/js/validator.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="/Public/js/validator.js"></script>
 <script language="JavaScript">
 <!--
 region.isAdmin = true;
@@ -73,12 +77,12 @@ region.isAdmin = true;
 
 
 <!--
-<embed src="/admin/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
+<embed src="/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
-  <param name="movie" value="/admin/Public/images/online.swf">
+  <param name="movie" value="/Public/images/online.swf">
   <param name="quality" value="high">
-  <embed src="/admin/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  <embed src="/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
 
@@ -108,15 +112,15 @@ function showTodoList(adminid)
 {
   if(!MyTodolist)
   {
-    var global = $import("__PUBLIC__/js/global.js","js");
+    var global = $import("/js/global.js","js");
     global.onload = global.onreadystatechange= function()
     {
       if(this.readyState && this.readyState=="loading")return;
-      var md5 = $import("/admin/Public/js/md5.js","js");
+      var md5 = $import("/Public/js/md5.js","js");
       md5.onload = md5.onreadystatechange= function()
       {
         if(this.readyState && this.readyState=="loading")return;
-        var todolist = $import("/admin/Public/js/todolist.js","js");
+        var todolist = $import("/Public/js/todolist.js","js");
         todolist.onload = todolist.onreadystatechange = function()
         {
           if(this.readyState && this.readyState=="loading")return;

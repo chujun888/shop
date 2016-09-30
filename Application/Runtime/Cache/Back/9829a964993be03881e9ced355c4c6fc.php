@@ -4,25 +4,26 @@
 <title>商之翼 管理中心 - 商品添加 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
+<link href="/Public/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/styles/main.css" rel="stylesheet" type="text/css" />
 <!-- 修改 by www.68ecshop.com 百度编辑器 begin -->
-<script type="text/javascript" src="/admin/Public/js/jquery.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="/admin/Public/js/transport_bd.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script><!-- 修改 by www.68ecshop.com 百度编辑器 end -->
+<script type="text/javascript" src="/Public/js/jquery.js"></script><script type="text/javascript" src="/Public/js/jquery.json.js"></script><script type="text/javascript" src="/Public/js/transport_bd.js"></script><script type="text/javascript" src="/Public/js/common.js"></script><!-- 修改 by www.68ecshop.com 百度编辑器 end -->
+<link rel="stylesheet" type="text/css" href="/Public/timePicker/jquery.datetimepicker.css"/>
 </head>
 <body>
 
 
 <h1>
-<span class="action-span"><a href="/admin/Back/Goods/lst">商品列表</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加新商品 </span>
+<span class="action-span"><a href="/Back/Goods/lst">商品列表</a></span>
+<span class="action-span1"><a href="/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加新商品 </span>
 <div style="clear:both"></div>
 </h1>
- <script type="text/javascript" src="__PUBLIC__/js/utils.js"></script><script type="text/javascript" src="/admin/Public/js/selectzone_bd.js"></script><script type="text/javascript" src="/admin/Public/js/colorselector.js"></script><!-- 修改 by www.68ecshop.com 百度编辑器 end -->
-<script type="text/javascript" src="__PUBLIC__/js/calendar.php?lang="></script>
-<link href="__PUBLIC__/js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+ <script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="/Public/js/selectzone_bd.js"></script><script type="text/javascript" src="/Public/js/colorselector.js"></script><!-- 修改 by www.68ecshop.com 百度编辑器 end -->
+<script type="text/javascript" src="/js/calendar.php?lang="></script>
+<link href="/js/calendar/calendar.css" rel="stylesheet" type="text/css" />
 <!-- zTree Style -->
-<link href="/admin/Public/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery.ztree.all-3.5.min.js"></script><script type="text/javascript" src="/admin/Public/js/category_selecter.js"></script> 
+<link href="/Public/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/js/jquery.ztree.all-3.5.min.js"></script><script type="text/javascript" src="/Public/js/category_selecter.js"></script> 
 <!-- start goods form -->
 <div class="tab-div">
 	<!-- tab bar -->
@@ -49,7 +50,7 @@
 					<td>
 						<input type="text" name="goods_name" value="" style="float:left;color:;" size="30" />
 						<div style="background-color:;float:left;margin-left:2px;" id="font_color" onclick="ColorSelecter.Show(this);">
-							<img src="/admin/Public/images/color_selecter.gif" style="margin-top:-1px;" />
+							<img src="/Public/images/color_selecter.gif" style="margin-top:-1px;" />
 						</div>
 
 						<span class="require-field">*</span>					</td>
@@ -90,7 +91,7 @@
 								<tr>
 					<td class="label">
 						<a href="javascript:showNotice('noticeUserPrice');" title="点击此处查看提示信息">
-							<img src="/admin/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
+							<img src="/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
 						</a>
 						会员价格：					</td>
 					<td><?php foreach($levels as $k=>$v):?>
@@ -114,7 +115,7 @@
 				<tr>
 					<td class="label">
 						<a href="javascript:showNotice('giveIntegral');" title="点击此处查看提示信息">
-							<img src="/admin/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
+							<img src="/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
 						</a>
 						赠送消费积分数：					</td>
 					<td>
@@ -126,7 +127,7 @@
 				<tr>
 					<td class="label">
 						<a href="javascript:showNotice('rankIntegral');" title="点击此处查看提示信息">
-							<img src="/admin/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
+							<img src="/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
 						</a>
 						赠送等级积分数：					</td>
 					<td>
@@ -139,22 +140,22 @@
 				<tr>
 					<td class="label">
 						<label for="is_promote">
-							<input type="checkbox" id="is_promote" name="is_promote"   onclick="handlePromote(this.checked);" />
+							<input type="checkbox" id="is_promote" name="is_promote"   value='1'onclick="isPromote(this);" />
 							促销价：						</label>
 					</td>
 					<td id="promote_3">
-						<input type="text" id="promote_1" name="promote_price"  value='0.00' size="20" />
+						<input type="text" id="promote" name="promote_price" value='0.00' readonly='readonly'  size="20" />
 					</td>
 				</tr>
 
 				<tr id="promote_4">
 					<td class="label" id="promote_5">促销日期：</td>
 					<td id="promote_6">
-						<input name="promote_start_time" type="text" id="promote_start_date" size="12"  readonly="readonly" />
-						<input name="selbtn1" type="button" id="selbtn1" onclick="return showCalendar('promote_start_date', '%Y-%m-%d', false, false, 'selbtn1');" value="选择" class="button" />
+						<input name="promote_start_time" type="text" id="promote_start_time"  readonly="readonly" />
+						
 						-
-						<input name="promote_end_time" type="text" id="promote_end_date" size="12" readonly="readonly" />
-						<input name="selbtn2" type="button" id="selbtn2" onclick="return showCalendar('promote_end_date', '%Y-%m-%d', false, false, 'selbtn2');" value="选择" class="button" />
+						<input name="promote_end_time" type="text" id="promote_end_time"  readonly="readonly" />
+						
 					</td>
 				</tr>
 
@@ -165,7 +166,7 @@
 					<td class="label">上传商品图片：</td>
 					<td>
 						<input type="file" name="logo" size="35" />
-												<img src="/admin/Public/images/no.gif" />
+												<img src="/Public/images/no.gif" />
 												<br />
 						
 					</td>
@@ -202,7 +203,7 @@ src="/includes/ueditor/ueditor.all.js"></script>
 				<tr>
 					<td class="label">
 						<a href="javascript:showNotice('noticeStorage');" title="点击此处查看提示信息">
-							<img src="/admin/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
+							<img src="/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
 						</a>
 						商品库存数量：					</td>
 					<!--            <td><input type="text" name="goods_number" value="1" size="20"  /><br />-->
@@ -244,7 +245,7 @@ src="/includes/ueditor/ueditor.all.js"></script>
 				<tr >
 					<td class="label">
 						<a href="javascript:showNotice('noticeGoodsType');" title="点击此处查看提示信息">
-							<img src="/admin/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
+							<img src="/Public/images/notice.gif" width="16" height="16" border="0" alt="点击此处查看提示信息">
 						</a>
 						商品类型：					</td>
 					<td>
@@ -321,8 +322,28 @@ src="/includes/ueditor/ueditor.all.js"></script>
 		</form>
 	</div>
 </div>
+<script src="/Public/timePicker/jquery.js"></script>
+<script src="/Public/timePicker/jquery.datetimepicker.js"></script>
 <!-- end goods form -->
-<script type="text/javascript" src="/admin/Public/js/validator.js"></script><script type="text/javascript" src="/admin/Public/js/tab.js"></script><script language="JavaScript">
+<script type="text/javascript" src="/Public/js/validator.js"></script><script type="text/javascript" src="/Public/js/tab.js"></script><script language="JavaScript">
+    var logic = function( currentDateTime ){
+	if( currentDateTime.getDay()==6 ){
+		this.setOptions({
+			minTime:'11:00'
+		});
+	}else
+		this.setOptions({
+			minTime:'8:00'
+		});
+};
+    $('#promote_start_time').datetimepicker({
+	onChangeDateTime:logic,
+	onShow:logic
+    });
+    $('#promote_end_time').datetimepicker({
+            onChangeDateTime:logic,
+            onShow:logic
+    });
   var goodsId = '0';
   var elements = document.forms['theForm'].elements;
   var sz1 = new SelectZone(1, elements['source_select1'], elements['target_select1']);
@@ -382,7 +403,7 @@ function getAttrList(e){
             });
            
         },
-        url:'/admin/Back/Goods/ajaxAttr/type_id/'+value,
+        url:'/Back/Goods/ajaxAttr/type_id/'+value,
         
     });
 }
@@ -406,12 +427,22 @@ function addNew(e){
         p.after(clone);
     }
 }
-
+//促销可选 promote st
+function isPromote(e){
+    //选中促销
+    if($(e).attr('checked')){
+        $("#promote,#st").removeAttr('readonly');
+    }
+    else{
+        $('#promote,#st').attr('readonly','readonly');
+    }
+}
 
 
 
   
 </script>
+
 <div id="footer">
 共执行 10 个查询，用时 0.955376 秒，Gzip 已禁用，内存占用 7.405 MB<br />
 版权所有 &copy; 2008-2015 秦皇岛商之翼网络科技有限公司，并保留所有权利。</div>

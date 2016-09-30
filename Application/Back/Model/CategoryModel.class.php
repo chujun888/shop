@@ -3,8 +3,8 @@ namespace Back\Model;
 use Think\Model;
 class   CategoryModel extends Model{
     #添加时允许插入的字段
-     protected $insertFields='cat_name,parent_id,cat_desc,sort_order,unit,is_show,filter_attr_id';
-    protected $updateFields='id,cat_name,parent_id,cat_desc,sort_order,unit,is_show,filter_attr_id';
+     protected $insertFields='cat_name,parent_id,cat_desc,sort_order,unit,is_show,filter_attr_id,is_floor';
+    protected $updateFields='id,cat_name,parent_id,cat_desc,sort_order,unit,is_show,filter_attr_id,is_floor';
     #自动验证
      protected $_validate=array(
 		 array('cat_name','0,30','商品类别名称应小于30',0,'length'),
@@ -19,6 +19,33 @@ class   CategoryModel extends Model{
 
  
      );
+     
+      /**
+      * 获取嵌套展示
+      * 
+      */
+     public function getNest($data=array()){
+         if(empty($data)){
+             $data=$this->select();
+         }
+         return $this->_getNest($data);
+     }
+     
+     public function _getNest($data,$pid=0){
+         //存放数据
+         
+         $arr=array();
+        
+         foreach($data as $k=>$v){
+             if($v['parent_id']==$pid)
+             {
+               
+                 $v['children']=$this->_getNest($data,$v['id']);
+                 $arr[]=$v;
+             }
+         }
+         return $arr;
+     }
      
      /**
       * 数据树装排列
@@ -121,6 +148,87 @@ class   CategoryModel extends Model{
         return array('data'=>$data,'fpage'=>$fpage);
      }
      
+     /**
+      * 获取促销商品
+      */
+     public function getPromote(){
+        $date= strtotime(date('Y-m-d H:i'));
+        $where['is_promote']=array('eq',1);
+        $where['promote_start_time']=array('lt',$date);
+        $where['promote_end_time']=array('gt',$date);
+        $goods=M('goods')->field('promote_price,goods_name,promote_price,sm_logo')->where($where)->order('id desc')->limit(4)->select();
+        return $goods;
+        
+     }
+     
+     /**
+      * 获取热，最佳，最新商品
+      */
+     public function getSelect($way){
+         $where[$way]=array('eq',1);
+         $where['is_on_sale']=array('eq',1);
+         $goods=M('goods')->field('shop_price,sm_logo,goods_name')->where($where)->order('id desc')->limit(4)->select();
+         return $goods;
+     }
+     
+     /**
+      * 获取推荐楼层
+      */
+     public function getFloor(){
+     
+       
+      
+            $cats=$this->select();
+            $m_goods=M('goods');
+            //搜索商品条件
+            $where['is_on_sale']=1;
+            //推荐数据
+            $arr=array();
+            foreach($cats as $k=>$v){
+                if($v['parent_id']==0 && $v['is_floor']==1){
+                     $v['rec_cat']=array();
+                        $v['unrec_cat']=array();
+                    //获取下级推荐不推荐分类
+                    foreach($cats as $k1=>$v1){
+                        //推荐分类
+                       
+                        if($v1['parent_id']==$v['id']){
+                            if($v1['is_floor']==1){
+                                //获取当前分类的8个商品
+                                $where['cat_id']=$v1['id'];
+                                $goods=$m_goods->field('goods_name,shop_price,sm_logo')->where($where)->limit(8)->select();
+                                $v1['goods']=$goods;
+                                $v['rec_cat'][]=$v1;
+                            }
+                            //不推荐分类
+                           else
+                                $v['unrec_cat'][]=$v1;
+                        }
+                        
+                        
+                    }
+                    $where['cat_id']=$v['id'];
+                    $goods=$m_goods->field('goods_name,shop_price,sm_logo')->where($where)->limit(8)->select();
+                    $v['goods']=$goods;
+                    $v['brand']=$this->getBrand($v['id']);
+                    $arr[]=$v;
+                }
+                 
+         
+         }
+         return $arr;
+     }
+     
+     /**
+      * 根据分类，获取分类下的品牌信息
+      * @param $cat_id int 获取的分类Id
+      */
+     public function getBrand($cat_id){
+         $children=D('Back/Category')->getChildren($cat_id);
+         $children[]=$cat_id;
+         $brands=M('goods')->alias('a')->join('__BRAND__ as b on b.id=a.brand_id')->field('distinct b.logo,b.id,b.brand_name')->where(array('a.cat_id'=>array('in',$children)))->select();
+         return $brands;
+     }
      
      
   

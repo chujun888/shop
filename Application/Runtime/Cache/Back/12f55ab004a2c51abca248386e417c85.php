@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/Public/styles/general.css" rel="stylesheet" type="text/css" />
 <link href="/Public/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="__PUBLIC__/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="__PUBLIC__/js/jquery.json.js"></script><script type="text/javascript" src="__PUBLIC__/js/transport.js"></script><script type="text/javascript" src="__PUBLIC__/js/common.js"></script><script language="JavaScript">
+<script type="text/javascript" src="/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/js/common.js"></script><script language="JavaScript">
 <!--
 // 这里把JS用到的所有语言都赋值到这里
 
@@ -141,15 +141,15 @@ function showTodoList(adminid)
 {
   if(!MyTodolist)
   {
-    var global = $import("__PUBLIC__/js/global.js","js");
+    var global = $import("/js/global.js","js");
     global.onload = global.onreadystatechange= function()
     {
       if(this.readyState && this.readyState=="loading")return;
-      var md5 = $import("__PUBLIC__/js/md5.js","js");
+      var md5 = $import("/js/md5.js","js");
       md5.onload = md5.onreadystatechange= function()
       {
         if(this.readyState && this.readyState=="loading")return;
-        var todolist = $import("__PUBLIC__/js/todolist.js","js");
+        var todolist = $import("/js/todolist.js","js");
         todolist.onload = todolist.onreadystatechange = function()
         {
           if(this.readyState && this.readyState=="loading")return;

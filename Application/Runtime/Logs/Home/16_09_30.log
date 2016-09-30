@@ -1,0 +1,561 @@
+[ 2016-09-30T12:56:39+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+
+[ 2016-09-30T12:57:14+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0303s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0423s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475211420 AND `promote_end_time` > 1475211420 ORDER BY id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0004s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000850s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000952s ]
+
+[ 2016-09-30T13:28:34+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0063s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475213280 AND `promote_end_time` > 1475213280 ORDER BY id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0008s ]
+
+[ 2016-09-30T13:28:57+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000780s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0060s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475213280 AND `promote_end_time` > 1475213280 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0001s ]
+
+[ 2016-09-30T13:48:21+08:00 ] 127.0.0.1 /goods.php?id=233
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001051s ]
+ERR: 无法加载控制器:Goods.php
+
+[ 2016-09-30T13:50:58+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001336s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0066s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475214600 AND `promote_end_time` > 1475214600 ORDER BY id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [8] Undefined index: brand E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 539 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 539 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000847s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000936s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001443s ]
+
+[ 2016-09-30T13:53:31+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0061s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475214780 AND `promote_end_time` > 1475214780 ORDER BY id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000218s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000325s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [8] Undefined index: brand E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 539 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 539 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001535s ]
+
+[ 2016-09-30T13:53:32+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+
+[ 2016-09-30T13:53:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0072s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475214780 AND `promote_end_time` > 1475214780 ORDER BY id desc LIMIT 4   [ RunTime:0.0016s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0019s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0002s ]
+
+[ 2016-09-30T13:55:00+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0055s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475214900 AND `promote_end_time` > 1475214900 ORDER BY id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: brand E:\php\http\fuxi\Application\Home\Controller\IndexController.class.php 第 19 行.
+
+[ 2016-09-30T13:55:37+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0071s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475214900 AND `promote_end_time` > 1475214900 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0004s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024708s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000852s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000963s ]
+
+[ 2016-09-30T13:55:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0057s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475214900 AND `promote_end_time` > 1475214900 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024299s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000854s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000965s ]
+
+[ 2016-09-30T13:56:23+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0055s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475214960 AND `promote_end_time` > 1475214960 ORDER BY id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001211s ]
+
+[ 2016-09-30T13:56:42+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0054s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475214960 AND `promote_end_time` > 1475214960 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020155s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001353s ]
+
+[ 2016-09-30T13:56:52+08:00 ] 127.0.0.1 /index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0055s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475214960 AND `promote_end_time` > 1475214960 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000798s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000915s ]
+
+[ 2016-09-30T13:57:00+08:00 ] 127.0.0.1 /index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0044s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475215020 AND `promote_end_time` > 1475215020 ORDER BY id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024382s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000945s ]
+
+[ 2016-09-30T13:57:03+08:00 ] 127.0.0.1 /index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0060s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475215020 AND `promote_end_time` > 1475215020 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020083s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2016-09-30T13:57:05+08:00 ] 127.0.0.1 /index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0060s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475215020 AND `promote_end_time` > 1475215020 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021919s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005217s ]
+
+[ 2016-09-30T13:57:07+08:00 ] 127.0.0.1 /index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0053s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475215020 AND `promote_end_time` > 1475215020 ORDER BY id desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2016-09-30T13:57:08+08:00 ] 127.0.0.1 /index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0058s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1475215020 AND `promote_end_time` > 1475215020 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 33 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 6 LIMIT 8   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('33','36','6')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+

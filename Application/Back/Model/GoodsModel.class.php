@@ -16,7 +16,10 @@ class GoodsModel extends Model{
      //插入前钩子函数
      protected function _before_insert(&$data, $options) {
          parent::_before_insert($data, $options);
-    
+         
+         $data['promote_start_time']=strtotime(I('post.promote_start_time'));
+         $data['promote_end_time']=strtotime(I('post.promote_end_time'));
+       
          //生成时间
          $data['addtime']=time();
          //过滤goods_desc
@@ -118,7 +121,8 @@ class GoodsModel extends Model{
       */
      protected function _before_update(&$data, $options) {
          parent::_before_update($data, $options);
-        
+        $data['promote_start_time']=strtotime(I('post.promote_start_time'));
+         $data['promote_end_time']=strtotime(I('post.promote_end_time'));
          $id=$options['where']['id']; 
          /*******图片********/
         
@@ -183,34 +187,35 @@ class GoodsModel extends Model{
          
          /*****商品属性*******/
         $attrs=I('post.attr');
+        if(!empty($attrs)){
         //所有修改的id的集合
-        $list=array();
-        $m_goods_attr=M('goodsAttr');
-        foreach($attrs as $k=>$v){
-            foreach($v as $k1=>$v1){
-                if($v1){
-                    $list[]=$k1;
-                    //修改商品属性
-                    $m_goods_attr->save(array('id'=>$k1,'attr_value'=>$v1));    
-                }
-            }
-        }
-        //删除未修改的属性
-        $where['goods_id']=array('eq',$id);
-        $where['id']=array('not in',$list);
-        $m_goods_attr->where($where)->delete();
-        //添加新属性
-        $new_attr=I('post.new_attr');
-        if($new_attr){
-            foreach($new_attr as $k=>$v){
+            $list=array();
+            $m_goods_attr=M('goodsAttr');
+            foreach($attrs as $k=>$v){
                 foreach($v as $k1=>$v1){
-                    if($v1)
-                     $m_goods_attr->add(array('goods_id'=>$id,'attr_id'=>$k,'attr_value'=>$v1));
+                    if($v1){
+                        $list[]=$k1;
+                        //修改商品属性
+                        $m_goods_attr->save(array('id'=>$k1,'attr_value'=>$v1));    
+                    }
                 }
             }
-           
+            //删除未修改的属性
+            $where['goods_id']=array('eq',$id);
+            $where['id']=array('not in',$list);
+            $m_goods_attr->where($where)->delete();
+            //添加新属性
+            $new_attr=I('post.new_attr');
+            if($new_attr){
+                foreach($new_attr as $k=>$v){
+                    foreach($v as $k1=>$v1){
+                        if($v1)
+                         $m_goods_attr->add(array('goods_id'=>$id,'attr_id'=>$k,'attr_value'=>$v1));
+                    }
+                }
+
+            }
         }
-       
          
      }
      

@@ -5,7 +5,7 @@
 **/
 
 function removeXSS($data){
-    require_once '../includes/htmlpurifier/HTMLPurifier.auto.php';
+    require_once '/includes/htmlpurifier/HTMLPurifier.auto.php';
     $_clean_xss_config = HTMLPurifier_Config::createDefault();
     $_clean_xss_config->set('Core.Encoding', 'UTF-8');
     $_clean_xss_config->set('HTML.Allowed','div,b,strong,i,em,a[href|title],ul,ol,li,p[style],br,span[style],img[width|height|alt|src]');
@@ -20,20 +20,23 @@ function removeXSS($data){
 *上传图片
  * @param $data array =>logo图片地址 =>sm_logo缩略图地址 上传文件数组
  * @param $dir string 上传目录
+ * @param $sm bool 是否生成缩略图
 **/
-function uploadOne($data,$dir="Goods/"){
+function uploadOne($data,$dir="Goods/",$sm=true){
 	$upload=new \Think\Upload();
         $upload->rootPath=C('UPLOAD_PATH');
         $upload->savePath=$dir;
         if($res=$upload->uploadOne($data)){
             $ret['logo']=$res['savepath'].$res['savename'];
-            $image=new \Think\Image();
-            $image->open(C('UPLOAD_PATH').$ret['logo']);
-            $image->thumb(200, 200);
-            $sm_path=$res['savepath'].'sm_'.$res['savename'];
-            $image->save(C('UPLOAD_PATH').$sm_path);
-            //返回缩略图地址
-            $ret['sm_logo']=$sm_path;
+            if($sm){
+                $image=new \Think\Image();
+                $image->open(C('UPLOAD_PATH').$ret['logo']);
+                $image->thumb(200, 200);
+                $sm_path=$res['savepath'].'sm_'.$res['savename'];
+                $image->save(C('UPLOAD_PATH').$sm_path);
+                //返回缩略图地址
+                $ret['sm_logo']=$sm_path;
+            }
             return $ret;
         }
         //返回错误信息
@@ -50,7 +53,8 @@ function uploadOne($data,$dir="Goods/"){
  * return image_html string 展示图片的Html代码
  */
 function showImage($path,$width=200,$height=200){
-    echo "<image src='$path' width='$width' height='$height'/>";
+    $path=C('SHOW_PATH').$path;
+    echo "<image src='$path' />";
 }
 
 

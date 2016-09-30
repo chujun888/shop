@@ -41,8 +41,9 @@ class CategoryController extends BaseController{
     public function edit(){
         $m_category=D('Back/category');
         if(IS_POST){
-            if($m_category->create(I('post.'),2)!==false){       
-                if($m_category->save()){
+            if($m_category->create(I('post.'),2)){       
+              
+                if($m_category->save()!==false){
                     $this->success ('修改成功', U('lst'));
                     exit;
                 }

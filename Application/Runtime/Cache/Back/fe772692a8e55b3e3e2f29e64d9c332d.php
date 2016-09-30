@@ -6,20 +6,20 @@
 <title>商之翼 管理中心 - 属性列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="__PUBLIC__/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
+<link href="/Public/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/Public/js/common.js"></script>
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="/admin/Back/Attr/add/type_id/<?php echo I('get.type_id');?>">添加新属性</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
+    <span class="action-span"><a href="/Back/Attr/add/type_id/<?php echo I('get.type_id');?>">添加新属性</a></span>
+<span class="action-span1"><a href="/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
 <div style="clear:both"></div>
 </h1>
-<script type="text/javascript" src="__PUBLIC__/js/utils.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script>
 <div class="form-div">
   <form action="" name="searchForm">
-    <img src="/admin/Public/images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+    <img src="/Public/images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
     按商品类型显示：<select name='type_id' onchange="change(this)"><?php foreach($types as $k=>$v):?><option value='<?php echo ($v["id"]); ?>' <?php if($v['id']==I('get.type_id')) echo 'selected="selected"';?>><?php echo ($v["type_name"]); ?></option>><?php endforeach;?></select>
   </form>
 </div>
@@ -31,7 +31,7 @@
   <tr>
     <th>
      
-      <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="/admin/Public/images/sort_desc.gif"/>    </th>
+      <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="/Public/images/sort_desc.gif"/>    </th>
               <th><a href='#'>属性名称</a></th>
               <th><a href='#'>属性类型</a></th>
               <th><a href='#'>可选值：（多个用,分开）</a></th>
@@ -50,9 +50,9 @@
         
     <td align="center">
       
-        <a href="/admin/Back/Attr/edit/type_id/<?php echo I('get.type_id');?>/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/admin/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
-      <a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="删除"><img src="/admin/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
-      <img src="/admin/Public/images/empty.gif" width="16" height="16" border="0" />          
+        <a href="/Back/Attr/edit/type_id/<?php echo I('get.type_id');?>/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
+      <a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="删除"><img src="/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
+      <img src="/Public/images/empty.gif" width="16" height="16" border="0" />          
     </td>
     </tr>
 <?php endforeach;?>  </table>
@@ -82,12 +82,12 @@
 
 
 <!--
-<embed src="/admin/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
+<embed src="/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
-  <param name="movie" value="/admin/Public/images/online.swf">
+  <param name="movie" value="/Public/images/online.swf">
   <param name="quality" value="high">
-  <embed src="/admin/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  <embed src="/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
 <script language="JavaScript">
@@ -235,7 +235,7 @@ function remove(e,id){
         
         //数据库删除
         $.ajax({
-            url:"/admin/Back/Attr/delete/id/"+id,
+            url:"/Back/Attr/delete/id/"+id,
             type:'get',
             dataType:'json',
             success:function(data){
@@ -249,7 +249,7 @@ function remove(e,id){
 
 //商品类型改变
 function change(e){
-    location.href="/admin/Back/Attr/lst/type_id/"+$(e).val();
+    location.href="/Back/Attr/lst/type_id/"+$(e).val();
 }
 </script>
 </body>

@@ -18,6 +18,17 @@ class   BrandModel extends Model{
      //插入前钩子函数
      protected function _before_insert(&$data, $options) {
          parent::_before_insert($data, $options);
+         //插入图片
+         if($_FILES['logo']['error']==0){
+             $res=uploadOne($_FILES['logo'],'Brand/',false);
+             if(isset($res['logo'])){
+                 $data['logo']=$res['logo'];
+             }
+             else{
+                 $this->error=$res['error'];
+                 return false;
+             }
+         }
      }
      
      /**
@@ -25,6 +36,20 @@ class   BrandModel extends Model{
       */
      protected function _before_update(&$data, $options) {
          parent::_before_update($data, $options);
+            if($_FILES['logo']['error']==0){
+                //删除原图片
+                $row=$this->field('logo')->find($options['where']['id']);
+                @unlink(C('UPLOAD_PATH').$row['logo']);
+                
+                $res=uploadOne($_FILES['logo'],'Brand/',false);
+                if(isset($res['logo'])){
+                    $data['logo']=$res['logo'];
+                }
+                else{
+                    $this->error=$res['error'];
+                    return false;
+                }
+         }
      }
      
      

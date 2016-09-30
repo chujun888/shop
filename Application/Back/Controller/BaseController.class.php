@@ -10,6 +10,7 @@ class BaseController extends Controller{
     }
     //验证用户是否登录
     protected  function check(){
+       
           if(!session('id')){
               $this->error('请登录', U('login/index'));
               exit;

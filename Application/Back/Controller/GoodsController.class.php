@@ -50,6 +50,7 @@ class GoodsController extends BaseController{
      * 修改
      */
     public function edit(){
+        
         $m_goods=D('Back/goods');
         if(IS_POST){
             if($m_goods->create(I('post.'),2)){    
@@ -92,6 +93,8 @@ class GoodsController extends BaseController{
         $ext=M('extCat');
         $exts=$ext->where(array('goods_id'=>array('eq',I('get.id'))))->select();
         
+      
+        
         $this->assign('exts',$exts);
         $this->assign('data',$data);
         $this->display();
@@ -102,7 +105,7 @@ class GoodsController extends BaseController{
      * 放入回收站
      */
     public function recycle(){
-        $m_goods=M('goods');
+        $m_goods=D('Back/goods');
        if($m_goods->save(array('id'=>I('get.id'),'is_delete'=>1))!==false)
            $data=array('ok'=>1);
         else
@@ -142,10 +145,8 @@ class GoodsController extends BaseController{
                 $arr1[]=array('id'=>$v1,'value'=>$values[$k1],'attr_name'=>$v['attr_name']);        
             }
            $arr[$k]=$arr1;
-        }   
-        $arr=$this->getDcar($arr);
-       
-    
+        }
+        $arr=$this->getDcar($arr); 
         //取出已有数据
         $goods_number=M('goodsNumber');   
         $res=$goods_number->where(array('goods_id'=>array('eq',I('get.id'))))->select();
@@ -164,12 +165,12 @@ class GoodsController extends BaseController{
      * 获取数组的笛卡尔积
      */
     function getDcar($data){
+       
         $count=count($data);
         $result=$data[0];
        
         for($i=1;$i<$count;$i++){
             $result=$this->getTwo($result, $data[$i]);
-            
         }
        
         return $result;
@@ -178,12 +179,12 @@ class GoodsController extends BaseController{
     /**
      * 获取两个数组的笛卡尔积
      */
-    function getTwo($one,$two){
+        function getTwo($one,$two){
         $result=array();
       
         foreach($one as $k=>$v){
             foreach($two as $k1=>$v1){
-            	exit;
+            	
                $arr=$v;
                if(isset($v['id'])){
                    $arr=array($v);

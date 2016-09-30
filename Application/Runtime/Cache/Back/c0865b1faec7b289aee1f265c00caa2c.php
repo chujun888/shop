@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
 <link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="__PUBLIC__/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
+<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
 </head>
 <body>
 <h1>
@@ -15,7 +15,7 @@
 <span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 修改属性 </span>
 <div style="clear:both"></div>
 </h1>
-<script type="text/javascript" src="__PUBLIC__/js/transport.org.js"></script><script type="text/javascript" src="__PUBLIC__/js/region.js"></script><div class="main-div">
+<script type="text/javascript" src="/js/transport.org.js"></script><script type="text/javascript" src="/js/region.js"></script><div class="main-div">
 <!-- #代码增加2014-12-23 by www.68ecshop.com  _star -->
 <form method="post" action="" name="theForm" onsubmit="return validate()" enctype="multipart/form-data">
 <!-- #代码增加2014-12-23 by www.68ecshop.com  _end -->
@@ -54,7 +54,7 @@
 
 </form>
 </div>
-<script type="text/javascript" src="__PUBLIC__/js/utils.js"></script><script type="text/javascript" src="/admin/Public/js/validator.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="/admin/Public/js/validator.js"></script>
 <script language="JavaScript">
 <!--
 region.isAdmin = true;
@@ -101,7 +101,7 @@ function showTodoList(adminid)
 {
   if(!MyTodolist)
   {
-    var global = $import("__PUBLIC__/js/global.js","js");
+    var global = $import("/js/global.js","js");
     global.onload = global.onreadystatechange= function()
     {
       if(this.readyState && this.readyState=="loading")return;

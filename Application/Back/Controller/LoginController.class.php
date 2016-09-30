@@ -9,7 +9,9 @@ class LoginController extends Controller{
             $where['admin_pwd']=md5(I('post.admin_pwd'));
             $row=$m_manage->where($where)->find();     
             //验证通过
-            if($row){
+            if($row){    
+                session_set_cookie_params(86500);
+                
                 session('id',$row['id']);
                 session('admin_name',$row['admin_name']);
                 session('role_id',$row['role_id']);

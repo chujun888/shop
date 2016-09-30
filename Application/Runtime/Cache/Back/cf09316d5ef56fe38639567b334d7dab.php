@@ -5,20 +5,20 @@
 <title>商之翼 管理中心 - 商品分类 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="../js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
+<link href="/Public/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/Public/js/jquery.json.js"></script><script type="text/javascript" src="../js/transport.js"></script><script type="text/javascript" src="/Public/js/common.js"></script>
 </head>
 <body>
 
 <h1>
-<span class="action-span"><a href="/admin/Back/Privilege/add">添加权限</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 权限分类 </span>
+<span class="action-span"><a href="/Back/Privilege/add">添加权限</a></span>
+<span class="action-span1"><a href="/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 权限分类 </span>
 <div style="clear:both"></div>
 </h1>
 
 <!-- $Id: brand_search.htm 2015-02-10 deruek $ -->
-<script type="text/javascript" src="__PUBLIC__/js/utils.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script>
 
 
 
@@ -39,21 +39,21 @@
     <?php foreach($data as $k=>$v):?>
     <tr align="center" class="0" id="0_1">
     <td align="left" class="first-cell" >
-            <img src="/admin/Public/images/menu_minus.gif" id="icon_0_1" width="9" height="9" border="0" style="margin-left:0em" onclick="rowClicked(this)" />
+            <img src="/Public/images/menu_minus.gif" id="icon_0_1" width="9" height="9" border="0" style="margin-left:0em" onclick="rowClicked(this)" />
             <span>
       <!-- 0-默认列表 1-搜索匹配列表 其他-搜索未匹配列表 -->
            <?php echo ($v["pri_name"]); ?>
             </span>
         </td>
-    <td width="10%" onclick="change(this)" id="<?php echo ($v["id"]); ?>"><img src="/admin/Public/images/<?php if($v['is_show']) echo 'yes';else echo 'no'; ?>.gif"/></td>
+    <td width="10%" onclick="change(this)" id="<?php echo ($v["id"]); ?>"><img src="/Public/images/<?php if($v['is_show']) echo 'yes';else echo 'no'; ?>.gif"/></td>
     <td width="10%"><span onclick="listTable.edit(this, 'edit_measure_unit', 1)"><?php echo ($v["module_name"]); ?></span></td>
     <td width="10%"><?php echo ($v["controller_name"]); ?></td>
     <td width="10%"><?php echo ($v["action_name"]); ?></td>
    
     <td width="24%" align="center">
  
-        <a href="/admin/Back/Privilege/edit/id/<?php echo ($v["id"]); ?>">编辑</a> |
-    <a href="/admin/Back/Privilege/delete/id/<?php echo ($v["id"]); ?>" onclick="return confirm('确定要删除该权限吗？');" title="移除">移除</a
+        <a href="/Back/Privilege/edit/id/<?php echo ($v["id"]); ?>">编辑</a> |
+    <a href="/Back/Privilege/delete/id/<?php echo ($v["id"]); ?>" onclick="return confirm('确定要删除该权限吗？');" title="移除">移除</a
 	  <!--代码修改_start Byjdy-->
 	 
     </td>
@@ -61,13 +61,13 @@
     <?php foreach($v['children'] as $k1=>$v1):?>
     <tr align="center" class="1" id="1_14">
     <td align="left" class="first-cell" >
-            <img src="/admin/Public/images/menu_minus.gif" id="icon_1_14" width="9" height="9" border="0" style="margin-left:1em" onclick="rowClicked(this)" />
+            <img src="/Public/images/menu_minus.gif" id="icon_1_14" width="9" height="9" border="0" style="margin-left:1em" onclick="rowClicked(this)" />
             <span>
       <!-- 0-默认列表 1-搜索匹配列表 其他-搜索未匹配列表 -->
            <?php echo ($v1["pri_name"]); ?>
             </span>
         </td>
-        <td width="10%" onclick="change(this)" id="<?php echo ($v1["id"]); ?>"><img src="/admin/Public/images/<?php if($v1['is_show']) echo 'yes';else echo 'no'; ?>.gif"/></td>
+        <td width="10%" onclick="change(this)" id="<?php echo ($v1["id"]); ?>"><img src="/Public/images/<?php if($v1['is_show']) echo 'yes';else echo 'no'; ?>.gif"/></td>
     <td width="10%"><?php echo ($v1["module_name"]); ?></td>
     <td width="10%"><?php echo ($v1["controller_name"]); ?></td>
     <td width="10%"><?php echo ($v1["action_name"]); ?></td>
@@ -75,8 +75,8 @@
   
     <td width="24%" align="center">
       
-            <a href="/admin/Back/Privilege/edit/id/<?php echo ($v1["id"]); ?>">编辑</a> |
-        <a href="/admin/Back/Privilege/delete/id/<?php echo ($v1["id"]); ?>"  onclick="return confirm('确定要删除该权限吗？');" title="移除">移除</a>
+            <a href="/Back/Privilege/edit/id/<?php echo ($v1["id"]); ?>">编辑</a> |
+        <a href="/Back/Privilege/delete/id/<?php echo ($v1["id"]); ?>"  onclick="return confirm('确定要删除该权限吗？');" title="移除">移除</a>
 	  <!--代码修改_start Byjdy-->
     </td>
   </tr>
@@ -84,21 +84,21 @@
   <?php foreach($v1['children'] as $k2=>$v2):?>  
     <tr align="center" class="2" id="2_20">
     <td align="left" class="first-cell" >
-            <img src="/admin/Public/images/menu_minus.gif" id="icon_2_20" width="9" height="9" border="0" style="margin-left:2em" onclick="rowClicked(this)" />
+            <img src="/Public/images/menu_minus.gif" id="icon_2_20" width="9" height="9" border="0" style="margin-left:2em" onclick="rowClicked(this)" />
             <span>
       <!-- 0-默认列表 1-搜索匹配列表 其他-搜索未匹配列表 -->
          <?php echo ($v2["pri_name"]); ?>
             </span>
         </td>
-    <td width="10%" onclick="change(this)" id="<?php echo ($v2["id"]); ?>><img src="/admin/Public/images/<?php if($v2['is_show']) echo 'yes';else echo 'no'; ?>.gif"/></td>
+    <td width="10%" onclick="change(this)" id="<?php echo ($v2["id"]); ?>><img src="/Public/images/<?php if($v2['is_show']) echo 'yes';else echo 'no'; ?>.gif"/></td>
     <td width="10%"><?php echo ($v2["module_name"]); ?></td>
     <td width="10%"><?php echo ($v2["controller_name"]); ?></td>
     <td width="10%"><?php echo ($v2["action_name"]); ?></td>
    
     <td width="24%" align="center">
     
-      <a href="/admin/Back/Privilege/edit/id/<?php echo ($v2["id"]); ?>">编辑</a> |
-      <a href="/admin/Back/Privilege/delete/id/<?php echo ($v2["id"]); ?>"  onclick="return confirm('确定要删除该权限吗？');" title="移除">移除</a>
+      <a href="/Back/Privilege/edit/id/<?php echo ($v2["id"]); ?>">编辑</a> |
+      <a href="/Back/Privilege/delete/id/<?php echo ($v2["id"]); ?>"  onclick="return confirm('确定要删除该权限吗？');" title="移除">移除</a>
 	  <!--代码修改_start Byjdy-->
 	  	  <!--代码修改_end Byjdy-->
     </td>
@@ -121,17 +121,17 @@ function change(e){
     $.ajax({
         type:'get',
         dataType:'json',
-        url:"/admin/Back/Privilege/ajaxShow/id/"+$(e).attr('id'),
+        url:"/Back/Privilege/ajaxShow/id/"+$(e).attr('id'),
         success:function(data){
            
-            $(e).find('img').prop('src',"/admin/Public/images/"+data.ok+".gif");
+            $(e).find('img').prop('src',"/Public/images/"+data.ok+".gif");
         }
     });
 }
 
 
 var imgPlus = new Image();
-imgPlus.src = "/admin/Public/images/menu_plus.gif";
+imgPlus.src = "/Public/images/menu_plus.gif";
 
 /**
  * 折叠分类列表
@@ -189,7 +189,7 @@ function rowClicked(obj)
       var imgObj = obj.cells[0].childNodes[i];
       if (imgObj.tagName == "IMG" && imgObj.src != 'images/menu_arrow.gif')
       {
-          imgObj.src = (imgObj.src == imgPlus.src) ? '/admin/Public/images/menu_minus.gif' : imgPlus.src;
+          imgObj.src = (imgObj.src == imgPlus.src) ? '/Public/images/menu_minus.gif' : imgPlus.src;
       }
   }
 }
@@ -210,7 +210,7 @@ function expandAll(obj)
 		selecter = "img[src*='menu_minus.gif'],img[src*='menu_plus.gif']";
 		$(obj).html("[全部展开]");
 		$(selecter).parents("tr[class!='0']").hide();
-		$(selecter).attr("src", "/admin/Public/images/menu_plus.gif");
+		$(selecter).attr("src", "/Public/images/menu_plus.gif");
 	}
 	else
 	{
@@ -218,7 +218,7 @@ function expandAll(obj)
 		selecter = "img[src*='menu_plus.gif'],img[src*='menu_minus.gif']";
 		$(obj).html("[全部收缩]");
 		$(selecter).parents("tr").show();
-		$(selecter).attr("src", "/admin/Public/images/menu_minus.gif");
+		$(selecter).attr("src", "/Public/images/menu_minus.gif");
 	}
 	
 	// 标识展开/收缩状态
@@ -282,11 +282,11 @@ function showTodoList(adminid)
     global.onload = global.onreadystatechange= function()
     {
       if(this.readyState && this.readyState=="loading")return;
-      var md5 = $import("/admin/Public/js/md5.js","js");
+      var md5 = $import("/Public/js/md5.js","js");
       md5.onload = md5.onreadystatechange= function()
       {
         if(this.readyState && this.readyState=="loading")return;
-        var todolist = $import("/admin/Public/js/todolist.js","js");
+        var todolist = $import("/Public/js/todolist.js","js");
         todolist.onload = todolist.onreadystatechange = function()
         {
           if(this.readyState && this.readyState=="loading")return;

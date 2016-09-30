@@ -6,23 +6,23 @@
 <title>商之翼 管理中心 - 商品分类列表 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="__PUBLIC__/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
+<link href="/Public/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/Public/js/common.js"></script>
 </head>
 <body>
 <h1>
-<span class="action-span"><a href="/admin/Back/Category/add">添加新商品分类</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
+<span class="action-span"><a href="/Back/Category/add">添加新商品分类</a></span>
+<span class="action-span1"><a href="/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品列表 </span>
 <div style="clear:both"></div>
 </h1>
-<script type="text/javascript" src="__PUBLIC__/js/utils.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script>
 <!-- 商品搜索 
  $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ 
-<link href="/admin/Public/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery.ztree.all-3.5.min.js"></script><script type="text/javascript" src="/admin/Public/js/category_selecter.js"></script><div class="form-div">
-    <form action="/admin/Back/Category/lst" name='search' method="post">
-    <img src="/admin/Public/images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+<link href="/Public/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/js/jquery.ztree.all-3.5.min.js"></script><script type="text/javascript" src="/Public/js/category_selecter.js"></script><div class="form-div">
+    <form action="/Back/Category/lst" name='search' method="post">
+    <img src="/Public/images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
          关键字 
         关键字 <input type="text" name="keyword" size="15" value=""/>
           <input type="submit" value=" 搜索" class="button" />
@@ -36,10 +36,10 @@
   <tr>
     <th>
      
-      <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="/admin/Public/images/sort_desc.gif"/>    </th>
+      <a href="javascript:listTable.sort('goods_id'); ">编号</a><img src="/Public/images/sort_desc.gif"/>    </th>
               <th><a href='#'>商品类别名称</a></th>          
               <th><a href='#'>是否显示</a></th>
-              
+               <th><a href='#'>是否推荐楼层</a></th>
     <th>操作</th>
     
 <!-- 循环输出-->    
@@ -49,12 +49,14 @@
     <td><?php echo ($v["id"]); ?></td>
          	 <td class="first-cell" style=""><span onclick="listTable.edit(this, 'edit_goods_name', 233)"><?php echo str_repeat("&nbsp;",10*$v['level']).$v['cat_name'];?></span></td>
          	
-         <td class="first-cell" style="text-align: center;"><img src="/admin/Public/images/<?php if($v['is_show']) echo 'yes';else echo 'no';?>.gif"  /></td>  
-    <td align="center">
+         <td class="first-cell" style="text-align: center;"><img src="/Public/images/<?php if($v['is_show']) echo 'yes';else echo 'no';?>.gif"  /></td>  
+     <td class="first-cell" style="text-align: center;"><img src="/Public/images/<?php if($v['is_floor']) echo 'yes';else echo 'no';?>.gif"  /></td>  
+         
+         <td align="center">
       
-      <a href="/admin/Back/Category/edit/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/admin/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
-      <a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="删除"><img src="/admin/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
-      <img src="/admin/Public/images/empty.gif" width="16" height="16" border="0" />          
+      <a href="/Back/Category/edit/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>  
+      <a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="删除"><img src="/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
+      <img src="/Public/images/empty.gif" width="16" height="16" border="0" />          
     </td>
     </tr>
 <?php endforeach;?>  </table>
@@ -84,12 +86,12 @@
 
 
 <!--
-<embed src="/admin/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
+<embed src="/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
-  <param name="movie" value="/admin/Public/images/online.swf">
+  <param name="movie" value="/Public/images/online.swf">
   <param name="quality" value="high">
-  <embed src="/admin/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  <embed src="/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
 <script language="JavaScript">
@@ -237,7 +239,7 @@ function remove(e,id){
           
         //数据库删除
         $.ajax({
-            url:"/admin/Back/Category/delete/id/"+id,
+            url:"/Back/Category/delete/id/"+id,
             type:'get',
             dataType:'json',
             success:function(data){

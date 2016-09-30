@@ -6,23 +6,23 @@
 <title>商之翼 管理中心 - 商品库存修改 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="__PUBLIC__/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
+<link href="/Public/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/Public/js/common.js"></script>
 </head>
 <body>
 
 
 
 <h1>
-<span class="action-span"><a href="/admin/Back/Goods/lst">商品列表</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品库存修改 </span>
+<span class="action-span"><a href="/Back/Goods/lst">商品列表</a></span>
+<span class="action-span1"><a href="/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品库存修改 </span>
 <div style="clear:both"></div>
 </h1>
-<script type="text/javascript" src="__PUBLIC__/js/utils.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script>
 <!-- 商品搜索 -->
 <!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
-<link href="/admin/Public/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
+<link href="/Public/styles/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
 
 <!-- 商品列表 -->
 <form method="post" action="" name="listForm" onsubmit="return confirmSubmit(this)">
@@ -30,7 +30,7 @@
   <!-- start goods list -->
   <div class="list-div" id="listDiv">
       <table cellpadding="3" cellspacing="1" >
-          <tr>
+  <tr>
       <?php foreach($data[0] as $k=>$v): ?>
       <th><?php echo ($v["attr_name"]); ?></th>
       <?php endforeach;?>
@@ -39,8 +39,8 @@
        <?php foreach($data as $k=>$v): $arr=array();?>
   <tr align="center">
      
-      <?php foreach($v as $k1=>$v1): $arr[]=$v1['id'];?>
-      <td><?php echo ($v1["value"]); ?></td>
+      <?php foreach($v as $k=>$v): $arr[]=$v['id'];?>
+      <td><?php echo ($v["value"]); ?></td>
       
    
       <?php endforeach; sort($arr);$arr=implode(',',$arr);?>

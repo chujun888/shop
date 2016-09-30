@@ -10,6 +10,7 @@
 // +----------------------------------------------------------------------
 namespace Behavior;
 use Think\Storage;
+$fl=null;
 /**
  * 系统行为扩展：静态缓存读取
  */
@@ -24,6 +25,9 @@ class ReadHtmlCacheBehavior {
                 echo Storage::read(HTML_FILE_NAME,'html');
                 exit();
             }
+            global $fl;
+            $fl=  fopen('./readlock','r');
+            flock($fl, LOCK_EX);
         }
     }
 
@@ -80,9 +84,15 @@ class ReadHtmlCacheBehavior {
                 }else{
                     $cacheTime  =   $cacheTime;
                 }
-                
+                $html_path=HTML_PATH;
+               
+                if($rule=='index'){
+                    $html_path='./';
+                }
+               
                 // 当前缓存文件
-                define('HTML_FILE_NAME',HTML_PATH . $rule.C('HTML_FILE_SUFFIX',null,'.html'));
+                define('HTML_FILE_NAME',$html_path. $rule.C('HTML_FILE_SUFFIX',null,'.html'));
+               
                 return $cacheTime;
             }
         }

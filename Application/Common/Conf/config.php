@@ -2,7 +2,7 @@
 return array(
 	//'配置项'=>'配置值'
 	'MODULE_ALLOW_LIST' => array('Home', 'Back','Ger'), # 允许访问的模块列表
-	'DEFAULT_MODULE' => 'Back',	# 默认的模块
+	'DEFAULT_MODULE' => 'Home',	# 默认的模块
 	'URL_MODEL' => 2, # URL模式，2 REWRITE模式
             /* 数据库设置 */
         'DB_TYPE'               =>  'mysql',     // 数据库类型
@@ -20,4 +20,8 @@ return array(
        'SHOW_PATH'             =>'/Uploads/' ,   //文件显示地址
         /**换行符**/
        'LINE_FEED'             =>"\r\n",
+     /* 数据缓存设置 */
+    'DATA_CACHE_TIME'       =>  84600,      // 数据缓存有效期 0表示永久缓存
+    'DATA_CACHE_TYPE'       =>  'Memcache',  // 数据缓存类型,支持:File|Db|Apc|Memcache|Shmop|Sqlite|Xcache|Apachenote|Eaccelerator
+    'MEMCACHE_HOST'         =>'tcp://127.0.0.1:11211',
 );
