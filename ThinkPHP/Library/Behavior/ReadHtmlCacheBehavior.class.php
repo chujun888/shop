@@ -86,13 +86,13 @@ class ReadHtmlCacheBehavior {
                 }
                 $html_path=HTML_PATH;
                
-                if($rule=='index'){
+                if($rule=='index' || strpos($rule,'goods/goods')!==false){
                     $html_path='./';
                 }
-               
+                
                 // 当前缓存文件
                 define('HTML_FILE_NAME',$html_path. $rule.C('HTML_FILE_SUFFIX',null,'.html'));
-               
+                
                 return $cacheTime;
             }
         }

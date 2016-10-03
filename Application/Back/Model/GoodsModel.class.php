@@ -72,11 +72,13 @@ class GoodsModel extends Model{
              //将pic整理成数组
               $arr=array();
             foreach($_FILES['pics']['name'] as $k=>$v){
+                if(!empty($arr[$k]['name'])){
                 $arr[$k]['name']=$v;
                 $arr[$k]['type']=$_FILES['pics']['type'][$k];
                 $arr[$k]['error']=$_FILES['pics']['error'][$k];
                 $arr[$k]['size']=$_FILES['pics']['size'][$k];
                 $arr[$k]['tmp_name']=$_FILES['pics']['tmp_name'][$k];
+                }
             }
             //上传
             $pic=M('pic');
@@ -121,6 +123,7 @@ class GoodsModel extends Model{
       */
      protected function _before_update(&$data, $options) {
          parent::_before_update($data, $options);
+        
         $data['promote_start_time']=strtotime(I('post.promote_start_time'));
          $data['promote_end_time']=strtotime(I('post.promote_end_time'));
          $id=$options['where']['id']; 
@@ -160,6 +163,8 @@ class GoodsModel extends Model{
              //将pic整理成数组
               $arr=array();
             foreach($_FILES['pics']['name'] as $k=>$v){
+                 if(empty($arr[$k]['name']))
+                        continue;
                 $arr[$k]['name']=$v;
                 $arr[$k]['type']=$_FILES['pics']['type'][$k];
                 $arr[$k]['error']=$_FILES['pics']['error'][$k];
@@ -187,10 +192,11 @@ class GoodsModel extends Model{
          
          /*****商品属性*******/
         $attrs=I('post.attr');
+          $m_goods_attr=M('goodsAttr');
         if(!empty($attrs)){
         //所有修改的id的集合
             $list=array();
-            $m_goods_attr=M('goodsAttr');
+          
             foreach($attrs as $k=>$v){
                 foreach($v as $k1=>$v1){
                     if($v1){
@@ -199,13 +205,21 @@ class GoodsModel extends Model{
                         $m_goods_attr->save(array('id'=>$k1,'attr_value'=>$v1));    
                     }
                 }
+            } 
+            
             }
             //删除未修改的属性
             $where['goods_id']=array('eq',$id);
-            $where['id']=array('not in',$list);
+            if(!empty($list)){
+                $where['id']=array('not in',$list);
+                
+            }
+    
             $m_goods_attr->where($where)->delete();
+       
             //添加新属性
             $new_attr=I('post.new_attr');
+           
             if($new_attr){
                 foreach($new_attr as $k=>$v){
                     foreach($v as $k1=>$v1){
@@ -215,7 +229,7 @@ class GoodsModel extends Model{
                 }
 
             }
-        }
+        
          
      }
      
@@ -303,6 +317,8 @@ class GoodsModel extends Model{
         ->order("$way $order")->limit($offset,$per)->group('a.id')->select();
         return array('data'=>$data,'fpage'=>$fpage);
      }
+     
+
      
      
      

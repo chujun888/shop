@@ -31,7 +31,7 @@ function uploadOne($data,$dir="Goods/",$sm=true){
             if($sm){
                 $image=new \Think\Image();
                 $image->open(C('UPLOAD_PATH').$ret['logo']);
-                $image->thumb(200, 200);
+                $image->thumb(50, 50);
                 $sm_path=$res['savepath'].'sm_'.$res['savename'];
                 $image->save(C('UPLOAD_PATH').$sm_path);
                 //返回缩略图地址

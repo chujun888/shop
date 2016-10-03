@@ -6,13 +6,17 @@
 	<link rel="stylesheet" href="/Public/Home/style/base.css" type="text/css">
 	<link rel="stylesheet" href="/Public/Home/style/global.css" type="text/css">
 	<link rel="stylesheet" href="/Public/Home/style/header.css" type="text/css">
-	<link rel="stylesheet" href="/Public/Home/style/index.css" type="text/css">
+            <?php foreach($style as $k=>$v):?>
+	<link rel="stylesheet" href="/Public/Home/style/<?php echo ($v); ?>.css" type="text/css">
+            <?php endforeach;?>
 	<link rel="stylesheet" href="/Public/Home/style/bottomnav.css" type="text/css">
 	<link rel="stylesheet" href="/Public/Home/style/footer.css" type="text/css">
         
 	<script type="text/javascript" src="/Public/Home/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/Public/Home/js/header.js"></script>
-	<script type="text/javascript" src="/Public/Home/js/index.js"></script>
+        <?php foreach($js as $k=>$v):?>
+	<script type="text/javascript" src="/Public/Home/js/<?php echo ($v); ?>.js"></script>
+        <?php endforeach;?>
 </head>
 <body>
 	<!-- 顶部导航 start -->
@@ -96,10 +100,9 @@
 						<div style="clear:both;"></div>
 						<div class="viewlist mt10">
 							<h3>最近浏览的商品：</h3>
-							<ul>
-								<li><a href=""><img src="/Public/Home/images/view_list1.jpg" alt="" /></a></li>
-								<li><a href=""><img src="/Public/Home/images/view_list2.jpg" alt="" /></a></li>
-								<li><a href=""><img src="/Public/Home/images/view_list3.jpg" alt="" /></a></li>
+							<ul id='recent'>
+								
+								
 							</ul>
 						</div>
 					</dd>
@@ -130,13 +133,13 @@
 		<!-- 导航条部分 start -->
 		<div class="nav w1210 bc mt10">
 			<!--  商品分类部分 start-->
-			<div class="category fl"> <!-- 非首页，需要添加cat1类 -->
-				<div class="cat_hd">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，鼠标滑过时展开菜单则将off类换成on类 -->
+			<div class="category fl <?php if(!$show):?>cat1<?php endif;?>"> <!-- 非首页，需要添加cat1类 -->
+				<div class="cat_hd <?php if(!$show):?>off<?php endif;?>">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，鼠标滑过时展开菜单则将off类换成on类 -->
 					<h2>全部商品分类</h2>
 					<em></em>
 				</div>
 				
-				<div class="cat_bd">
+				<div class="cat_bd <?php if(!$show):?>none<?php endif;?>">
 <?php foreach($cats as $k=>$v):?>
 					<div class="cat <?php if($k==0) echo 'item1';?>">
 						<h3><a href=""><?php echo ($v["cat_name"]); ?></a> <b></b></h3>
@@ -179,6 +182,19 @@
 	<!-- 头部 end-->
 	
 	<div style="clear:both;"></div>
+        <script>
+            $.ajax({
+                type:'get',
+                dataType:'json',
+                url:'/Home/Index/ajaxRecent',
+                success:function(data){
+                    $.each(data,function(k,v){
+                       $('#recent').append('<li><a href="/Home/Index/goods/'+v.id+'"><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></li>'); 
+                    });
+                }
+            });
+        </script>
+
 	
 	<!-- 综合区域 start 包括幻灯展示，商城快报 -->
 	<div class="colligate w1210 bc mt10">
@@ -639,6 +655,16 @@
 	<div style="clear:both;"></div>
 
 
+<script>
+    $.ajax({
+        type:'get',
+        dataType:'json',
+        url:'/Home/Index/ajaxRecent',
+        success:function(data){
+            console.log(data);
+        }
+    });
+</script>
 	<!-- 底部版权 start -->
 	<div class="footer w1210 bc mt10">
 		<p class="links">

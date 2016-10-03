@@ -3,17 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/php/http/fuxi/Application/Back/Model/PrivilegeModel.class.php</file>
-            <file>file:/E:/php/http/fuxi/ThinkPHP/Conf/convention.php</file>
-            <file>file:/E:/php/http/fuxi/ThinkPHP/Library/Behavior/ReadHtmlCacheBehavior.class.php</file>
-            <file>file:/E:/php/http/fuxi/Application/Home/View/index/index.html</file>
-            <file>file:/E:/php/http/fuxi/Application/Home/Controller/IndexController.class.php</file>
-            <file>file:/E:/php/http/fuxi/Application/Common/Conf/config.php</file>
+            <file>file:/E:/php/http/fuxi/Application/Home/View/member/register.html</file>
+            <file>file:/E:/php/http/fuxi/Application/Home/Controller/MemberController.class.php</file>
+            <file>file:/E:/php/http/fuxi/Application/Home/Model/MemberModel.class.php</file>
+            <file>file:/E:/php/http/fuxi/Application/Home/View/tmp.html</file>
+            <file>file:/E:/php/http/fuxi/Application/Back/Conf/config.php</file>
+            <file>file:/E:/php/http/fuxi/Application/Back/View/tmp.html</file>
             <file>file:/E:/php/http/fuxi/Application/Home/Conf/config.php</file>
-            <file>file:/E:/php/http/fuxi/Application/Back/Model/CategoryModel.class.php</file>
-            <file>file:/E:/php/http/fuxi/Application/Home/View/common/nav.html</file>
-            <file>file:/E:/php/http/fuxi/Application/Home/View/common/help.html</file>
-            <file>file:/E:/php/http/fuxi/Application/Home/View/layout.html</file>
         </group>
     </open-files>
 </project-private>

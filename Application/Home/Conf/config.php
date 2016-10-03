@@ -9,8 +9,12 @@ return array(
     'HTML_FILE_SUFFIX'  =>    '.html', // 设置静态缓存文件后缀
     'HTML_CACHE_RULES'  =>     array(  // 定义静态缓存规则)
         "index:index"   => array('index',84500),
-        
+        'index:goods'   =>array('goods/goods_{id}',84500),      
     ),
-   'HTML_PATH'         =>'/',
+    	//'配置项'=>'配置值'
+      /*跳转模板*/
+       'TMPL_ACTION_ERROR'     =>  ':tmp', // 默认错误跳转对应的模板文件
+       'TMPL_ACTION_SUCCESS'   =>  ':tmp', // 默认成功跳转对应的模板文件
+  
     
 );

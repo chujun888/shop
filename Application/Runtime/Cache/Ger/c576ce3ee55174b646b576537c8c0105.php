@@ -4,12 +4,12 @@
 <title>商品列表</title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/admin/Public/ext_styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/admin/Public/ext_styles/main.css" rel="stylesheet" type="text/css" />
+<link href="/Public/ext_styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/ext_styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="main-div">
-    <form name="main_form" method="POST" action="/admin/index.php/Ger/Index/index">
+    <form name="main_form" method="POST" action="/index.php/Ger/Index/index">
         <table cellspacing="1" cellpadding="3" width="100%">
             <tr>
                 <td class="label">生成类型：</td>

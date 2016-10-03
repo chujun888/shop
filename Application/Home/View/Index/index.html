@@ -394,3 +394,13 @@
 	<div style="clear:both;"></div>
 
 <include file="common/help"/>
+<script>
+    $.ajax({
+        type:'get',
+        dataType:'json',
+        url:'__URL__/ajaxRecent',
+        success:function(data){
+            console.log(data);
+        }
+    });
+</script>

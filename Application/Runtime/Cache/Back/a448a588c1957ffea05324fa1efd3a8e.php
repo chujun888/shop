@@ -260,14 +260,14 @@ src="/includes/ueditor/ueditor.all.js"></script>
 						<span class="notice-span" style="display:block"  id="noticeGoodsType">请选择商品的所属类型，进而完善此商品的属性</span>
 					</td>
                                 <?php
- $list=array(); foreach($attrs as $k=>$v): $add=''; $new=''; if(!$v['attr_value']) $new='new_'; if($v['attr_type']==1){ if(in_array($v['attr_id'],$list)) $flag='[-]'; else{ $flag='[+]'; $list[]=$v['attr_id']; } $add='<a href="javascript:void(0);" onclick=addNew(this)><span >'.$flag.'</span></a>'; } ?>
+ $list=array(); foreach($attrs as $k=>$v): $add=''; $new=''; if(!$v['attr_value']) $new='new_'; if($v['attr_type']==1){ if(in_array($v['id'],$list)) $flag='[-]'; else{ $flag='[+]'; $list[]=$v['id']; } $add='<a href="javascript:void(0);" onclick=addNew(this)><span >'.$flag.'</span></a>'; } ?>
 				</tr>
                                 				<tr>
 					<td class="label">
 						<?php echo $add.$v['attr_name'];?>：					</td>
 					<td>
 						<?php if($v['attr_option_value']): $arr=explode(',',$v['attr_option_value']);?>
-                                                <select name="<?php echo ($new); ?>attr[<?php echo ($v["a_id"]); ?>][<?php echo ($v["id"]); ?>]">
+                                                <select name="<?php echo ($new); ?>attr[<?php echo ($v["id"]); ?>][<?php echo ($v["a_id"]); ?>]">
                                                     <option value="">请选择...</option>
                                                     <?php foreach($arr as $k1=>$v1):?>
                                                     <option value="<?php echo ($v1); ?>" <?php if($v['attr_value']==$v1) echo 'selected';?>><?php echo ($v1); ?></option>
@@ -275,7 +275,7 @@ src="/includes/ueditor/ueditor.all.js"></script>
                                                 </select>
                                                 
                                                 <?php else:?>
-                                                <input type='text' name="<?php echo ($new); ?>attr[<?php echo ($v['a_id']); ?>][<?php echo ($v["id"]); ?>]" value='<?php echo ($v["attr_value"]); ?>'>
+                                                <input type='text' name="<?php echo ($new); ?>attr[<?php echo ($v['id']); ?>][<?php echo ($v["a_id"]); ?>]" value='<?php echo ($v["attr_value"]); ?>'>
                                                  <?php endif;?>
 					</td>
 				</tr>
@@ -324,9 +324,9 @@ src="/includes/ueditor/ueditor.all.js"></script>
 													</div>
                                                     <div width="100%"  style="border:1px #eee solid; margin-top:5px;">
                                                         <!--展示已添加的图片-->
-                                                        <ul class='imgUl'>
+                                                        <ul class='imgUl' id='imgUl'>
                                                             <?php $path=C("SHOW_PATH"); foreach($pics as $k=>$v):?>
-                                                            <li><input onclick='removeImg(this)' type="button" value=" 删除图片" id='<?php echo $v['id'];?>' class="button" /><br/><?php showImage($path.$v['small_pic']);?></li>
+                                                            <li><input onclick='removeImg(this)' type="button" value=" 删除图片" id='<?php echo $v['id'];?>' class="button" /><br/><?php showImage($v['small_pic']);?></li>
                                                             <?php endforeach;?>
                                                         </ul>
                                                     </div>
@@ -451,6 +451,7 @@ src="/includes/ueditor/ueditor.all.js"></script>
    */
   function addOtherCat(conObj)
   {
+      
       var sel = document.createElement("SELECT");
       var selCat = document.forms['theForm'].elements['other_cat[]'][0];
       
@@ -480,7 +481,13 @@ src="/includes/ueditor/ueditor.all.js"></script>
 
 //添加按钮
 function add(e){
-    $(e).parent().parent().append("<input type='file' name='pics[]' />");
+    
+    var count=$(e).parent().parent().find('input[type=file]').length;
+ 
+    if(count<5)
+        $(e).parent().parent().append("<input type='file' name='pics[]' />");
+    else
+        alert('最多添加5张');
 }
 
 //ajxa删除图片
@@ -513,19 +520,20 @@ function getAttrList(e){
         type:'get',
         dataType:'json',
         success:function(data){
+             $('#properties-table').find('tr:gt(0)').remove();
             $.each(data,function(k,v){
                 //清空属性值
-                 $('#properties-table').find('tr:gt(0)').remove();
+                
                 var add='';
                 if(v.attr_type!=0){
                     add='<a href="javascript:void(0);" onclick=addNew(this) ><span >[+]</span></a>';
                 }
                     //输出文本框
                 if(!v.attr_option_value)
-                  $('#properties-table').append('<tr ><td class="label">'+add+v.attr_name+'：</td><td><input type="text" name="attr['+v.id+'][]"/><br /></td></tr>');
+                  $('#properties-table').append('<tr ><td class="label">'+add+v.attr_name+'：</td><td><input type="text" name="new_attr['+v.id+'][]"/><br /></td></tr>');
                 else{
                 //下拉列表
-                    var str='<tr ><td class="label">'+add+v.attr_name+'：</td><td><select name="attr['+v.id+'][]"><option value="">请选择...</option>';
+                    var str='<tr ><td class="label">'+add+v.attr_name+'：</td><td><select name="new_attr['+v.id+'][]"><option value="">请选择...</option>';
                     var arr=v.attr_option_value.split(',');
                     $.each(arr,function(k1,v2){
                         str+="<option value='"+v2+"'>"+v2+"</option>";

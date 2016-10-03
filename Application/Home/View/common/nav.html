@@ -60,10 +60,9 @@
 						<div style="clear:both;"></div>
 						<div class="viewlist mt10">
 							<h3>最近浏览的商品：</h3>
-							<ul>
-								<li><a href=""><img src="__PUBLIC__/Home/images/view_list1.jpg" alt="" /></a></li>
-								<li><a href=""><img src="__PUBLIC__/Home/images/view_list2.jpg" alt="" /></a></li>
-								<li><a href=""><img src="__PUBLIC__/Home/images/view_list3.jpg" alt="" /></a></li>
+							<ul id='recent'>
+								
+								
 							</ul>
 						</div>
 					</dd>
@@ -94,13 +93,13 @@
 		<!-- 导航条部分 start -->
 		<div class="nav w1210 bc mt10">
 			<!--  商品分类部分 start-->
-			<div class="category fl"> <!-- 非首页，需要添加cat1类 -->
-				<div class="cat_hd">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，鼠标滑过时展开菜单则将off类换成on类 -->
+			<div class="category fl <?php if(!$show):?>cat1<?php endif;?>"> <!-- 非首页，需要添加cat1类 -->
+				<div class="cat_hd <?php if(!$show):?>off<?php endif;?>">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，鼠标滑过时展开菜单则将off类换成on类 -->
 					<h2>全部商品分类</h2>
 					<em></em>
 				</div>
 				
-				<div class="cat_bd">
+				<div class="cat_bd <?php if(!$show):?>none<?php endif;?>">
 <?php foreach($cats as $k=>$v):?>
 					<div class="cat <?php if($k==0) echo 'item1';?>">
 						<h3><a href="">{$v.cat_name}</a> <b></b></h3>
@@ -143,3 +142,15 @@
 	<!-- 头部 end-->
 	
 	<div style="clear:both;"></div>
+        <script>
+            $.ajax({
+                type:'get',
+                dataType:'json',
+                url:'__URL__/ajaxRecent',
+                success:function(data){
+                    $.each(data,function(k,v){
+                       $('#recent').append('<li><a href="__URL__/goods/goods_'+v.id+'"><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></li>'); 
+                    });
+                }
+            });
+        </script>

@@ -266,7 +266,7 @@ function remove(e,id){
             url:"/Back/Goods/recycle/id/"+id,
             type:'get',
             dataType:'json',
-            success:function(data){
+            success:function(data){       
                 if(data.ok==1)
                 $(e).parent().parent().remove();
             }

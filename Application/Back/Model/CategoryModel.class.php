@@ -171,6 +171,20 @@ class   CategoryModel extends Model{
          return $goods;
      }
      
+      /**
+      * 获取分类及其上级分类
+      */
+     public function getSup($cat_id){
+      
+         static $arr=array();//存放所有分类id和名称
+         $row=$this->field('id,cat_name,parent_id')->find($cat_id);
+         $arr[]=$row;
+         if($row['parent_id']>0){
+            $this->getSup($row['parent_id']);
+         }
+         return $arr;
+     }
+     
      /**
       * 获取推荐楼层
       */

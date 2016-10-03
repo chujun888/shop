@@ -70,8 +70,9 @@ class GoodsController extends BaseController{
         
         $data=$m_goods->find($id);
         //取出所有的商品属性
-        $attrs=M('attr')->field("a.*,b.*,a.id a_id")->where("type_id={$data['type_id']}")->alias('a')->join("left join __GOODS_ATTR__ b on b.attr_id = a.id")->having("b.goods_id=$id or b.goods_id IS NULL")->select();
-       
+        $m_attr=M('attr');
+        $attrs=$m_attr->field("a.*,b.id a_id,b.attr_value")->where("a.type_id={$data['type_id']}")->alias('a')->join("LEFT JOIN  __GOODS_ATTR__ as b on b.attr_id = a.id and b.goods_id=$id")->select();
+     
         $this->assign('attrs',$attrs);
         
        
@@ -105,7 +106,7 @@ class GoodsController extends BaseController{
      * 放入回收站
      */
     public function recycle(){
-        $m_goods=D('Back/goods');
+        $m_goods=M('goods');
        if($m_goods->save(array('id'=>I('get.id'),'is_delete'=>1))!==false)
            $data=array('ok'=>1);
         else

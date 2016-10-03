@@ -322,7 +322,7 @@ src="/includes/ueditor/ueditor.all.js"></script>
 		</form>
 	</div>
 </div>
-<script src="__PUBLIC__/timePicker/jquery.js"></script>
+
 <script src="__PUBLIC__/timePicker/jquery.datetimepicker.js"></script>
 <!-- end goods form -->
 <script type="text/javascript" src="__PUBLIC__/js/validator.js"></script><script type="text/javascript" src="__PUBLIC__/js/tab.js"></script><script language="JavaScript">
@@ -379,9 +379,11 @@ function getAttrList(e){
         type:'get',
         dataType:'json',
         success:function(data){
+            $('#properties-table').find('tr:gt(0)').remove();
             $.each(data,function(k,v){
+              
                 //清空属性值
-                 $('#properties-table').find('tr:gt(0)').remove();
+                
                 var add='';
                 if(v.attr_type!=0){
                     add='<a href="javascript:void(0);" onclick=addNew(this)><span >[+]</span></a>';
