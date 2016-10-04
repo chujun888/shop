@@ -85,8 +85,9 @@ class ReadHtmlCacheBehavior {
                     $cacheTime  =   $cacheTime;
                 }
                 $html_path=HTML_PATH;
-               
-                if($rule=='index' || strpos($rule,'goods/goods')!==false){
+                //缓存到根目录的方法名
+                $list=array('index','register','login');
+                if(in_array($rule, $list)|| strpos($rule,'goods/goods')!==false){
                     $html_path='./';
                 }
                 

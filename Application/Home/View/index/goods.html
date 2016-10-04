@@ -27,7 +27,7 @@
 	<div class="main w1210 mt10 bc">
 		<!-- 面包屑导航 start -->
 		<div class="breadcrumb">
-			<h2>当前位置：<a href="">首页</a> > <?php foreach($mianbao as $k=>$v):?><a href="">{$v.cat_name}</a> ><?php endforeach;?>  {$data.goods_name}</h2>
+			<h2>当前位置：<a href="/index.html">首页</a> > <?php foreach($mianbao as $k=>$v):?><a href="">{$v.cat_name}</a> ><?php endforeach;?>  {$data.goods_name}</h2>
 		</div>
 		<!-- 面包屑导航 end -->
 		
@@ -127,8 +127,7 @@
 			<!-- 最近浏览 start -->
 			<div class="viewd leftbar mt10">
 				<h2><a href="">清空</a><strong>最近浏览过的商品</strong></h2>
-				<div class="leftbar_wrap" id="leftbar">
-				
+				<div class="leftbar_wrap" id="leftbar">				
 				</div>
 			</div>
 			<!-- 最近浏览 end -->
@@ -186,9 +185,9 @@
 						<li><span>上架时间：</span>2012-09-12</li>
 						<li class="star"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
 					</ul>
-					<form action="" method="post" class="choose">
+					<form action="__MODULE__/cart/add" method="post" class="choose">
 						<ul>
-							
+					            <input type='hidden' name='id' value='{$data.id}'/>
                                                     <?php foreach($attrs as $k=>$v):?>
 							<li class="product">
 								<dl>
@@ -196,9 +195,9 @@
 									<dd>
 										<?php foreach($v as $k1=>$v1):?>
                                                                                 <?php if($k1==0):?>
-                                                                                <a  href="javascript:;" class='selected'>{$v1.attr_value}<input type="radio" name="attr[{$v.attr_id}][]" checked value="{$v1.id}"/></a>
+                                                                                <a  href="javascript:;" class='selected'>{$v1.attr_value}<input type="checkbox" name="attr[]" checked value="{$v1.id}"/></a>
                                                                                 <?php else:?>    
-                                                                                <a  href="javascript:;">{$v1.attr_value}<input type="radio" name="attr[{$v.attr_id}][]" value="{$v1.id}"/></a>
+                                                                                <a  href="javascript:;">{$v1.attr_value}<input type="checkbox" name="attr[]" value="{$v1.id}"/></a>
 										<?php endif;?>
                                                                                 <?php endforeach;?>
 										
@@ -211,7 +210,7 @@
 									<dt>购买数量：</dt>
 									<dd>
 										<a href="javascript:;" id="reduce_num"></a>
-										<input type="text" name="goods_number" value="1" class="amount"/>
+										<input type="text" name="goods_num" value="1" class="amount"/>
 										<a href="javascript:;" id="add_num"></a>
 									</dd>
 								</dl>

@@ -3,13 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/php/http/fuxi/Application/Home/View/member/register.html</file>
-            <file>file:/E:/php/http/fuxi/Application/Home/Controller/MemberController.class.php</file>
+            <file>file:/E:/php/http/fuxi/Application/Home/Model/CartModel.class.php</file>
             <file>file:/E:/php/http/fuxi/Application/Home/Model/MemberModel.class.php</file>
-            <file>file:/E:/php/http/fuxi/Application/Home/View/tmp.html</file>
-            <file>file:/E:/php/http/fuxi/Application/Back/Conf/config.php</file>
-            <file>file:/E:/php/http/fuxi/Application/Back/View/tmp.html</file>
-            <file>file:/E:/php/http/fuxi/Application/Home/Conf/config.php</file>
+            <file>file:/E:/php/http/fuxi/Application/Home/Controller/CartController.class.php</file>
+            <file>file:/E:/php/http/fuxi/Application/Home/View/index/goods.html</file>
+            <file>file:/E:/php/http/fuxi/Application/Back/Model/GoodsModel.class.php</file>
+            <file>file:/E:/php/http/fuxi/Application/Home/View/common/nav.html</file>
+            <file>file:/E:/php/http/fuxi/Application/Home/View/cart/lst.html</file>
         </group>
     </open-files>
 </project-private>

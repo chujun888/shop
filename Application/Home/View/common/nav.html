@@ -1,5 +1,6 @@
+<style>
 
-	
+</style>
 	<div style="clear:both;"></div>
 
 	<!-- 头部 start -->
@@ -74,12 +75,13 @@
 			<div class="cart fl">
 				<dl>
 					<dt>
-						<a href="">去购物车结算</a>
+						<a href="__MODULE__/cart/lst">去购物车结算</a>
 						<b></b>
 					</dt>
 					<dd>
-						<div class="prompt">
-							购物车中还没有商品，赶紧选购吧！
+						<div class="prompt" id="prom">
+							
+                                                  
 						</div>
 					</dd>
 				</dl>
@@ -149,8 +151,30 @@
                 url:'__URL__/ajaxRecent',
                 success:function(data){
                     $.each(data,function(k,v){
-                       $('#recent').append('<li><a href="__URL__/goods/goods_'+v.id+'"><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></li>'); 
+                       $('#recent').append('<li><a href="/goods/goods_'+v.id+'.html"><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></li>'); 
                     });
+                }
+            });
+            //获取购物车数据
+            $.ajax({
+                type:'get',
+                dataType:'json',
+                url:'__MODULE__/cart/ajaxCartList',
+                success:function(data){
+                  
+                    if(data){
+                        $('#prom').empty();
+                        var html = "<ul style='background:white;width:400px;border:1px;'>";
+                         $(data).each(function(k,v){
+                                 html += "<li style='padding:10px;'>";
+                                 html += '<img width="50" src="/Uploads/'+v.goods.sm_logo+'" />';
+                                 html += v.goods.goods_name;
+                                 html += '</li>';
+                         });
+                         html += "</ul>";
+                         $("#prom").html(html);
+                    }
+             
                 }
             });
         </script>

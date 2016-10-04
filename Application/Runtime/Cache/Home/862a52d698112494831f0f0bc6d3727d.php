@@ -27,11 +27,14 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-					<li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+                                    <li>您好，欢迎来到京西！<span id="login">[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
 					<li class="line">|</li>
 					<li>我的订单</li>
 					<li class="line">|</li>
 					<li>客户服务</li>
+                                        <li class='line'>|</li>
+                                        <li><a href="/index.html">首页</a></li>
+                                        <span id="log"><li><a href="/Home/index/logout">退出</a></li></span>
 
 				</ul>
 			</div>
@@ -58,8 +61,9 @@
 	        });
 		})
 	</script>
+<style>
 
-	
+</style>
 	<div style="clear:both;"></div>
 
 	<!-- 头部 start -->
@@ -134,12 +138,13 @@
 			<div class="cart fl">
 				<dl>
 					<dt>
-						<a href="">去购物车结算</a>
+						<a href="/Home/cart/lst">去购物车结算</a>
 						<b></b>
 					</dt>
 					<dd>
-						<div class="prompt">
-							购物车中还没有商品，赶紧选购吧！
+						<div class="prompt" id="prom">
+							
+                                                  
 						</div>
 					</dd>
 				</dl>
@@ -209,8 +214,30 @@
                 url:'/Home/Index/ajaxRecent',
                 success:function(data){
                     $.each(data,function(k,v){
-                       $('#recent').append('<li><a href="/Home/Index/goods/goods_'+v.id+'"><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></li>'); 
+                       $('#recent').append('<li><a href="/goods/goods_'+v.id+'.html"><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></li>'); 
                     });
+                }
+            });
+            //获取购物车数据
+            $.ajax({
+                type:'get',
+                dataType:'json',
+                url:'/Home/cart/ajaxCartList',
+                success:function(data){
+                  
+                    if(data){
+                        $('#prom').empty();
+                        var html = "<table>";
+                         $(data).each(function(k,v){
+                                 html += "<tr>";
+                                 html += '<td><img width="50" src="/Uploads/'+v.goods.sm_logo+'" /></td>';
+                                 html += '<td>'+v.goods.goods_name+'</td>';
+                                 html += '</tr>';
+                         });
+                         html += "</table>";
+                         $("#prom").html(html);
+                    }
+             
                 }
             });
         </script>
@@ -223,7 +250,7 @@
 	<div class="main w1210 mt10 bc">
 		<!-- 面包屑导航 start -->
 		<div class="breadcrumb">
-			<h2>当前位置：<a href="">首页</a> > <?php foreach($mianbao as $k=>$v):?><a href=""><?php echo ($v["cat_name"]); ?></a> ><?php endforeach;?>  <?php echo ($data["goods_name"]); ?></h2>
+			<h2>当前位置：<a href="/index.html">首页</a> > <?php foreach($mianbao as $k=>$v):?><a href=""><?php echo ($v["cat_name"]); ?></a> ><?php endforeach;?>  <?php echo ($data["goods_name"]); ?></h2>
 		</div>
 		<!-- 面包屑导航 end -->
 		
@@ -323,8 +350,7 @@
 			<!-- 最近浏览 start -->
 			<div class="viewd leftbar mt10">
 				<h2><a href="">清空</a><strong>最近浏览过的商品</strong></h2>
-				<div class="leftbar_wrap" id="leftbar">
-				
+				<div class="leftbar_wrap" id="leftbar">				
 				</div>
 			</div>
 			<!-- 最近浏览 end -->
@@ -343,7 +369,7 @@
 					<div class="midpic">
                                             
                                             <a href="<?php $path=C('SHOW_PATH');echo $path.$data['logo'];?>" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
-                                                <img src="<?php echo $path.$data['logo'];?>" alt="" />               <!-- 第一幅图片的中图 -->
+                                                <img src="<?php echo $path.$data['sm_logo'];?>" alt="" />               <!-- 第一幅图片的中图 -->
 						</a>
 					</div>
 	
@@ -382,9 +408,9 @@
 						<li><span>上架时间：</span>2012-09-12</li>
 						<li class="star"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
 					</ul>
-					<form action="" method="post" class="choose">
+					<form action="/Home/cart/add" method="post" class="choose">
 						<ul>
-							
+					            <input type='hidden' name='id' value='<?php echo ($data["id"]); ?>'/>
                                                     <?php foreach($attrs as $k=>$v):?>
 							<li class="product">
 								<dl>
@@ -392,9 +418,9 @@
 									<dd>
 										<?php foreach($v as $k1=>$v1):?>
                                                                                 <?php if($k1==0):?>
-                                                                                <a  href="javascript:;" class='selected'><?php echo ($v1["attr_value"]); ?><input type="radio" name="attr[<?php echo ($v["attr_id"]); ?>][]" checked value="<?php echo ($v1["id"]); ?>"/></a>
+                                                                                <a  href="javascript:;" class='selected'><?php echo ($v1["attr_value"]); ?><input type="checkbox" name="attr[]" checked value="<?php echo ($v1["id"]); ?>"/></a>
                                                                                 <?php else:?>    
-                                                                                <a  href="javascript:;"><?php echo ($v1["attr_value"]); ?><input type="radio" name="attr[<?php echo ($v["attr_id"]); ?>][]" value="<?php echo ($v1["id"]); ?>"/></a>
+                                                                                <a  href="javascript:;"><?php echo ($v1["attr_value"]); ?><input type="checkbox" name="attr[]" value="<?php echo ($v1["id"]); ?>"/></a>
 										<?php endif;?>
                                                                                 <?php endforeach;?>
 										
@@ -407,7 +433,7 @@
 									<dt>购买数量：</dt>
 									<dd>
 										<a href="javascript:;" id="reduce_num"></a>
-										<input type="text" name="goods_number" value="1" class="amount"/>
+										<input type="text" name="goods_num" value="1" class="amount"/>
 										<a href="javascript:;" id="add_num"></a>
 									</dd>
 								</dl>
@@ -820,3 +846,16 @@
 
 </body>
 </html>
+<script>
+   $.ajax({
+    type:'get',
+    dataType:'json',
+    url:'/Home/index/ajaxLogin',
+    success:function(data){
+         if(data.ok==1){
+              $('#login').html('[<a href="login.html">'+data.user+'</a>]');
+              $('#log').html('<li><a href="/Home/index/logout">退出</a></li>');
+         }
+    }
+   });
+</script>

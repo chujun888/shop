@@ -27,19 +27,23 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-					<li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+                                    <li>您好，欢迎来到京西！<span id="login">[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
 					<li class="line">|</li>
 					<li>我的订单</li>
 					<li class="line">|</li>
 					<li>客户服务</li>
+                                        <li class='line'>|</li>
+                                        <li><a href="/index.html">首页</a></li>
+                                        <span id="log"><li><a href="/Home/index/logout">退出</a></li></span>
 
 				</ul>
 			</div>
 		</div>
 	</div>
 	<!-- 顶部导航 end -->
+<style>
 
-	
+</style>
 	<div style="clear:both;"></div>
 
 	<!-- 头部 start -->
@@ -114,12 +118,13 @@
 			<div class="cart fl">
 				<dl>
 					<dt>
-						<a href="">去购物车结算</a>
+						<a href="/Home/cart/lst">去购物车结算</a>
 						<b></b>
 					</dt>
 					<dd>
-						<div class="prompt">
-							购物车中还没有商品，赶紧选购吧！
+						<div class="prompt" id="prom">
+							
+                                                  
 						</div>
 					</dd>
 				</dl>
@@ -189,8 +194,30 @@
                 url:'/Home/Index/ajaxRecent',
                 success:function(data){
                     $.each(data,function(k,v){
-                       $('#recent').append('<li><a href="/Home/Index/goods/'+v.id+'"><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></li>'); 
+                       $('#recent').append('<li><a href="/goods/goods_'+v.id+'.html"><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></li>'); 
                     });
+                }
+            });
+            //获取购物车数据
+            $.ajax({
+                type:'get',
+                dataType:'json',
+                url:'/Home/cart/ajaxCartList',
+                success:function(data){
+                  
+                    if(data){
+                        $('#prom').empty();
+                        var html = "<ul style='background:white;width:400px;border:1px;'>";
+                         $(data).each(function(k,v){
+                                 html += "<li style='padding:10px;'>";
+                                 html += '<img width="50" src="/Uploads/'+v.goods.sm_logo+'" />';
+                                 html += v.goods.goods_name;
+                                 html += '</li>';
+                         });
+                         html += "</ul>";
+                         $("#prom").html(html);
+                    }
+             
                 }
             });
         </script>
@@ -694,3 +721,16 @@
 
 </body>
 </html>
+<script>
+   $.ajax({
+    type:'get',
+    dataType:'json',
+    url:'/Home/index/ajaxLogin',
+    success:function(data){
+         if(data.ok==1){
+              $('#login').html('[<a href="login.html">'+data.user+'</a>]');
+              $('#log').html('<li><a href="/Home/index/logout">退出</a></li>');
+         }
+    }
+   });
+</script>

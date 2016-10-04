@@ -266,6 +266,35 @@ class GoodsModel extends Model{
          
      }
      
+     /**
+      * 获取商品实时价格
+      */
+     public function getPrice($goods_id){
+        $row=$this->find($goods_id);
+        $date=time();
+      
+        //促销价
+        if($row['is_promote']==1 && $row['promote_start_time']<$date && $row['promote_end_time']>$date){
+            //会员是否登录
+            if($m_level=session('m_level')){
+                //是否存在设置的会员价格
+                $where['goods_id']=array('eq',$goods_id);
+                $where['level_id']=array('eq',$m_level);
+                $level_row=M('levelPrice')->where($where)->find();
+                //设置了会员价格
+                if($level_row){
+                    $level_price=$level_row['price'];
+                    if($level_price<$row['promote_price'])
+                        return  $level_price;
+                }
+              
+            }    
+              return  $row['promote_price'];
+            
+        }
+      
+        return    $row['shop_price'];
+     }
      
      /**
       * 获取数据

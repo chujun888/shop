@@ -76,9 +76,16 @@ class IndexController extends Controller{
      * 获取最近浏览的记录
      */
     public function  ajaxRecent(){
-        $recent=cookie('recent');
-        $recent=  unserialize($recent);
-        $data=M('goods')->field('sm_logo,goods_name,id')->where(array('id'=>array('in',$recent)))->select();
+        if($recent=cookie('recent')){
+            $recent=unserialize($recent);
+            $data=M('goods')->field('sm_logo,goods_name,id')->where(array('id'=>array('in',$recent)))->select();
+        
+        }
+        else 
+         {
+            $data=array();
+            
+         }
         echo json_encode($data);
     }
     
@@ -89,6 +96,7 @@ class IndexController extends Controller{
           /********将浏览历史存到cookie中*******/
         //添加浏览记录到最近浏览
         $recent=  cookie('recent')?unserialize(cookie('recent')):array();
+        
         array_unshift($recent, I('get.id'));
         //去重
         $recent=array_unique($recent);
@@ -99,45 +107,37 @@ class IndexController extends Controller{
         /************/
     }
     
-    /**
-     * 获取实时的商品价格
-     */
-    public function getPrice($id=''){
-        if(I('get.id'))
-            $id=I('get.id');
-    }
-    
+
     /**
      * 获取最新的价格
      */
     public function ajaxPrice(){
         $goods_id=I('get.id');
-        $row=M('goods')->find($goods_id);
-        $date=time();
-        //促销价
-        if($row['is_promote']==1 && $row['promote_start_time']<$date && $row['promote_end_time']>$date){
-            //会员是否登录
-            if($m_level=session('m_level')){
-                //是否存在设置的会员价格
-                $where['goods_id']=array('eq',$goods_id);
-                $where['level_id']=array('eq',$m_level);
-                $level_row=M('levelPrice')->where($where)->find();
-                //设置了会员价格
-                if($level_row){
-                    $level_price=$level_row['price'];
-                    if($level_price<$row['promote_price'])
-                        echo $level_price;
-                    else
-                        echo $row['promote_price'];
-                }
-                else
-                    echo $row['promote_price'];
-            }
-            else
-                echo $row['promote_price'];
-            
+       
+        $m_goods=D('Back/Goods');
+        echo $m_goods->getPrice($goods_id);
+     
+    }
+    
+    /**
+     * 获取登录状态
+     */
+    public function ajaxLogin(){
+        if(session('m_id')){
+            echo json_encode(array('ok'=>1,'user'=>session('m_user'),'id'=>session('m_id')));
         }
-        else
-            echo $row['shop_price'];
+        else{
+            echo json_encode(array('ok'=>0));
+        }
+    }
+    
+    /**
+     * 退出登录
+     */
+    public function logout(){
+        session('m_id',null);
+        session('m_user',null);
+        session('m_level',null);
+        header('location:/login.html');
     }
 }
