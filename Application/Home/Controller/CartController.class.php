@@ -32,11 +32,9 @@ class CartController extends Controller{
                         $this->redirect('lst');
                         exit;
                     }
-                 }
-                
+                 }   
                      $this->error('添加失败');
                      exit;
-                
                  
              }
              //商品添加到cookie
@@ -70,7 +68,8 @@ class CartController extends Controller{
       
         $this->assign(
              array(
-                 'data'=>$data,
+                 'data'=>$data['data'],
+                 'total'=>$data['total'],
                  'title'=>'购物车页面',
                  'style'=>array('cart'),
                  'js'=>array('cart1')
@@ -83,7 +82,7 @@ class CartController extends Controller{
         $m_cart=D('Home/Cart');
        $attr=I('get.attr');
    
-        if($m_cart->delete(I('get.id'),$attr)){
+        if($m_cart->del(I('get.id'),$attr)){
             echo json_encode(array('ok'=>1));
         }
         else
@@ -98,6 +97,15 @@ class CartController extends Controller{
         $data=D('Home/Cart')->getCarts();
        
         echo json_encode($data);
+    }
+    
+    /**
+     * ajax修改购物车数量
+     */
+    public function ajaxChange(){
+        $m_cart=D('Home/Cart');
+       $m_cart->change(I('get.id'),I('get.val'));
+       
     }
     
 }

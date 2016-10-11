@@ -1,0 +1,882 @@
+[ 2016-10-10T10:22:57+08:00 ] 127.0.0.1 /back
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000421s ]
+
+[ 2016-10-10T10:23:02+08:00 ] 127.0.0.1 /Back/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038303s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2016-10-10T10:23:02+08:00 ] 127.0.0.1 /Back//Public/js/utils.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-10T10:23:08+08:00 ] 127.0.0.1 /Back/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+SQL: SHOW COLUMNS FROM `php34_manage` [ RunTime:0.0513s ]
+SQL: SELECT * FROM `php34_manage` WHERE `admin_name` = 'admin' AND `admin_pwd` = '202cb962ac59075b964b07152d234b70' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2016-10-10T10:23:08+08:00 ] 127.0.0.1 /Back/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000628s ]
+
+[ 2016-10-10T10:23:08+08:00 ] 127.0.0.1 /Back/Index/top
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001122s ]
+
+[ 2016-10-10T10:23:08+08:00 ] 127.0.0.1 /Back/Index/main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046163s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2016-10-10T10:23:08+08:00 ] 127.0.0.1 /Back//Public/js/transport.org.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-10T10:23:08+08:00 ] 127.0.0.1 /Back/Index/left
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+SQL: SHOW COLUMNS FROM `php34_privilege` [ RunTime:0.2174s ]
+SQL: SELECT * FROM `php34_privilege` WHERE `is_show` = 1  [ RunTime:0.0337s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039565s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039841s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2016-10-10T10:23:14+08:00 ] 127.0.0.1 /index.php/Back/Goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `php34_goods` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.cat_name,group_concat(d.cat_name SEPARATOR "<br/>") ext_name FROM php34_goods a LEFT JOIN php34_category as b on a.cat_id=b.id LEFT JOIN php34_ext_cat as c on c.goods_id=a.id LEFT JOIN php34_category as d on d.id =c.cat_id  WHERE `is_delete` = 0 GROUP BY a.id ORDER BY id desc LIMIT 0,10   [ RunTime:0.0429s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000895s ]
+
+[ 2016-10-10T10:23:18+08:00 ] 127.0.0.1 /Back/Goods/edit/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `php34_type` [ RunTime:0.0465s ]
+SQL: SELECT * FROM `php34_type`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `php34_goods` WHERE `id` = 60 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_attr` [ RunTime:0.0045s ]
+SQL: SELECT a.*,b.id a_id,b.attr_value FROM php34_attr a LEFT JOIN  php34_goods_attr as b on b.attr_id = a.id and b.goods_id=60  WHERE ( a.type_id=7 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `php34_member_level` [ RunTime:0.0063s ]
+SQL: SELECT a.id,a.level_name,b.youhui_price as price FROM php34_member_level a left join php34_youhui_price as b on a.id=b.youhui_num and b.goods_id=60   [ RunTime:0.0351s ]
+SQL: SHOW COLUMNS FROM `php34_pic` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `php34_pic` WHERE `goods_id` = '60'  [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0054s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `php34_ext_cat` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `php34_ext_cat` WHERE `goods_id` = '60'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000280s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000383s ]
+SQL: SHOW COLUMNS FROM `php34_brand` [ RunTime:0.0076s ]
+SQL: SELECT `brand_name`,`id` FROM `php34_brand`  [ RunTime:0.0011s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078581s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000980s ]
+
+[ 2016-10-10T10:23:25+08:00 ] 127.0.0.1 /Back/Goods/edit/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0056s ]
+NOTIC: [8] Undefined index: validate E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `php34_youhui_price` [ RunTime:0.0064s ]
+SQL: DELETE FROM `php34_youhui_price` WHERE `goods_id` = 60 [ RunTime:0.0284s ]
+SQL: INSERT INTO `php34_youhui_price` (`goods_id`,`youhui_num`,`youhui_price`) VALUES ('60','1','230') [ RunTime:0.0003s ]
+SQL: INSERT INTO `php34_youhui_price` (`goods_id`,`youhui_num`,`youhui_price`) VALUES ('60','3','120') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_ext_cat` [ RunTime:0.0044s ]
+SQL: DELETE FROM `php34_ext_cat` WHERE `goods_id` = 60 [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0054s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='12G' WHERE `id` = 1 [ RunTime:0.0003s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='红色' WHERE `id` = 2 [ RunTime:0.0002s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='黑色' WHERE `id` = 3 [ RunTime:0.0002s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='移动' WHERE `id` = 4 [ RunTime:0.0003s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='联通' WHERE `id` = 5 [ RunTime:0.0003s ]
+SQL: DELETE FROM `php34_goods_attr` WHERE `goods_id` = 60 AND `id` NOT IN (1,2,3,4,5) [ RunTime:0.0003s ]
+SQL: UPDATE `php34_goods` SET `goods_name`='发送到',`cat_id`='33',`brand_id`='0',`shop_price`='120',`market_price`='120',`jifen`='-1',`jyz`='-1',`is_promote`='1',`promote_price`='100.00',`promote_start_time`='1475313960',`promote_end_time`='1475486760',`goods_desc`='',`is_best`='1',`is_new`='1',`is_hot`='1',`is_on_sale`='1',`seo_keyword`='',`type_id`='7' WHERE `id` = 60 [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+
+[ 2016-10-10T10:23:28+08:00 ] 127.0.0.1 /Back/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `php34_goods` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.cat_name,group_concat(d.cat_name SEPARATOR "<br/>") ext_name FROM php34_goods a LEFT JOIN php34_category as b on a.cat_id=b.id LEFT JOIN php34_ext_cat as c on c.goods_id=a.id LEFT JOIN php34_category as d on d.id =c.cat_id  WHERE `is_delete` = 0 GROUP BY a.id ORDER BY id desc LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013167s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000867s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2016-10-10T10:25:46+08:00 ] 127.0.0.1 /Back/Index/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+
+[ 2016-10-10T10:25:47+08:00 ] 127.0.0.1 /Back/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-10-10T10:25:47+08:00 ] 127.0.0.1 /Back//Public/js/utils.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-10T10:25:52+08:00 ] 127.0.0.1 /Back/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+
+[ 2016-10-10T10:25:52+08:00 ] 127.0.0.1 /Back/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009229s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2016-10-10T10:25:52+08:00 ] 127.0.0.1 /Back//Public/js/utils.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-10T10:25:57+08:00 ] 127.0.0.1 /Back/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+SQL: SHOW COLUMNS FROM `php34_manage` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `php34_manage` WHERE `admin_name` = 'admin' AND `admin_pwd` = '202cb962ac59075b964b07152d234b70' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-10-10T10:25:57+08:00 ] 127.0.0.1 /Back/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010129s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010239s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2016-10-10T10:25:57+08:00 ] 127.0.0.1 /Back/Index/top
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000812s ]
+
+[ 2016-10-10T10:25:57+08:00 ] 127.0.0.1 /Back/Index/main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016651s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000879s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-10T10:25:57+08:00 ] 127.0.0.1 /Back//Public/js/transport.org.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-10T10:25:57+08:00 ] 127.0.0.1 /Back/Index/left
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001923s ]
+SQL: SHOW COLUMNS FROM `php34_privilege` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `php34_privilege` WHERE `is_show` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001163s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001268s ]
+
+[ 2016-10-10T10:26:33+08:00 ] 127.0.0.1 /index.php/Back/Goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `php34_goods` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT a.*,b.cat_name,group_concat(d.cat_name SEPARATOR "<br/>") ext_name FROM php34_goods a LEFT JOIN php34_category as b on a.cat_id=b.id LEFT JOIN php34_ext_cat as c on c.goods_id=a.id LEFT JOIN php34_category as d on d.id =c.cat_id  WHERE `is_delete` = 0 GROUP BY a.id ORDER BY id desc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2016-10-10T10:26:36+08:00 ] 127.0.0.1 /Back/Goods/edit/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `php34_type` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `php34_type`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `php34_goods` WHERE `id` = 60 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_attr` [ RunTime:0.0052s ]
+SQL: SELECT a.*,b.id a_id,b.attr_value FROM php34_attr a LEFT JOIN  php34_goods_attr as b on b.attr_id = a.id and b.goods_id=60  WHERE ( a.type_id=7 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_member_level` [ RunTime:0.0060s ]
+SQL: SELECT a.id,a.level_name,b.youhui_price as price FROM php34_member_level a left join php34_youhui_price as b on a.id=b.youhui_num and b.goods_id=60   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `php34_pic` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `php34_pic` WHERE `goods_id` = '60'  [ RunTime:0.0002s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0145s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_ext_cat` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `php34_ext_cat` WHERE `goods_id` = '60'  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000274s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `php34_brand` [ RunTime:0.0067s ]
+SQL: SELECT `brand_name`,`id` FROM `php34_brand`  [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000924s ]
+
+[ 2016-10-10T10:26:45+08:00 ] 127.0.0.1 /Back/Goods/edit/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0054s ]
+NOTIC: [8] Undefined index: validate E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `php34_youhui_price` [ RunTime:0.0052s ]
+SQL: DELETE FROM `php34_youhui_price` WHERE `goods_id` = 60 [ RunTime:0.0005s ]
+SQL: INSERT INTO `php34_youhui_price` (`goods_id`,`youhui_num`,`youhui_price`) VALUES ('60','1','230') [ RunTime:0.0003s ]
+SQL: INSERT INTO `php34_youhui_price` (`goods_id`,`youhui_num`,`youhui_price`) VALUES ('60','3','120') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_ext_cat` [ RunTime:0.0044s ]
+SQL: DELETE FROM `php34_ext_cat` WHERE `goods_id` = 60 [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0050s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='12G' WHERE `id` = 1 [ RunTime:0.0004s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='红色' WHERE `id` = 2 [ RunTime:0.0002s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='黑色' WHERE `id` = 3 [ RunTime:0.0002s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='移动' WHERE `id` = 4 [ RunTime:0.0002s ]
+SQL: UPDATE `php34_goods_attr` SET `attr_value`='联通' WHERE `id` = 5 [ RunTime:0.0002s ]
+SQL: DELETE FROM `php34_goods_attr` WHERE `goods_id` = 60 AND `id` NOT IN (1,2,3,4,5) [ RunTime:0.0002s ]
+SQL: UPDATE `php34_goods` SET `goods_name`='发送到',`cat_id`='33',`brand_id`='0',`shop_price`='120',`market_price`='120',`jifen`='-1',`jyz`='-1',`is_promote`='1',`promote_price`='100.00',`promote_start_time`='1475313960',`promote_end_time`='1477707960',`goods_desc`='',`is_on_sale`='1',`seo_keyword`='',`type_id`='7' WHERE `id` = 60 [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+
+[ 2016-10-10T10:26:47+08:00 ] 127.0.0.1 /Back/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `php34_goods` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.cat_name,group_concat(d.cat_name SEPARATOR "<br/>") ext_name FROM php34_goods a LEFT JOIN php34_category as b on a.cat_id=b.id LEFT JOIN php34_ext_cat as c on c.goods_id=a.id LEFT JOIN php34_category as d on d.id =c.cat_id  WHERE `is_delete` = 0 GROUP BY a.id ORDER BY id desc LIMIT 0,10   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012661s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012780s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000868s ]
+
+[ 2016-10-10T21:47:22+08:00 ] 127.0.0.1 /back
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001315s ]
+
+[ 2016-10-10T21:47:23+08:00 ] 127.0.0.1 /Back/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024066s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000970s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001073s ]
+
+[ 2016-10-10T21:47:23+08:00 ] 127.0.0.1 /Back//Public/js/utils.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-10T21:47:28+08:00 ] 127.0.0.1 /Back/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+SQL: SHOW COLUMNS FROM `php34_manage` [ RunTime:0.0747s ]
+SQL: SELECT * FROM `php34_manage` WHERE `admin_name` = 'admin' AND `admin_pwd` = '202cb962ac59075b964b07152d234b70' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-10-10T21:47:28+08:00 ] 127.0.0.1 /Back/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040910s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2016-10-10T21:47:28+08:00 ] 127.0.0.1 /Back/Index/main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001295s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001408s ]
+
+[ 2016-10-10T21:47:28+08:00 ] 127.0.0.1 /Back/Index/top
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067996s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020706s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020821s ]
+
+[ 2016-10-10T21:47:28+08:00 ] 127.0.0.1 /Back//Public/js/transport.org.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-10T21:47:28+08:00 ] 127.0.0.1 /Back/Index/left
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `php34_privilege` [ RunTime:0.0599s ]
+SQL: SELECT * FROM `php34_privilege` WHERE `is_show` = 1  [ RunTime:0.0121s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062314s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062431s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001384s ]
+
+[ 2016-10-10T21:47:32+08:00 ] 127.0.0.1 /index.php/Back/Goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0077s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `php34_goods` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.cat_name,group_concat(d.cat_name SEPARATOR "<br/>") ext_name FROM php34_goods a LEFT JOIN php34_category as b on a.cat_id=b.id LEFT JOIN php34_ext_cat as c on c.goods_id=a.id LEFT JOIN php34_category as d on d.id =c.cat_id  WHERE `is_delete` = 0 GROUP BY a.id ORDER BY id desc LIMIT 0,10   [ RunTime:0.0537s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042553s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000809s ]
+
+[ 2016-10-10T21:47:37+08:00 ] 127.0.0.1 /Back/Goods/goodsNumber/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0060s ]
+SQL: SELECT group_concat(a.id) ids,group_concat(a.attr_value) attr_value,b.attr_name FROM php34_goods_attr a INNER JOIN php34_attr b on b.id=a.attr_id  WHERE `goods_id` = '60' GROUP BY a.attr_id HAVING count(*)>1  [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `php34_goods_number` [ RunTime:0.0297s ]
+SQL: SELECT * FROM `php34_goods_number` WHERE `goods_id` = '60'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+NOTIC: [8] Undefined index: 2,4 E:\php\http\fuxi\Application\Runtime\Cache\Back\23d6bf005302236dcb729d92bee235e5.php 第 48 行.
+NOTIC: [8] Undefined index: 2,5 E:\php\http\fuxi\Application\Runtime\Cache\Back\23d6bf005302236dcb729d92bee235e5.php 第 48 行.
+NOTIC: [8] Undefined index: 3,4 E:\php\http\fuxi\Application\Runtime\Cache\Back\23d6bf005302236dcb729d92bee235e5.php 第 48 行.
+NOTIC: [8] Undefined index: 3,5 E:\php\http\fuxi\Application\Runtime\Cache\Back\23d6bf005302236dcb729d92bee235e5.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009535s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2016-10-10T21:48:33+08:00 ] 127.0.0.1 /Back/Goods/goodsNumber/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000901s ]
+SQL: SHOW COLUMNS FROM `php34_goods_number` [ RunTime:0.0055s ]
+SQL: DELETE FROM `php34_goods_number` WHERE `goods_id` = '60' [ RunTime:0.0002s ]
+SQL: INSERT INTO `php34_goods_number` (`goods_id`,`goods_attr_id`,`goods_number`) VALUES ('60','2,4','100') [ RunTime:0.0003s ]
+SQL: INSERT INTO `php34_goods_number` (`goods_id`,`goods_attr_id`,`goods_number`) VALUES ('60','2,5','100') [ RunTime:0.0002s ]
+SQL: INSERT INTO `php34_goods_number` (`goods_id`,`goods_attr_id`,`goods_number`) VALUES ('60','3,4','100') [ RunTime:0.0001s ]
+SQL: INSERT INTO `php34_goods_number` (`goods_id`,`goods_attr_id`,`goods_number`) VALUES ('60','3,5','100') [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047869s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000280s ]
+
+[ 2016-10-10T21:48:36+08:00 ] 127.0.0.1 /Back/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `php34_goods` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT a.*,b.cat_name,group_concat(d.cat_name SEPARATOR "<br/>") ext_name FROM php34_goods a LEFT JOIN php34_category as b on a.cat_id=b.id LEFT JOIN php34_ext_cat as c on c.goods_id=a.id LEFT JOIN php34_category as d on d.id =c.cat_id  WHERE `is_delete` = 0 GROUP BY a.id ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010642s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2016-10-10T21:48:40+08:00 ] 127.0.0.1 /Back/Goods/goodsNumber/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0054s ]
+SQL: SELECT group_concat(a.id) ids,group_concat(a.attr_value) attr_value,b.attr_name FROM php34_goods_attr a INNER JOIN php34_attr b on b.id=a.attr_id  WHERE `goods_id` = '60' GROUP BY a.attr_id HAVING count(*)>1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_goods_number` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `php34_goods_number` WHERE `goods_id` = '60'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007448s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000813s ]
+
+[ 2016-10-10T21:51:19+08:00 ] 127.0.0.1 /index.php/back/goods/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+SQL: SHOW COLUMNS FROM `php34_brand` [ RunTime:0.0071s ]
+SQL: SELECT `id`,`brand_name` FROM `php34_brand`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_member_level` [ RunTime:0.0082s ]
+SQL: SELECT `id`,`level_name` FROM `php34_member_level`  [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0051s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `php34_type` [ RunTime:0.0705s ]
+SQL: SELECT * FROM `php34_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000327s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `php34_brand` [ RunTime:0.0049s ]
+SQL: SELECT `brand_name`,`id` FROM `php34_brand`  [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2016-10-10T21:51:22+08:00 ] 127.0.0.1 /Back/Goods/ajaxAttr/type_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+SQL: SHOW COLUMNS FROM `php34_attr` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `php34_attr` WHERE `type_id` = '2'  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000930s ]
+
+[ 2016-10-10T21:51:26+08:00 ] 127.0.0.1 /Back/Goods/ajaxAttr/type_id/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `php34_attr` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `php34_attr` WHERE `type_id` = '7'  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000854s ]
+

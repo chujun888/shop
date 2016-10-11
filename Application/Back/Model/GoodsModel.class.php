@@ -12,7 +12,6 @@ class GoodsModel extends Model{
         
          array('shop_price','number','请输入数字',2)
      );
-     
      //插入前钩子函数
      protected function _before_insert(&$data, $options) {
          parent::_before_insert($data, $options);
@@ -107,14 +106,14 @@ class GoodsModel extends Model{
              }
          }
          
-         /*****插入库存数量******/
-         $goods_number=M('goodsNumber');
-         if($number=I('post.number')){
-             foreach($number as $k=>$v){
-                 if($v)
-                 $goods_number->add(array('id'=>$id,'goods_number'=>$v));
-             }
-         }
+//         /*****插入库存数量******/
+//         $goods_number=M('goodsNumber');
+//         if($number=I('post.number')){
+//             foreach($number as $k=>$v){
+//                 if($v)
+//                 $goods_number->add(array('id'=>$id,'goods_number'=>$v));
+//             }
+//         }
          
      }
      

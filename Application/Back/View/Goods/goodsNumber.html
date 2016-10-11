@@ -36,11 +36,16 @@
       <?php endforeach;?>
       <th>库存量</th>
   </tr>
+   <?php if(!$data):?>
+    <tr align="center">
+        <td><input type='text' name="number[<?php echo I('get.id');?>]" value='<?php if($res[I('get.id')]) echo $res[I('get.id')];?>'/></td>
+    </tr>
+   <?php endif;?>
        <?php foreach($data as $k=>$v): $arr=array();?>
   <tr align="center">
      
-      <?php foreach($v as $k=>$v): $arr[]=$v['id'];?>
-      <td>{$v.value}</td>
+      <?php foreach($v as $k1=>$v1): $arr[]=$v1['id'];?>
+      <td>{$v1.value}</td>
       
    
       <?php endforeach; sort($arr);$arr=implode(',',$arr);?>

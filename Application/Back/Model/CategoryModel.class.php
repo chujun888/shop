@@ -156,7 +156,7 @@ class   CategoryModel extends Model{
         $where['is_promote']=array('eq',1);
         $where['promote_start_time']=array('lt',$date);
         $where['promote_end_time']=array('gt',$date);
-        $goods=M('goods')->field('promote_price,goods_name,promote_price,sm_logo')->where($where)->order('id desc')->limit(4)->select();
+        $goods=M('goods')->field('promote_price,goods_name,promote_price,sm_logo,id')->where($where)->order('id desc')->limit(4)->select();
         return $goods;
         
      }
@@ -167,7 +167,7 @@ class   CategoryModel extends Model{
      public function getSelect($way){
          $where[$way]=array('eq',1);
          $where['is_on_sale']=array('eq',1);
-         $goods=M('goods')->field('shop_price,sm_logo,goods_name')->where($where)->order('id desc')->limit(4)->select();
+         $goods=M('goods')->field('shop_price,sm_logo,goods_name,id')->where($where)->order('id desc')->limit(4)->select();
          return $goods;
      }
      
@@ -210,7 +210,7 @@ class   CategoryModel extends Model{
                             if($v1['is_floor']==1){
                                 //获取当前分类的8个商品
                                 $where['cat_id']=$v1['id'];
-                                $goods=$m_goods->field('goods_name,shop_price,sm_logo')->where($where)->limit(8)->select();
+                                $goods=$m_goods->field('goods_name,shop_price,sm_logo,id')->where($where)->limit(8)->select();
                                 $v1['goods']=$goods;
                                 $v['rec_cat'][]=$v1;
                             }
@@ -222,7 +222,7 @@ class   CategoryModel extends Model{
                         
                     }
                     $where['cat_id']=$v['id'];
-                    $goods=$m_goods->field('goods_name,shop_price,sm_logo')->where($where)->limit(8)->select();
+                    $goods=$m_goods->field('goods_name,shop_price,sm_logo,id')->where($where)->limit(8)->select();
                     $v['goods']=$goods;
                     $v['brand']=$this->getBrand($v['id']);
                     $arr[]=$v;

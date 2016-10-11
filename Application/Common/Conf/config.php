@@ -24,4 +24,7 @@ return array(
     'DATA_CACHE_TIME'       =>  84600,      // 数据缓存有效期 0表示永久缓存
     'DATA_CACHE_TYPE'       =>  'Memcache',  // 数据缓存类型,支持:File|Db|Apc|Memcache|Shmop|Sqlite|Xcache|Apachenote|Eaccelerator
     'MEMCACHE_HOST'         =>'tcp://127.0.0.1:11211',
+    /****商品详情页缓存地址******/
+    'Goods'    => '/Goods/',
+     
 );

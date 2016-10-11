@@ -227,14 +227,14 @@
                   
                     if(data){
                         $('#prom').empty();
-                        var html = "<table>";
+                        var html = "<ul style='background:white;width:400px;border:1px;'>";
                          $(data).each(function(k,v){
-                                 html += "<tr>";
-                                 html += '<td><img width="50" src="/Uploads/'+v.goods.sm_logo+'" /></td>';
-                                 html += '<td>'+v.goods.goods_name+'</td>';
-                                 html += '</tr>';
+                                 html += "<li style='padding:10px;'>";
+                                 html += '<img width="50" src="/Uploads/'+v.goods.sm_logo+'" />';
+                                 html += v.goods.goods_name;
+                                 html += '</li>';
                          });
-                         html += "</table>";
+                         html += "</ul>";
                          $("#prom").html(html);
                     }
              
@@ -369,7 +369,7 @@
 					<div class="midpic">
                                             
                                             <a href="<?php $path=C('SHOW_PATH');echo $path.$data['logo'];?>" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
-                                                <img src="<?php echo $path.$data['sm_logo'];?>" alt="" />               <!-- 第一幅图片的中图 -->
+                                                <img src="<?php echo $path.$data['logo'];?>" alt="" />               <!-- 第一幅图片的中图 -->
 						</a>
 					</div>
 	

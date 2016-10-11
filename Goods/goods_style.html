@@ -32,7 +32,8 @@
 					<li class="line">|</li>
 					<li>客户服务</li>
                                         <li class='line'>|</li>
-                                        <li><a href="/Home/index/logout">退出</a></li>
+                                        <li><a href="/index.html">首页</a></li>
+                                        <span id="log"><li><a href="/Home/index/logout">退出</a></li></span>
 
 				</ul>
 			</div>
@@ -59,8 +60,9 @@
 	        });
 		})
 	</script>
+<style>
 
-	
+</style>
 	<div style="clear:both;"></div>
 
 	<!-- 头部 start -->
@@ -135,12 +137,13 @@
 			<div class="cart fl">
 				<dl>
 					<dt>
-						<a href="">去购物车结算</a>
+						<a href="/Home/cart/lst">去购物车结算</a>
 						<b></b>
 					</dt>
 					<dd>
-						<div class="prompt">
-							购物车中还没有商品，赶紧选购吧！
+						<div class="prompt" id="prom">
+							
+                                                  
 						</div>
 					</dd>
 				</dl>
@@ -279,6 +282,28 @@
                     });
                 }
             });
+            //获取购物车数据
+            $.ajax({
+                type:'get',
+                dataType:'json',
+                url:'/Home/cart/ajaxCartList',
+                success:function(data){
+                  
+                    if(data){
+                        $('#prom').empty();
+                        var html = "<ul style='background:white;width:400px;border:1px;'>";
+                         $(data).each(function(k,v){
+                                 html += "<li style='padding:10px;'>";
+                                 html += '<img width="50" src="/Uploads/'+v.goods.sm_logo+'" />';
+                                 html += v.goods.goods_name;
+                                 html += '</li>';
+                         });
+                         html += "</ul>";
+                         $("#prom").html(html);
+                    }
+             
+                }
+            });
         </script>
 
 
@@ -289,7 +314,7 @@
 	<div class="main w1210 mt10 bc">
 		<!-- 面包屑导航 start -->
 		<div class="breadcrumb">
-			<h2>当前位置：<a href="">首页</a> > <a href="">母婴、玩具乐器</a> ><a href="">母婴</a> >  </h2>
+			<h2>当前位置：<a href="/index.html">首页</a> > <a href="">母婴、玩具乐器</a> ><a href="">母婴</a> >  </h2>
 		</div>
 		<!-- 面包屑导航 end -->
 		
@@ -867,6 +892,7 @@
     success:function(data){
          if(data.ok==1){
               $('#login').html('[<a href="login.html">'+data.user+'</a>]');
+              $('#log').html('<li><a href="/Home/index/logout">退出</a></li>');
          }
     }
    });

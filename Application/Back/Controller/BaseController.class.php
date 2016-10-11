@@ -12,6 +12,10 @@ class BaseController extends Controller{
     protected  function check(){
        
           if(!session('id')){
+              if(CONTROLLER_NAME=='Index'){
+                  $this->redirect('Login/index');
+                  exit;
+              }
               $this->error('请登录', U('login/index'));
               exit;
           }

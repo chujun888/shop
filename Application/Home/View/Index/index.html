@@ -148,7 +148,7 @@
 						<?php foreach($promotes as $k=>$v):?>
 						<li>
 							<dl>
-								<dt><a href=""><?php showImage($v['sm_logo']);?></a></dt>
+								<dt><a href="{$Goods}goods_{$v.id}.html"><?php showImage($v['sm_logo']);?></a></dt>
 								<dd><a href="">{$v.goods_name}</a></dd>
 								<dd><span>售价：</span><strong> ￥{$v.promote_price}</strong></dd>
 							</dl>
@@ -164,7 +164,7 @@
                                             <?php foreach($hot as $k=>$v):?>
 						<li>
 							<dl>
-								<dt><a href=""><?php showImage($v['sm_logo']);?></a></dt>
+								<dt><a href="{$Goods}goods_{$v.id}.html"><?php showImage($v['sm_logo']);?></a></dt>
 								<dd><a href="">{}</a></dd>
 								<dd><span>售价：</span><strong> ￥1386.00</strong></dd>
 							</dl>
@@ -180,7 +180,7 @@
 					<ul>
 						<li>
 							<dl>
-								<dt><a href=""><img src="__PUBLIC__/Home/images/recommend1.jpg" alt="" /></a></dt>
+								<dt><a href="{$Goods}goods_{$v.id}.html"><img src="__PUBLIC__/Home/images/recommend1.jpg" alt="" /></a></dt>
 								<dd><a href="">黄飞红麻辣花生整箱特惠装</a></dd>
 								<dd><span>售价：</span><strong> ￥139.00</strong></dd>
 							</dl>
@@ -209,7 +209,7 @@
                                             <?php foreach($new as $k=>$v):?>
 						<li>
 							<dl>
-								<dt><a href=""><?php showImage($v['sm_logo']);?></a></dt>
+								<dt><a href="{$Goods}goods_{$v.id}.html"><?php showImage($v['sm_logo']);?></a></dt>
 								<dd><a href="">{$v.goods_name}</a></dd>
 								<dd><span>售价：</span><strong> ￥{$v.shop_price}</strong></dd>
 							</dl>
@@ -314,7 +314,7 @@
 							<li>
                                                             <?php foreach($v['goods'] as $k7=>$v7):?>
 								<dl>
-									<dt><a href=""><?php showImage($v7['sm_logo']);?></a></dt>
+									<dt><a href="{$Goods}goods_{$v7.id}.html"><?php showImage($v7['sm_logo']);?></a></dt>
 									<dd><a href="">{$v7.goods_name}</a></dd>
 									<dd><span>售价：</span> <strong>￥{$v7.shop_price}</strong></dd>
 								</dl>
@@ -334,7 +334,7 @@
 							<?php foreach($v5['goods'] as $k6=>$v6):?>
 							<li>
 								<dl>
-									<dt><a href=""><?php showImage($v6['sm_logo']);?></a></dt>
+									<dt><a href="{$Goods}goods_{$v6.id}.html"><?php showImage($v6['sm_logo']);?></a></dt>
 									<dd><a href="">{$v6.goods_name}</a></dd>
 									<dd><span>售价：</span> <strong>￥{$v6.shop_price}</strong></dd>
 								</dl>

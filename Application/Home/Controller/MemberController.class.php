@@ -38,12 +38,15 @@ class MemberController extends Controller{
        
             if($m_member->validate($m_member->_login_validate)->create(I('post.'))){
                 if($m_member->login()){
+                    if($return=session('return')){
+                        $this->redirect($return);
+                        exit;
+                    }
                     header("location:/index.html");
-                    exit;
                 }
              }   
          
-                $this->error($m_member->getError());
+                $this->error($m_member->getError(),'',1);
                  exit;
           
       }

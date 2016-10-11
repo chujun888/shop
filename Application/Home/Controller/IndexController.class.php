@@ -16,6 +16,7 @@ class IndexController extends Controller{
         $floor=$m_cats->getFloor();
 
         $this->assign(array(
+            'Goods'=>C('Goods'),
             'floor'=>$floor,
            'promotes'=>$promotes,
             'best'=>$best,

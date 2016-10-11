@@ -27,7 +27,7 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-                                    <li>您好，欢迎来到京西！<span id="login">[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
+                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
 					<li class="line">|</li>
 					<li>我的订单</li>
 					<li class="line">|</li>
@@ -371,7 +371,7 @@
 						<?php foreach($promotes as $k=>$v):?>
 						<li>
 							<dl>
-								<dt><a href=""><?php showImage($v['sm_logo']);?></a></dt>
+								<dt><a href="<?php echo ($Goods); ?>goods_<?php echo ($v["id"]); ?>.html"><?php showImage($v['sm_logo']);?></a></dt>
 								<dd><a href=""><?php echo ($v["goods_name"]); ?></a></dd>
 								<dd><span>售价：</span><strong> ￥<?php echo ($v["promote_price"]); ?></strong></dd>
 							</dl>
@@ -387,7 +387,7 @@
                                             <?php foreach($hot as $k=>$v):?>
 						<li>
 							<dl>
-								<dt><a href=""><?php showImage($v['sm_logo']);?></a></dt>
+								<dt><a href="<?php echo ($Goods); ?>goods_<?php echo ($v["id"]); ?>.html"><?php showImage($v['sm_logo']);?></a></dt>
 								<dd><a href="">{}</a></dd>
 								<dd><span>售价：</span><strong> ￥1386.00</strong></dd>
 							</dl>
@@ -403,7 +403,7 @@
 					<ul>
 						<li>
 							<dl>
-								<dt><a href=""><img src="/Public/Home/images/recommend1.jpg" alt="" /></a></dt>
+								<dt><a href="<?php echo ($Goods); ?>goods_<?php echo ($v["id"]); ?>.html"><img src="/Public/Home/images/recommend1.jpg" alt="" /></a></dt>
 								<dd><a href="">黄飞红麻辣花生整箱特惠装</a></dd>
 								<dd><span>售价：</span><strong> ￥139.00</strong></dd>
 							</dl>
@@ -432,7 +432,7 @@
                                             <?php foreach($new as $k=>$v):?>
 						<li>
 							<dl>
-								<dt><a href=""><?php showImage($v['sm_logo']);?></a></dt>
+								<dt><a href="<?php echo ($Goods); ?>goods_<?php echo ($v["id"]); ?>.html"><?php showImage($v['sm_logo']);?></a></dt>
 								<dd><a href=""><?php echo ($v["goods_name"]); ?></a></dd>
 								<dd><span>售价：</span><strong> ￥<?php echo ($v["shop_price"]); ?></strong></dd>
 							</dl>
@@ -537,7 +537,7 @@
 							<li>
                                                             <?php foreach($v['goods'] as $k7=>$v7):?>
 								<dl>
-									<dt><a href=""><?php showImage($v7['sm_logo']);?></a></dt>
+									<dt><a href="<?php echo ($Goods); ?>goods_<?php echo ($v7["id"]); ?>.html"><?php showImage($v7['sm_logo']);?></a></dt>
 									<dd><a href=""><?php echo ($v7["goods_name"]); ?></a></dd>
 									<dd><span>售价：</span> <strong>￥<?php echo ($v7["shop_price"]); ?></strong></dd>
 								</dl>
@@ -557,7 +557,7 @@
 							<?php foreach($v5['goods'] as $k6=>$v6):?>
 							<li>
 								<dl>
-									<dt><a href=""><?php showImage($v6['sm_logo']);?></a></dt>
+									<dt><a href="<?php echo ($Goods); ?>goods_<?php echo ($v6["id"]); ?>.html"><?php showImage($v6['sm_logo']);?></a></dt>
 									<dd><a href=""><?php echo ($v6["goods_name"]); ?></a></dd>
 									<dd><span>售价：</span> <strong>￥<?php echo ($v6["shop_price"]); ?></strong></dd>
 								</dl>
@@ -728,7 +728,7 @@
     url:'/Home/index/ajaxLogin',
     success:function(data){
          if(data.ok==1){
-              $('#login').html('[<a href="login.html">'+data.user+'</a>]');
+              $('#login').html('[<a href="#">'+data.user+'</a>]');
               $('#log').html('<li><a href="/Home/index/logout">退出</a></li>');
          }
     }

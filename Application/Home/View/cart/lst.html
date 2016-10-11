@@ -21,25 +21,25 @@
 					<td class="col1"><a href="/goods/goods_{$v.goods_id}.html"><?php showImage($v['goods']['sm_logo']);?></a>  <strong><a href="">{$v['goods']['goods_name']}</a></strong></td>
 					<td class="col2"> <?php foreach($v['attrs'] as $k1=>$v1):?><p>{$v1['attr_name']}：{$v1.attr_value}</p><?php endforeach;?>  </td>
 					<td class="col3">￥<span>{$v['goods']['price']}</span></td>
-					<td class="col4"> 
-						<a href="javascript:;" class="reduce_num"></a>
-						<input type="text" name="amount" value="{$v['goods_num']}" class="amount"/>
-						<a href="javascript:;" class="add_num"></a>
+					<td class="col4" id='{$v.goods_id}-{$v.attr_id}'> 
+						<a href="javascript:;" class="reduce_num" onclick='change(-1,this)'></a>
+						<input type="text" name="amount" value="{$v['goods_num']}" onblur='change(2,this)' class="amount"/>
+						<a href="javascript:;" class="add_num" onclick='change(1,this)'></a>
 					</td>
 					<td class="col5">￥<span><?php echo $v['goods']['price']*$v['goods_num'];?></span></td>
-                                        <td class="col6"><a href="javascript:void(0);" id='{$v.goods_id}' attr="{$v.attr_id}" onclick='remove(this)'>删除</a></td>
+                                        <td class="col6"><a href="javascript:void(0);" id='{$v.goods_id}' attr="{$v.attr_id}" onclick='removeCart(this)'>删除</a></td>
 				</tr>
                            <?php endforeach;?>
 			</tbody>
 			<tfoot>
 				<tr>
-					<td colspan="6">购物金额总计： <strong>￥ <span id="total">1870.00</span></strong></td>
+					<td colspan="6">购物金额总计： <strong>￥ <span id="total">{$total}</span></strong></td>
 				</tr>
 			</tfoot>
 		</table>
 		<div class="cart_btn w990 bc mt10">
-			<a href="" class="continue">继续购物</a>
-			<a href="" class="checkout">结 算</a>
+			<a href="/index.html" class="continue">继续购物</a>
+			<a href="__MODULE__/Order/lst" class="checkout">结 算</a>
 		</div>
 	</div>
 	<!-- 主体部分 end -->
@@ -47,7 +47,7 @@
 	<div style="clear:both;"></div>
         <script>
             //删除数据
-           function remove(e){
+           function removeCart(e){
                if(confirm('确定删除吗')){
                $.ajax({
                    type:'get',
@@ -63,5 +63,22 @@
                    }
                });
            }
-           }
+         }
+         function  change(type,e){
+            var val=$(e).parent().find('input').val();
+            var id=$(e).parent().attr('id');
+            //商品数量
+            if(type==1){
+                val++;
+            }
+            if(type==-1){
+                val--;
+            }
+           $.ajax({
+               type:'get',
+               dataType:'json',
+               url:'__URL__/ajaxChange/id/'+id+'/val/'+val,
+           });
+            
+         }
         </script>
