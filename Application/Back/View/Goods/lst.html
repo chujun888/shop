@@ -78,7 +78,7 @@
     <td align="center">
         <a href="__URL__/goodsNumber/id/{$v.id}">商品库存</a>
       <a href="__URL__/edit/id/{$v.id}" title="编辑"><img src="__PUBLIC__/images/icon_edit.gif" width="16" height="16" border="0" /></a>
-      <a href="javascript:;" onclick="remove(this,{$v.id});" title="回收站"><img src="__PUBLIC__/images/icon_trash.gif" width="16" height="16" border="0" /></a>
+      <a href="javascript:;" onclick="removeG(this,{$v.id});" title="回收站"><img src="__PUBLIC__/images/icon_trash.gif" width="16" height="16" border="0" /></a>
       <img src="__PUBLIC__/images/empty.gif" width="16" height="16" border="0" />          
     </td>
     </tr>
@@ -258,7 +258,7 @@ if (document.getElementById("listDiv"))
   }
 
 }
-function remove(e,id){
+function removeG(e,id){
     if(confirm('确定要将商品放入回收站吗？')){
         
         //数据库删除

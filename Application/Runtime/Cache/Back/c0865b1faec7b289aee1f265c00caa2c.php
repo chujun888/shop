@@ -5,14 +5,14 @@
 <title>商之翼 管理中心 - 修改属性 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/admin/Public/styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/admin/Public/styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/admin/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/admin/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/admin/Public/js/common.js"></script>
+<link href="/Public/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="/Public/js/jquery.json.js"></script><script type="text/javascript" src="/js/transport.js"></script><script type="text/javascript" src="/Public/js/common.js"></script>
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="/admin/Back/Attr/lst/type_id/<?php echo I('get.type_id');?>">属性列表</a></span>
-<span class="action-span1"><a href="/admin/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 修改属性 </span>
+    <span class="action-span"><a href="/Back/Attr/lst/type_id/<?php echo I('get.type_id');?>">属性列表</a></span>
+<span class="action-span1"><a href="/Back/index/main">商之翼 管理中心</a> </span><span id="search_id" class="action-span1"> - 修改属性 </span>
 <div style="clear:both"></div>
 </h1>
 <script type="text/javascript" src="/js/transport.org.js"></script><script type="text/javascript" src="/js/region.js"></script><div class="main-div">
@@ -54,7 +54,7 @@
 
 </form>
 </div>
-<script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="/admin/Public/js/validator.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script><script type="text/javascript" src="/Public/js/validator.js"></script>
 <script language="JavaScript">
 <!--
 region.isAdmin = true;
@@ -66,12 +66,12 @@ region.isAdmin = true;
 
 
 <!--
-<embed src="/admin/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
+<embed src="/Public/images/online.wav" width="0" height="0" autostart="false" name="msgBeep" id="msgBeep" enablejavascript="true"/>
 -->
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="msgBeep" width="1" height="1">
-  <param name="movie" value="/admin/Public/images/online.swf">
+  <param name="movie" value="/Public/images/online.swf">
   <param name="quality" value="high">
-  <embed src="/admin/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
+  <embed src="/Public/images/online.swf" name="msgBeep" id="msgBeep" quality="high" width="0" height="0" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash">
   </embed>
 </object>
 
@@ -105,11 +105,11 @@ function showTodoList(adminid)
     global.onload = global.onreadystatechange= function()
     {
       if(this.readyState && this.readyState=="loading")return;
-      var md5 = $import("/admin/Public/js/md5.js","js");
+      var md5 = $import("/Public/js/md5.js","js");
       md5.onload = md5.onreadystatechange= function()
       {
         if(this.readyState && this.readyState=="loading")return;
-        var todolist = $import("/admin/Public/js/todolist.js","js");
+        var todolist = $import("/Public/js/todolist.js","js");
         todolist.onload = todolist.onreadystatechange = function()
         {
           if(this.readyState && this.readyState=="loading")return;

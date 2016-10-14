@@ -82,3 +82,24 @@ function getSelect($name,$table,$field,$value,$eq=''){
    
     
 }
+
+/**
+ * 生成支付宝按钮
+ */
+function alipay($orderId,$btnName='立即支付'){
+    return require C('INCLUDE_PATH').'alipay/alipayapi.php';
+}
+
+/**
+ * 过滤url
+ */
+function filter_url($param){
+    $preg="/\/$param\/[^\/]+/";
+    
+    $url=$_SERVER['PHP_SELF']; 
+    $url=preg_replace($preg, '', $url);
+    //preg_match($preg, $url,$arr);
+    //var_dump($arr);exit;
+   return $url;
+    
+}

@@ -27,13 +27,14 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-                                    <li>您好，欢迎来到京西！<span id="login">[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
+                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
 					<li class="line">|</li>
-					<li>我的订单</li>
+                                        <span id='order'></span>
 					<li class="line">|</li>
 					<li>客户服务</li>
                                         <li class='line'>|</li>
-                                        <li><a href="/Home/index/logout">退出</a></li>
+                                        <li><a href="/index.html">首页</a></li>
+                                        <span id="log"><li><a href="/Home/index/logout">退出</a></li></span>
 
 				</ul>
 			</div>
@@ -96,7 +97,7 @@
 				<h3>还不是商城用户</h3>
 				<p>现在免费注册成为商城用户，便能立刻享受便宜又放心的购物乐趣，心动不如行动，赶紧加入吧!</p>
 
-				<a href="/regist.html" class="reg_btn">免费注册 >></a>
+				<a href="/register.html" class="reg_btn">免费注册 >></a>
 			</div>
 
 		</div>
@@ -140,7 +141,9 @@
     url:'/Home/index/ajaxLogin',
     success:function(data){
          if(data.ok==1){
-              $('#login').html('[<a href="login.html">'+data.user+'</a>]');
+              $('#login').html('[<a href="#">'+data.user+'</a>]');
+              $('#log').html('<li><a href="/Home/index/logout">退出</a></li>');
+              $('#order').html("<li><a href='/Home/My/lst'>我的订单</a></li>");
          }
     }
    });

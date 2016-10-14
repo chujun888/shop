@@ -1263,3 +1263,126 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
 
+[ 2016-10-11T20:47:06+08:00 ] 127.0.0.1 /index.php/Back/Goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `php34_goods` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT a.*,b.cat_name,group_concat(d.cat_name SEPARATOR "<br/>") ext_name FROM php34_goods a LEFT JOIN php34_category as b on a.cat_id=b.id LEFT JOIN php34_ext_cat as c on c.goods_id=a.id LEFT JOIN php34_category as d on d.id =c.cat_id  WHERE `is_delete` = 0 GROUP BY a.id ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2016-10-11T20:47:09+08:00 ] 127.0.0.1 /Back/Goods/goodsNumber/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001328s ]
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0057s ]
+SQL: SELECT group_concat(a.id) ids,group_concat(a.attr_value) attr_value,b.attr_name FROM php34_goods_attr a INNER JOIN php34_attr b on b.id=a.attr_id  WHERE `goods_id` = '60' GROUP BY a.attr_id HAVING count(*)>1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_goods_number` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `php34_goods_number` WHERE `goods_id` = '60'  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006574s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2016-10-11T20:48:49+08:00 ] 127.0.0.1 /Back/Goods/goodsNumber/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+SQL: SHOW COLUMNS FROM `php34_goods_number` [ RunTime:0.0033s ]
+SQL: DELETE FROM `php34_goods_number` WHERE `goods_id` = '60' [ RunTime:0.0023s ]
+SQL: INSERT INTO `php34_goods_number` (`goods_id`,`goods_attr_id`,`goods_number`) VALUES ('60','2,4','100') [ RunTime:0.0014s ]
+SQL: INSERT INTO `php34_goods_number` (`goods_id`,`goods_attr_id`,`goods_number`) VALUES ('60','2,5','100') [ RunTime:0.0013s ]
+SQL: INSERT INTO `php34_goods_number` (`goods_id`,`goods_attr_id`,`goods_number`) VALUES ('60','3,4','100') [ RunTime:0.0013s ]
+SQL: INSERT INTO `php34_goods_number` (`goods_id`,`goods_attr_id`,`goods_number`) VALUES ('60','3,5','100') [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-10-11T20:48:51+08:00 ] 127.0.0.1 /Back/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `php34_goods` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT a.*,b.cat_name,group_concat(d.cat_name SEPARATOR "<br/>") ext_name FROM php34_goods a LEFT JOIN php34_category as b on a.cat_id=b.id LEFT JOIN php34_ext_cat as c on c.goods_id=a.id LEFT JOIN php34_category as d on d.id =c.cat_id  WHERE `is_delete` = 0 GROUP BY a.id ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007785s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000893s ]
+
+[ 2016-10-11T20:49:00+08:00 ] 127.0.0.1 /Back/Goods/goodsNumber/id/82
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0077s ]
+SQL: SELECT group_concat(a.id) ids,group_concat(a.attr_value) attr_value,b.attr_name FROM php34_goods_attr a INNER JOIN php34_attr b on b.id=a.attr_id  WHERE `goods_id` = '82' GROUP BY a.attr_id HAVING count(*)>1  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 E:\php\http\fuxi\Application\Back\Controller\GoodsController.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `php34_goods_number` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `php34_goods_number` WHERE `goods_id` = '82'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Back\23d6bf005302236dcb729d92bee235e5.php 第 34 行.
+NOTIC: [8] Undefined index: 82 E:\php\http\fuxi\Application\Runtime\Cache\Back\23d6bf005302236dcb729d92bee235e5.php 第 41 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Back\23d6bf005302236dcb729d92bee235e5.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006574s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+

@@ -18,6 +18,8 @@ return array(
           /**文件上传**/
        'UPLOAD_PATH'           =>'./Uploads/',  //文件上传地址        
        'SHOW_PATH'             =>'/Uploads/' ,   //文件显示地址
+       /***外部继承包***/
+       'INCLUDE_PATH'=>'/includes/',
         /**换行符**/
        'LINE_FEED'             =>"\r\n",
      /* 数据缓存设置 */
@@ -25,6 +27,6 @@ return array(
     'DATA_CACHE_TYPE'       =>  'Memcache',  // 数据缓存类型,支持:File|Db|Apc|Memcache|Shmop|Sqlite|Xcache|Apachenote|Eaccelerator
     'MEMCACHE_HOST'         =>'tcp://127.0.0.1:11211',
     /****商品详情页缓存地址******/
-    'Goods'    => '/Goods/',
+    'GOODS_PATH'    => '/Goods/',
      
 );

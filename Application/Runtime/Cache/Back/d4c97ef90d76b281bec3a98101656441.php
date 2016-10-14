@@ -78,7 +78,7 @@
     <td align="center">
         <a href="/Back/Goods/goodsNumber/id/<?php echo ($v["id"]); ?>">商品库存</a>
       <a href="/Back/Goods/edit/id/<?php echo ($v["id"]); ?>" title="编辑"><img src="/Public/images/icon_edit.gif" width="16" height="16" border="0" /></a>
-      <a href="javascript:;" onclick="remove(this,<?php echo ($v["id"]); ?>);" title="回收站"><img src="/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
+      <a href="javascript:;" onclick="removeG(this,<?php echo ($v["id"]); ?>);" title="回收站"><img src="/Public/images/icon_trash.gif" width="16" height="16" border="0" /></a>
       <img src="/Public/images/empty.gif" width="16" height="16" border="0" />          
     </td>
     </tr>
@@ -258,7 +258,7 @@ if (document.getElementById("listDiv"))
   }
 
 }
-function remove(e,id){
+function removeG(e,id){
     if(confirm('确定要将商品放入回收站吗？')){
         
         //数据库删除

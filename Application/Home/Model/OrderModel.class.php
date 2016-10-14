@@ -93,7 +93,25 @@ class OrderModel extends Model{
         //清空购物车
        $m_cart->where(array('member_id'=>array('eq',$m_id)))->delete();
        $this->commit();
-               
+       return $id;
+    }
+    
+    /**
+     * 设置订单支付成功后的状态
+     */
+    public function setPaid($order_id){
+        /**
+         * 1.pay_status =1
+         * 2.会员积分增加
+         */
+        $m_id=session('m_id');
+        $this->where("id=$order_id")->setField('pay_statu',1);
+        $row=$this->field('total_price')->find($order_id);
+        $total=$row['total_price'];
+        $m_member=M('Member');
+        $m_member->where("id=$m_id")->setInc('jifen',$total);
+        $m_member->where("id=$m_id")->setInc('jyz',$total);
+        
     }
 }
 

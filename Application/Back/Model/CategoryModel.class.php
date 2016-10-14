@@ -182,7 +182,7 @@ class   CategoryModel extends Model{
          if($row['parent_id']>0){
             $this->getSup($row['parent_id']);
          }
-         return $arr;
+         return array_reverse($arr);
      }
      
      /**
@@ -231,6 +231,21 @@ class   CategoryModel extends Model{
          
          }
          return $arr;
+     }
+     
+     /**
+      * 根据分类，获取分类下的商品
+      */
+     
+     public function getGoods($cat_id){
+              $child=$this->getChildren($cat_id);
+              $child[]=$cat_id;
+              $goods=M('Goods')->where(array('cat_id'=>array('in',$child)))->field('id')->select();
+              $ids=array();
+              foreach($goods as $k=>$v){
+                  $ids[]=$v['id'];
+              }
+              return $ids;
      }
      
      /**
