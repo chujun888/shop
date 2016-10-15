@@ -27,7 +27,7 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
+                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="/register.html">免费注册</a>] </span></li>
 					<li class="line">|</li>
                                         <span id='order'></span>
 					<li class="line">|</li>
@@ -442,7 +442,7 @@
 						<dt>品牌：</dt>
 						<dd class="cur"><a href="">不限</a></dd>
                                                 <?php foreach($data['brands'] as $k=>$v):?>
-						<dd><a href="/index.php/Home/Search/cat/id/351/orderby/num_desc/brand/<?php echo ($v["id"]); ?>-<?php echo ($v["brand_name"]); ?>#mao"><?php echo ($v['brand_name']); ?></a></dd>
+						<dd><a href="/Home/Search/cat/id/18/brand/<?php echo ($v["id"]); ?>-<?php echo ($v["brand_name"]); ?>#mao"><?php echo ($v['brand_name']); ?></a></dd>
                                                 <?php endforeach;?>
                                            
 					</dl>
@@ -452,7 +452,7 @@
 						<dt>价格：</dt>
 						<dd class="cur"><a href="">不限</a></dd>
                                                 <?php foreach($data['price'] as $k=>$v):?>
-						<dd><a href="/index.php/Home/Search/cat/id/351/orderby/num_desc/price/<?php echo ($v); ?>#mao"><?php echo ($v); ?></a></dd>
+						<dd><a href="/Home/Search/cat/id/18/price/<?php echo ($v); ?>#mao"><?php echo ($v); ?></a></dd>
                                                 <?php endforeach;?>
 						
 					</dl>
@@ -463,7 +463,7 @@
 						<dt><?php echo ($attr_name); ?>：</dt>
 						<dd class="cur"><a href="">不限</a></dd>
                                                 <?php foreach($v as $k1=>$v1):?>
-						<dd><a href="/index.php/Home/Search/cat/id/351/orderby/num_desc/attr_<?php echo ($id); ?>/<?php echo ($attr_name); ?>-<?php echo ($v1); ?>#mao"><?php echo ($v1); ?></a></dd>
+						<dd><a href="/Home/Search/cat/id/18/attr_<?php echo ($id); ?>/<?php echo ($attr_name); ?>-<?php echo ($v1); ?>#mao"><?php echo ($v1); ?></a></dd>
 						
                                                 <?php endforeach;?>
 					</dl>

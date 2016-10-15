@@ -147,7 +147,15 @@ class GoodsController extends BaseController{
             }
            $arr[$k]=$arr1;
         }
-        $arr=$this->getDcar($arr); 
+        if(count($arr)==1){
+            $arr_=$arr;$arr=array();
+            foreach($arr_[0] as $k=>$v){
+                $arr[$k][]=$v;
+            }
+           // var_dump($arr);exit;
+        }
+        else
+            $arr=$this->getDcar($arr); 
         //取出已有数据
         $goods_number=M('goodsNumber');   
         $res=$goods_number->where(array('goods_id'=>array('eq',I('get.id'))))->select();

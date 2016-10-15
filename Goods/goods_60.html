@@ -587,7 +587,7 @@
 									<dd><div style="width:90px;"></div></dd>
 								</dl>
 								<dl>
-									<dt>中评（5%）</dt>
+									<dt>中评（60%）</dt>
 									<dd><div style="width:5px;"></div></dd>
 								</dl>
 								<dl>
@@ -597,13 +597,13 @@
 							</div>
 							<div class="buyer fl">
 								<dl>
-									<dt>买家印象：</dt>
-									<dd><span>屏幕大</span><em>(1953)</em></dd>
-									<dd><span>外观漂亮</span><em>(786)</em></dd>
-									<dd><span>系统流畅</span><em>(1091)</em></dd>
-									<dd><span>功能齐全</span><em>(1109)</em></dd>
-									<dd><span>反应快</span><em>(659)</em></dd>
-									<dd><span>分辨率高</span><em>(824)</em></dd>
+									<dt id="press">买家印象：</dt>
+                                                                        <dd><span><a href="javascript:void(0);">屏幕大</a></span><em>(1953)</em></dd>
+                                                                        <dd><span><a href="javascript:void(0);">外观漂亮</a></span><em>(786)</em></dd>
+									<dd><span><a href="javascript:void(0);">系统流畅</a></span><em>(1091)</em></dd>
+									<dd><span><a href="javascript:void(0);">功能齐全</a></span><em>(1109)</em></dd>
+									<dd><span><a href="javascript:void(0);">反应快</a></span><em>(659)</em></dd>
+									<dd><span><a href="javascript:void(0);">分辨率高</a></span><em>(824)</em></dd>
 								</dl>
 							</div>
 						</div>
@@ -865,6 +865,9 @@
 
 
 <script>
+    $('#press dd').mouseover(function(){
+        $(this).css('border','1px red');
+    });
     $.ajax({
         type:'get',
         dataType:'json',

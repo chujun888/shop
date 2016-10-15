@@ -27,7 +27,7 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
+                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="/register.html">免费注册</a>] </span></li>
 					<li class="line">|</li>
                                         <span id='order'></span>
 					<li class="line">|</li>

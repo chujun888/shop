@@ -16,7 +16,7 @@ class IndexController extends Controller{
         $floor=$m_cats->getFloor();
 
         $this->assign(array(
-            'Goods'=>C('Goods'),
+            'Goods'=>C('GOODS_PATH'),
             'floor'=>$floor,
            'promotes'=>$promotes,
             'best'=>$best,
@@ -67,7 +67,8 @@ class IndexController extends Controller{
             'show'=>0,
             'title'=>'商品详情',
             'js'=>array('goods','jqzoom-core'),
-            'style'=>array('common','goods','qzoom'),
+        
+            'style'=>array('common','goods','qzoom','login'),
         )        
         );
         $this->display();

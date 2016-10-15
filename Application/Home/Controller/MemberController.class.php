@@ -33,7 +33,9 @@ class MemberController extends Controller{
     * 登录
     */
     public function login(){
+      
       if($_POST){
+          $ajax=I('get.ajax');
           $m_member=D('Home/Member');
        
             if($m_member->validate($m_member->_login_validate)->create(I('post.'))){
@@ -42,10 +44,18 @@ class MemberController extends Controller{
                         $this->redirect($return);
                         exit;
                     }
+                    //ajax登录
+                    if($ajax){
+                        $this->success('登录成功','',false);
+                        exit;
+                    }
                     header("location:/index.html");
                 }
              }   
-         
+              if($ajax){
+                  $this->error($m_member->getError(),'',false);
+                  exit;
+              }
                 $this->error($m_member->getError(),'',1);
                  exit;
           

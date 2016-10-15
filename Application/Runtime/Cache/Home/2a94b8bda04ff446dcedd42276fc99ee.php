@@ -17,6 +17,7 @@
         <?php foreach($js as $k=>$v):?>
 	<script type="text/javascript" src="/Public/Home/js/<?php echo ($v); ?>.js"></script>
         <?php endforeach;?>
+        <script>var is_login=0;</script>
 </head>
 <body>
 	<!-- 顶部导航 start -->
@@ -27,7 +28,7 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
+                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="/register.html">免费注册</a>] </span></li>
 					<li class="line">|</li>
                                         <span id='order'></span>
 					<li class="line">|</li>
@@ -722,16 +723,20 @@
 </body>
 </html>
 <script>
-   $.ajax({
+   login();
+   function login(){
+       $.ajax({
     type:'get',
     dataType:'json',
     url:'/Home/index/ajaxLogin',
     success:function(data){
          if(data.ok==1){
+             is_login=1;
               $('#login').html('[<a href="#">'+data.user+'</a>]');
               $('#log').html('<li><a href="/Home/index/logout">退出</a></li>');
               $('#order').html("<li><a href='/Home/My/lst'>我的订单</a></li>");
          }
     }
    });
+   }
 </script>

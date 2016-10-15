@@ -17,6 +17,7 @@
         <?php foreach($js as $k=>$v):?>
 	<script type="text/javascript" src="/Public/Home/js/<?php echo ($v); ?>.js"></script>
         <?php endforeach;?>
+        <script>var is_login=0;</script>
 </head>
 <body>
 	<!-- 顶部导航 start -->
@@ -27,9 +28,9 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-                                    <li>您好，欢迎来到京西！<span id="login">[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
+                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="/register.html">免费注册</a>] </span></li>
 					<li class="line">|</li>
-					<li>我的订单</li>
+                                        <span id='order'></span>
 					<li class="line">|</li>
 					<li>客户服务</li>
                                         <li class='line'>|</li>
@@ -46,9 +47,82 @@
 	<script type="text/javascript" src="/Public/HOME/js/goods.js"></script>
 	<script type="text/javascript" src="/Public/HOME/js/jqzoom-core.js"></script>
         <link rel="stylesheet" href="style/common.css" type="text/css">
+        <link href="/Public/ui/css/blitzer/jquery-ui-1.9.2.custom.css" rel="stylesheet">
 	
+	<script src="/Public/ui/js/jquery-ui-1.9.2.custom.js"></script>
+        <div id="dialog" class="none">
+            <style>.ui li{margin-top: 5px;}</style>
+            <form action="/Home/member/login" method="post">
+					<ul class="ui">
+						<li>
+							<label for="">用户名：</label>
+							<input type="text" class="txt" name="user" /><br/>
+						</li>
+						<li>
+							<label for="">密　码：</label>
+							<input type="password" class="txt" name="password" />
+                                                        <a href="">忘记密码?</a><br/>
+                                                      
+						</li>
+						<li class="checkcode">
+							<label for="">验证码：</label>
+							<input type="text"  name="captcha" /><br/>
+                                                        　　　　　<img  style="width: 100px;" src="/Home/member/verify"  onclick="this.src='/Home/member/verify#'+Math.random();" alt="" />
+                                                             <span>看不清？<a href="javascript:void(0);" onclick="$(this).parent().prev('img').prop('src','/Home/member/verify#'+Math.random());">换一张</a></span>
+						</li>
+<!--						<li>
+							<label for="">&nbsp;</label>
+							<input type="checkbox" class="chb"  /> 保存登录信息
+						</li>-->
+						
+					</ul>
+				</form>
+        </div>
+      
 	<!-- jqzoom 效果 -->
 	<script type="text/javascript">
+            	$( "#dialog" ).dialog({
+                       modal:true,
+                      title:'欢迎登录',
+			autoOpen: false,
+			width: 400,
+			buttons: [
+				{
+					text: "登录",
+					click: function() {
+                                                var value=$('#dialog form').serialize();
+                                                var th=$(this);
+                                                $.ajax({
+                                                    type:'post',
+                                                    data:value,
+                                                    dataType:'json',
+                                                    url:'/Home/member/login/ajax/1',
+                                                    success:function(data){
+                                                        if(data.status==1){
+                                                           
+                                                            
+                                                            th.dialog( "close" );
+                                                            login();
+                                                            //comment();
+                                                        }
+                                                        else{
+                                                            alert(data.info);
+                                                        }
+                                                    }
+                                                    
+                                                });
+						
+					}
+				},
+				{
+					text: "取消",
+					click: function() {
+						$( this ).dialog( "close" );
+					}
+				}
+			]
+		});
+                
 		$(function(){
 			$('.jqzoom').jqzoom({
 	            zoomType: 'standard',
@@ -76,7 +150,7 @@
 				<div class="search_form">
 					<div class="form_left fl"></div>
 					<form action="" name="serarch" method="get" class="fl">
-						<input type="text" class="txt" value="请输入商品关键字" /><input type="submit" class="btn" value="搜索" />
+						<input type="text" class="txt" id='key' value="请输入商品关键字" /><input type="submit" class="btn" value="搜索" onclick='location.href="/Home/Search/key/val/"+$("#key").val();return false;'/>
 					</form>
 					<div class="form_right fl"></div>
 				</div>
@@ -167,15 +241,15 @@
 				<div class="cat_bd <?php if(!$show):?>none<?php endif;?>">
 <?php foreach($cats as $k=>$v):?>
 					<div class="cat <?php if($k==0) echo 'item1';?>">
-						<h3><a href=""><?php echo ($v["cat_name"]); ?></a> <b></b></h3>
+						<h3><a href="/Home/Search/cat/id/<?php echo ($v["id"]); ?>"><?php echo ($v["cat_name"]); ?></a> <b></b></h3>
 
 						<div class="cat_detail">
 <?php foreach($v['children'] as $k1=>$v1):?>                                                    
                                                      <dl <?php if($k1==0):?>class="dl_1st"<?php endif;?>>
-								<dt><a href=""><?php echo ($v1["cat_name"]); ?></a></dt>
+								<dt><a href="/Home/Search/cat/id/<?php echo ($v1["id"]); ?>"><?php echo ($v1["cat_name"]); ?></a></dt>
 								<dd>
 <?php foreach($v1['children'] as $k2=>$v2):?>				
-									<a href=""><?php echo ($v2["cat_name"]); ?></a>	
+									<a href="/Home/Search/cat/id/<?php echo ($v2["id"]); ?>"><?php echo ($v2["cat_name"]); ?></a>	
 <?php endforeach;?>                                                                       
 								</dd>
 							</dl>
@@ -503,182 +577,72 @@
 					
 					<!-- 商品评论 start -->
 					<div class="comment detail_div mt10">
-						<div class="comment_summary">
+						<div class="comment_summary" >
+                                                    
 							<div class="rate fl">
-								<strong><em>90</em>%</strong> <br />
+								<strong><em class='hao'></em>%</strong> <br />
 								<span>好评度</span>
 							</div>
 							<div class="percent fl">
 								<dl>
-									<dt>好评（90%）</dt>
-									<dd><div style="width:90px;"></div></dd>
+                                                                    <dt>好评（<span class='hao'></span>%）</dt>
+									<dd><div id='hao'></div></dd>
 								</dl>
 								<dl>
-									<dt>中评（5%）</dt>
-									<dd><div style="width:5px;"></div></dd>
+                                                                    <dt>中评（<span class='zhong'></span>%）</dt>
+									<dd><div id='zhong'></div></dd>
 								</dl>
 								<dl>
-									<dt>差评（5%）</dt>
-									<dd><div style="width:5px;" ></div></dd>
+                                                                    <dt>差评（<span class='cha'></span>%）</dt>
+									<dd><div id='cha'></div></dd>
 								</dl>
 							</div>
 							<div class="buyer fl">
 								<dl>
-									<dt>买家印象：</dt>
-									<dd><span>屏幕大</span><em>(1953)</em></dd>
-									<dd><span>外观漂亮</span><em>(786)</em></dd>
-									<dd><span>系统流畅</span><em>(1091)</em></dd>
-									<dd><span>功能齐全</span><em>(1109)</em></dd>
-									<dd><span>反应快</span><em>(659)</em></dd>
-									<dd><span>分辨率高</span><em>(824)</em></dd>
+									<dt id='dt'>买家印象：</dt>
+									
+									
 								</dl>
 							</div>
 						</div>
+                                            <div id='box'></div>
 
-						<div class="comment_items mt10">
-							<div class="user_pic">
-								<dl>
-									<dt><a href=""><img src="/Public/HOME/images/user1.gif" alt="" /></a></dt>
-									<dd><a href="">乖乖</a></dd>
-								</dl>
-							</div>
-							<div class="item">
-								<div class="title">
-									<span>2013-03-11 22:18</span>
-									<strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-								</div>
-								<div class="comment_content">
-									<dl>
-										<dt>心得：</dt>
-										<dd>东西挺好，挺满意的！</dd>
-									</dl>
-									<dl>
-										<dt>优点：</dt>
-										<dd>反应速度开，散热性能好</dd>
-									</dl>
-									<dl>
-										<dt>不足：</dt>
-										<dd>暂时还没发现缺点哦！</dd>
-									</dl>
-									<dl>
-										<dt>购买日期：</dt>
-										<dd>2013-11-24</dd>
-									</dl>
-								</div>
-								<div class="btns">
-									<a href="" class="reply">回复(0)</a>
-									<a href="" class="useful">有用(0)</a>
-								</div>
-							</div>
-							<div class="cornor"></div>
-						</div>
+					
 
-						<div class="comment_items mt10">
-							<div class="user_pic">
-								<dl>
-									<dt><a href=""><img src="/Public/HOME/images/user2.jpg" alt="" /></a></dt>
-									<dd><a href="">小宝贝</a></dd>
-								</dl>
-							</div>
-							<div class="item">
-								<div class="title">
-									<span>2013-10-01 14:10</span>
-									<strong class="star star4"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-								</div>
-								<div class="comment_content">
-									<dl>
-										<dt>心得：</dt>
-										<dd>外观漂亮同，还在使用过程中。</dd>
-									</dl>
-									<dl>
-										<dt>型号：</dt>
-										<dd>i5 8G内存版</dd>
-									</dl>
-									<dl>
-										<dt>购买日期：</dt>
-										<dd>2013-11-20</dd>
-									</dl>
-								</div>
-								<div class="btns">
-									<a href="" class="reply">回复(0)</a>
-									<a href="" class="useful">有用(0)</a>
-								</div>
-							</div>
-							<div class="cornor"></div>
-						</div>
-
-						<div class="comment_items mt10">
-							<div class="user_pic">
-								<dl>
-									<dt><a href=""><img src="/Public/HOME/images/user3.jpg" alt="" /></a></dt>
-									<dd><a href="">天使</a></dd>
-								</dl>
-							</div>
-							<div class="item">
-								<div class="title">
-									<span>2013-03-11 22:18</span>
-									<strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-								</div>
-								<div class="comment_content">
-									<dl>
-										<dt>心得：</dt>
-										<dd>挺好的，物超所值，速度挺好，WIN8用起来也不错。</dd>
-									</dl>
-									<dl>
-										<dt>优点：</dt>
-										<dd>散热很好，配置不错</dd>
-									</dl>
-									<dl>
-										<dt>不足：</dt>
-										<dd>暂时还没发现缺点哦！</dd>
-									</dl>
-									<dl>
-										<dt>购买日期：</dt>
-										<dd>2013-11-24</dd>
-									</dl>
-								</div>
-								<div class="btns">
-									<a href="" class="reply">回复(0)</a>
-									<a href="" class="useful">有用(0)</a>
-								</div>
-							</div>
-							<div class="cornor"></div>
-						</div>
+							
 
 						<!-- 分页信息 start -->
-						<div class="page mt20">
-							<a href="">首页</a>
-							<a href="">上一页</a>
-							<a href="">1</a>
-							<a href="">2</a>
-							<a href="" class="cur">3</a>
-							<a href="">4</a>
-							<a href="">5</a>
-							<a href="">下一页</a>
-							<a href="">尾页</a>
+						<div class="page mt20" id='page_'>
+							
 						</div>
 						<!-- 分页信息 end -->
 
 						<!--  评论表单 start-->
 						<div class="comment_form mt20">
-							<form action="">
+							<form action="" id='comment'>
+                                                            <input type='hidden' value='<?php echo I('get.id');?>' name='goods_id'/>
 								<ul>
 									<li>
 										<label for=""> 评分：</label>
-										<input type="radio" name="grade"/> <strong class="star star5"></strong>
-										<input type="radio" name="grade"/> <strong class="star star4"></strong>
-										<input type="radio" name="grade"/> <strong class="star star3"></strong>
-										<input type="radio" name="grade"/> <strong class="star star2"></strong>
-										<input type="radio" name="grade"/> <strong class="star star1"></strong>
+										<input type="radio" name="star" value="5"/> <strong class="star star5"></strong>
+										<input type="radio" name="star" value="4"/> <strong class="star star4"></strong>
+										<input type="radio" name="star" value="3"/> <strong class="star star3"></strong>
+										<input type="radio" name="star" value="2"/> <strong class="star star2"></strong>
+										<input type="radio" name="star" value="1"/> <strong class="star star1"></strong>
+										
 									</li>
 
 									<li>
 										<label for="">评价内容：</label>
-										<textarea name="" id="" cols="" rows=""></textarea>
+										<textarea name="content" id="" cols="" rows=""></textarea>
+									</li>
+                                                                        <li>
+										<label for="">印象：</label>
+										<input name="impress" type='text' style='width:400px;'/>（多个用,隔开）
 									</li>
 									<li>
 										<label for="">&nbsp;</label>
-										<input type="submit" value="提交评论"  class="comment_btn"/>										
+										<input type="button"  onclick='comment(this)' value="提交评论"  class="comment_btn"/>										
 									</li>
 								</ul>
 							</form>
@@ -811,10 +775,118 @@
         url:'/Home/Index/ajaxRecent',
         success:function(data){
             $.each(data,function(k,v){
-                $('#leftbar').append('<dl class="last"><dt><a href=""><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></dt><dd><a href="">'+v.goods_name+'</a></dd></dl>');
+                $('#leftbar').append('<dl class="last"><dt><a href=""><img src="<?php echo C('SHOW_PATH');?>'+v.sm_logo+'" alt="" /></a></dt><dd><a href="">'+v.goods_name+'</a></dd></dl><div class="cornor"></div>');
             })
         }
     });
+    /**
+     * 评论提交
+     */
+    function comment(e){
+        if(is_login!=1){
+         $("#dialog").dialog('open');
+         return false;     
+      }
+        var res=$('#comment').serialize();
+        $.ajax({
+            type:'post',
+            dataType:'json',
+            data:res,
+            url:"/Home/Comment/add",
+            success:function(data){
+                 if(data.status==1){
+                     $('#comment').trigger('reset');
+                     
+                      
+                      v=data.info;
+                      var html='<div class="comment_items mt10"><div class="user_pic"><dl><dt><a href=""><img src="/Public/Home/images/user2.jpg" alt="" /></a></dt><dd><a href="">'+v.user+'</a></dd></dl></div><div class="item"><div class="title"><span>'+v.addtime+'</span><strong class="star star'+v.star+'"></strong></div><div class="comment_content">'+v.content+'</div><div class="btns"><a href="" class="reply">回复(0)</a><a href="" class="useful">有用(0)</a></div></div><div class="cornor"></div></div>';
+                       $('#box').prepend($(html));
+                  
+                    $("body").animate({
+					"scrollTop" : "750px"
+				}, 1000, function(){
+					$(html).fadeIn(3000);
+				});
+                    
+                 }
+                 else
+                     alert(data.info);
+              
+            }
+        });
+   
+    }
+    //获取评论
+    function getComment(page=1){
+        $.ajax({
+            type:'get',
+            dataType:'json',
+            url:'/Home/Comment/lst/page/'+page+'/goods_id/<?php echo I('get.id');?>',
+            success:function(data)
+            {
+                
+                $('#box').empty();
+                if(page==1){
+                    //填入分页，好评数据
+                    $('#page_').html(data.fpage);
+                    $('.hao').html(data.good);
+                    $('.zhong').html(data.zhong);
+                    $('.cha').html(data.cha);
+                    $('#hao').css('width',data.good+'%');
+                    $('#zhong').css('width',data.zhong+'%');
+                    $('#cha').css('width',data.cha+'%');
+                    $.each(data.impress,function(k,v){
+                       $('#dt').after("<dd><span>"+v.imp_name+"</span><em>("+v.imp_count+")</em></dd>"); 
+                    });
+                    
+                }
+                
+                $('#page_ a').each(function(k,v){
+                   if($(v).html()==page){
+                       $(v).prop('class','cur');
+                   }
+                   else{
+                       $(v).removeClass('cur');
+                   }
+                });
+             
+                    //填充数据
+                   $.each(data.res,function(k,v){
+                       var str='';
+                       $.each(v.replay,function(k1,v1){
+                           str+='<div class="item">'+v1.user+'：'+v1.content+'</div>';
+                       });
+                       var replay="<div class='none'>"+str+"<div><textarea rows='1' style='width:100%'></textarea><input type='button' onclick='replay(this,"+v.id+")' value='回复'/><input type='button' onclick=\"$(this).parent().parent().addClass('none');\"  value='关闭'/></div></div>";
+                       var html='<div class="comment_items mt10"><div class="user_pic"><dl><dt><a href=""><img src="/Public/Home/images/user2.jpg" alt="" /></a></dt><dd><a href="">'+v.user+'</a></dd></dl></div><div class="item"><div class="title"><span>'+v.addtime+'</span><strong class="star star'+v.star+'"></strong></div><div class="comment_content">'+v.content+'</div><div class="btns"><a href="javascript:void(0)" class="reply" onclick="opener(this)">回复('+v.total+')</a><a href="" class="useful">有用('+v.used+')</a></div></div>'+replay+'<div class="cornor"></div></div>';
+                       $('#box').prepend($(html));
+                   });
+                
+            }
+        });
+    }
+    function opener(e){
+        if(is_login!=1){
+         $("#dialog").dialog('open');
+         return false;     
+       }
+        $(e).parent().parent().parent().find('.none').removeClass('none');
+        
+    }
+    function replay(e,id){
+        var value=$(e).prev('textarea').val();
+      
+        $.ajax({
+            type:'get',
+            dataType:'json',
+            url:'/Home/Comment/replay/id/'+id+'/value/'+value,
+            success:function(data){
+                
+                $(e).parent().before('<div class="item">'+data.user+'：'+data.content+'</div');
+                $(e).prev('textarea').val('');
+            }
+        });
+    }
+    getComment();
 </script>
 
 	<!-- 底部版权 start -->
@@ -847,15 +919,20 @@
 </body>
 </html>
 <script>
-   $.ajax({
+   login();
+   function login(){
+       $.ajax({
     type:'get',
     dataType:'json',
     url:'/Home/index/ajaxLogin',
     success:function(data){
          if(data.ok==1){
-              $('#login').html('[<a href="login.html">'+data.user+'</a>]');
+             is_login=1;
+              $('#login').html('[<a href="#">'+data.user+'</a>]');
               $('#log').html('<li><a href="/Home/index/logout">退出</a></li>');
+              $('#order').html("<li><a href='/Home/My/lst'>我的订单</a></li>");
          }
     }
    });
+   }
 </script>
