@@ -28,5 +28,7 @@ return array(
     'MEMCACHE_HOST'         =>'tcp://127.0.0.1:11211',
     /****商品详情页缓存地址******/
     'GOODS_PATH'    => '/Goods/',
+    /***站点****/
+    "SITE"=>"http://www.fuxi.com/",
      
 );

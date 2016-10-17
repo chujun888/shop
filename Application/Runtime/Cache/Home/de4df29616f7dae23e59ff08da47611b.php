@@ -17,6 +17,7 @@
         <?php foreach($js as $k=>$v):?>
 	<script type="text/javascript" src="/Public/Home/js/<?php echo ($v); ?>.js"></script>
         <?php endforeach;?>
+        <script>var is_login=0;</script>
 </head>
 <body>
 	<!-- 顶部导航 start -->
@@ -27,7 +28,7 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="register.html">免费注册</a>] </span></li>
+                                    <li>您好，欢迎来到京西！<span id="login">[<a href="/login.html">登录</a>] [<a href="/register.html">免费注册</a>] </span></li>
 					<li class="line">|</li>
                                         <span id='order'></span>
 					<li class="line">|</li>
@@ -57,7 +58,7 @@
 				<div class="search_form">
 					<div class="form_left fl"></div>
 					<form action="" name="serarch" method="get" class="fl">
-						<input type="text" class="txt" value="请输入商品关键字" /><input type="submit" class="btn" value="搜索" />
+						<input type="text" class="txt" id='key' value="请输入商品关键字" /><input type="submit" class="btn" value="搜索" onclick='location.href="/Home/Search/key/val/"+$("#key").val();return false;'/>
 					</form>
 					<div class="form_right fl"></div>
 				</div>
@@ -148,15 +149,15 @@
 				<div class="cat_bd <?php if(!$show):?>none<?php endif;?>">
 <?php foreach($cats as $k=>$v):?>
 					<div class="cat <?php if($k==0) echo 'item1';?>">
-						<h3><a href=""><?php echo ($v["cat_name"]); ?></a> <b></b></h3>
+						<h3><a href="/Home/Search/cat/id/<?php echo ($v["id"]); ?>"><?php echo ($v["cat_name"]); ?></a> <b></b></h3>
 
 						<div class="cat_detail">
 <?php foreach($v['children'] as $k1=>$v1):?>                                                    
                                                      <dl <?php if($k1==0):?>class="dl_1st"<?php endif;?>>
-								<dt><a href=""><?php echo ($v1["cat_name"]); ?></a></dt>
+								<dt><a href="/Home/Search/cat/id/<?php echo ($v1["id"]); ?>"><?php echo ($v1["cat_name"]); ?></a></dt>
 								<dd>
 <?php foreach($v1['children'] as $k2=>$v2):?>				
-									<a href=""><?php echo ($v2["cat_name"]); ?></a>	
+									<a href="/Home/Search/cat/id/<?php echo ($v2["id"]); ?>"><?php echo ($v2["cat_name"]); ?></a>	
 <?php endforeach;?>                                                                       
 								</dd>
 							</dl>
@@ -416,16 +417,20 @@
 </body>
 </html>
 <script>
-   $.ajax({
+   login();
+   function login(){
+       $.ajax({
     type:'get',
     dataType:'json',
     url:'/Home/index/ajaxLogin',
     success:function(data){
          if(data.ok==1){
+             is_login=1;
               $('#login').html('[<a href="#">'+data.user+'</a>]');
               $('#log').html('<li><a href="/Home/index/logout">退出</a></li>');
               $('#order').html("<li><a href='/Home/My/lst'>我的订单</a></li>");
          }
     }
    });
+   }
 </script>

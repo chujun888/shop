@@ -17,6 +17,7 @@
         <?php foreach($js as $k=>$v):?>
 	<script type="text/javascript" src="/Public/Home/js/<?php echo ($v); ?>.js"></script>
         <?php endforeach;?>
+        <script>var is_login=0;</script>
 </head>
 <body>
 	<!-- 顶部导航 start -->
@@ -442,7 +443,7 @@
 						<dt>品牌：</dt>
 						<dd class="cur"><a href="">不限</a></dd>
                                                 <?php foreach($data['brands'] as $k=>$v):?>
-						<dd><a href="/Home/Search/cat/id/18/brand/<?php echo ($v["id"]); ?>-<?php echo ($v["brand_name"]); ?>#mao"><?php echo ($v['brand_name']); ?></a></dd>
+						<dd><a href="/Home/Search/cat/id/161/brand/<?php echo ($v["id"]); ?>-<?php echo ($v["brand_name"]); ?>#mao"><?php echo ($v['brand_name']); ?></a></dd>
                                                 <?php endforeach;?>
                                            
 					</dl>
@@ -452,7 +453,7 @@
 						<dt>价格：</dt>
 						<dd class="cur"><a href="">不限</a></dd>
                                                 <?php foreach($data['price'] as $k=>$v):?>
-						<dd><a href="/Home/Search/cat/id/18/price/<?php echo ($v); ?>#mao"><?php echo ($v); ?></a></dd>
+						<dd><a href="/Home/Search/cat/id/161/price/<?php echo ($v); ?>#mao"><?php echo ($v); ?></a></dd>
                                                 <?php endforeach;?>
 						
 					</dl>
@@ -463,7 +464,7 @@
 						<dt><?php echo ($attr_name); ?>：</dt>
 						<dd class="cur"><a href="">不限</a></dd>
                                                 <?php foreach($v as $k1=>$v1):?>
-						<dd><a href="/Home/Search/cat/id/18/attr_<?php echo ($id); ?>/<?php echo ($attr_name); ?>-<?php echo ($v1); ?>#mao"><?php echo ($v1); ?></a></dd>
+						<dd><a href="/Home/Search/cat/id/161/attr_<?php echo ($id); ?>/<?php echo ($attr_name); ?>-<?php echo ($v1); ?>#mao"><?php echo ($v1); ?></a></dd>
 						
                                                 <?php endforeach;?>
 					</dl>
@@ -631,16 +632,20 @@
 </body>
 </html>
 <script>
-   $.ajax({
+   login();
+   function login(){
+       $.ajax({
     type:'get',
     dataType:'json',
     url:'/Home/index/ajaxLogin',
     success:function(data){
          if(data.ok==1){
+             is_login=1;
               $('#login').html('[<a href="#">'+data.user+'</a>]');
               $('#log').html('<li><a href="/Home/index/logout">退出</a></li>');
               $('#order').html("<li><a href='/Home/My/lst'>我的订单</a></li>");
          }
     }
    });
+   }
 </script>

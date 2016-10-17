@@ -18,7 +18,12 @@ class GoodsModel extends Model{
          
          $data['promote_start_time']=strtotime(I('post.promote_start_time'));
          $data['promote_end_time']=strtotime(I('post.promote_end_time'));
-       
+         if(!$data['promote_start_time']){
+             $data['promote_start_time']=0;
+         }
+         if(!$data['promote_end_time']){
+             $data['promote_end_time']=0;
+         }
          //生成时间
          $data['addtime']=time();
          //过滤goods_desc
@@ -105,6 +110,8 @@ class GoodsModel extends Model{
                     $m_goods_attr->add(array('goods_id'=>$id,"attr_value"=>$v1,"attr_id"=>$k));
              }
          }
+         //生成静态页面缓存
+           file_get_contents(C('SITE')."index.php/index/goods/id/$id");
          
 //         /*****插入库存数量******/
 //         $goods_number=M('goodsNumber');
@@ -122,7 +129,7 @@ class GoodsModel extends Model{
       */
      protected function _before_update(&$data, $options) {
          parent::_before_update($data, $options);
-        
+        $data['is_update']=1;
         $data['promote_start_time']=strtotime(I('post.promote_start_time'));
          $data['promote_end_time']=strtotime(I('post.promote_end_time'));
          $id=$options['where']['id']; 
@@ -232,6 +239,21 @@ class GoodsModel extends Model{
          
      }
      
+     /**
+      * 修改完成后
+      */
+     protected function _after_update($data, $options) {
+         parent::_after_update($data, $options);
+         $id=$options['where']['id'];
+         //删除原文件
+         $path=C('GOODS_PATH')."goods_{$id}.html";
+         file_get_contents(C('SITE')."index.php/index/goods/id/$id");
+        
+         
+         
+     }
+
+
      /**
       * 删除后
       */

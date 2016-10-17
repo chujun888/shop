@@ -48,7 +48,7 @@ class OrderController extends Controller{
                     
              
         }
-            $this->error($m_order->getError(),U('Cart/lst'),2);
+            $this->error($m_order->getError(),'',2);
             exit;
                 
     }

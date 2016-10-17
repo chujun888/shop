@@ -68,8 +68,19 @@ class SearchModel {
         $where['is_delete']=array('eq',0);
         $where['is_on_sale']=array('eq',1);
         //关键字搜索下
-        if($key)
-            $where['goods_name']=array('exp',"like '%$key%'");
+        if($key){
+            //sphinx全文索引
+            require "./includes/sphinxapi.php";
+            $spx=new \SphinxClient();
+            $spx->setServer('localhost',9312);
+            $res=$spx->query('发送到','mysql');
+            $like=array();
+            foreach($res['matches'] as $k=>$v){
+                     $like[]=$k;
+            }
+            $where['a.id']=array('in',$like);
+            
+        }
         
         if($brand=I('get.brand'))
         {

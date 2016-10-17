@@ -107,6 +107,7 @@
                                                         }
                                                         else{
                                                             alert(data.info);
+                                                            return false;
                                                         }
                                                     }
                                                     
@@ -785,7 +786,7 @@
     function comment(e){
         if(is_login!=1){
          $("#dialog").dialog('open');
-         return false;     
+         
       }
         var res=$('#comment').serialize();
         $.ajax({
@@ -817,7 +818,8 @@
    
     }
     //获取评论
-    function getComment(page=1){
+    function getComment(page){
+        if(!page) page=1;
         $.ajax({
             type:'get',
             dataType:'json',
@@ -867,7 +869,7 @@
     function opener(e){
         if(is_login!=1){
          $("#dialog").dialog('open');
-         return false;     
+         
        }
         $(e).parent().parent().parent().find('.none').removeClass('none');
         

@@ -6,6 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="__PUBLIC__/styles/general.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/styles/main.css" rel="stylesheet" type="text/css" />
+
+
 <!-- 修改 by www.68ecshop.com 百度编辑器 begin -->
 <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script><script type="text/javascript" src="__PUBLIC__/js/jquery.json.js"></script><script type="text/javascript" src="__PUBLIC__/js/transport_bd.js"></script><script type="text/javascript" src="__PUBLIC__/js/common.js"></script><!-- 修改 by www.68ecshop.com 百度编辑器 end -->
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/timePicker/jquery.datetimepicker.css"/>
@@ -151,10 +153,10 @@
 				<tr id="promote_4">
 					<td class="label" id="promote_5">促销日期：</td>
 					<td id="promote_6">
-						<input name="promote_start_time" type="text" id="promote_start_time"  readonly="readonly" />
+                                            <input name="promote_start_time" type="text" id="promote_start_time" size="12"  value='' readonly='readonly' />
 						
 						-
-						<input name="promote_end_time" type="text" id="promote_end_time"  readonly="readonly" />
+						<input name="promote_end_time" type="text" id="promote_end_time" size="12" value='' readonly='readonly' />
 						
 					</td>
 				</tr>
@@ -325,8 +327,10 @@ src="/includes/ueditor/ueditor.all.js"></script>
 
 <script src="__PUBLIC__/timePicker/jquery.datetimepicker.js"></script>
 <!-- end goods form -->
+<script src="__PUBLIC__/timePicker/jquery.js"></script>
+<script src="__PUBLIC__/timePicker/jquery.datetimepicker.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/validator.js"></script><script type="text/javascript" src="__PUBLIC__/js/tab.js"></script><script language="JavaScript">
-    var logic = function( currentDateTime ){
+var logic = function( currentDateTime ){
 	if( currentDateTime.getDay()==6 ){
 		this.setOptions({
 			minTime:'11:00'
@@ -409,7 +413,24 @@ function getAttrList(e){
         
     });
 }
-
+var logic = function( currentDateTime ){
+	if( currentDateTime.getDay()==6 ){
+		this.setOptions({
+			minTime:'11:00'
+		});
+	}else
+		this.setOptions({
+			minTime:'8:00'
+		});
+};
+    $('#promote_start_time').datetimepicker({
+	onChangeDateTime:logic,
+	onShow:logic
+    });
+    $('#promote_end_time').datetimepicker({
+            onChangeDateTime:logic,
+            onShow:logic
+    });
 //克隆或删除新的属性
 function addNew(e){
      var flag=$(e).find('span').text();
