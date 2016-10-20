@@ -3439,3 +3439,598 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
 
+[ 2016-10-17T12:38:51+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014216s ]
+
+[ 2016-10-17T12:38:51+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011899s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2016-10-17T12:38:51+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019264s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0123s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001612s ]
+
+[ 2016-10-17T12:38:51+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.148929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.149214s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0102s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001295s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001415s ]
+
+[ 2016-10-17T12:38:54+08:00 ] 127.0.0.1 /Home/Search/cat/id/351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001306s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0083s ]
+SQL: SELECT `id` FROM `php34_goods` WHERE `cat_id` IN ('351')  [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0111s ]
+NOTIC: [8] Undefined variable: arr E:\php\http\fuxi\Application\Home\Model\SearchModel.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0077s ]
+SQL: SELECT count(*) total,group_concat(id) ids FROM php34_goods a WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND a.id IN ('56','60') LIMIT 1   [ RunTime:0.0506s ]
+SQL: SELECT `sm_logo`,a.id,`goods_name`,`shop_price`,count(b.order_id) num FROM php34_goods a left join php34_order_goods b on b.goods_id=a.id left join php34_order c on b.order_id=c.id and c.pay_statu=1  WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND a.id IN ('56','60') GROUP BY a.id ORDER BY num desc LIMIT 0,6   [ RunTime:0.0036s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0007s ]
+SQL: SELECT `id` FROM `php34_goods` WHERE `cat_id` IN ('351')  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_brand` [ RunTime:0.0109s ]
+SQL: SELECT distinct a.id,a.brand_name FROM php34_brand a INNER JOIN php34_goods b on b.brand_id = a.id  WHERE b.id IN ('56','60')  [ RunTime:0.0012s ]
+SQL: SELECT max(shop_price) max,min(shop_price) min FROM `php34_goods` WHERE `id` IN ('56','60') LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT distinct a.attr_value,b.attr_name,b.id id FROM php34_goods_attr a INNER JOIN php34_attr b on b.id=a.attr_id  WHERE a.goods_id IN ('56','60')  [ RunTime:0.0047s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category` WHERE `id` = 351 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category` WHERE `id` = 161 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000556s ]
+NOTIC: [8] Undefined variable: show E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 142 行.
+NOTIC: [8] Undefined variable: show E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 143 行.
+NOTIC: [8] Undefined variable: show E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 148 行.
+NOTIC: [8] Undefined index: brand E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 423 行.
+NOTIC: [8] Undefined index: price E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 426 行.
+NOTIC: [8] Undefined index: brand E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 440 行.
+NOTIC: [8] Undefined index: price E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 451 行.
+NOTIC: [8] Undefined index: attr_4 E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 462 行.
+NOTIC: [8] Undefined index: attr_6 E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 462 行.
+NOTIC: [8] Undefined index: attr_9 E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 462 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000854s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2016-10-17T12:38:54+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0044s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2016-10-17T12:38:55+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.031182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031314s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2016-10-17T12:38:55+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.052640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.052724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2016-10-17T12:39:03+08:00 ] 127.0.0.1 /Home/Search/cat/id/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000911s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001555s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0034s ]
+SQL: SELECT `id` FROM `php34_goods` WHERE `cat_id` IN ('161','351','352','353','354','355','356','357','358','162','163','164','165','166','167','16')  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0029s ]
+NOTIC: [8] Undefined variable: arr E:\php\http\fuxi\Application\Home\Model\SearchModel.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0040s ]
+SQL: SELECT count(*) total,group_concat(id) ids FROM php34_goods a WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND a.id IN ('56','60','84') LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `sm_logo`,a.id,`goods_name`,`shop_price`,count(b.order_id) num FROM php34_goods a left join php34_order_goods b on b.goods_id=a.id left join php34_order c on b.order_id=c.id and c.pay_statu=1  WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND a.id IN ('56','60','84') GROUP BY a.id ORDER BY num desc LIMIT 0,6   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `php34_goods` WHERE `cat_id` IN ('161','351','352','353','354','355','356','357','358','162','163','164','165','166','167','161','351','352','353','354','355','356','357','358','162','163','164','165','166','167','16')  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_brand` [ RunTime:0.0038s ]
+SQL: SELECT distinct a.id,a.brand_name FROM php34_brand a INNER JOIN php34_goods b on b.brand_id = a.id  WHERE b.id IN ('56','60','84')  [ RunTime:0.0006s ]
+SQL: SELECT max(shop_price) max,min(shop_price) min FROM `php34_goods` WHERE `id` IN ('56','60','84') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT distinct a.attr_value,b.attr_name,b.id id FROM php34_goods_attr a INNER JOIN php34_attr b on b.id=a.attr_id  WHERE a.goods_id IN ('56','60','84')  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined variable: show E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 142 行.
+NOTIC: [8] Undefined variable: show E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 143 行.
+NOTIC: [8] Undefined variable: show E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 148 行.
+NOTIC: [8] Undefined index: brand E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 423 行.
+NOTIC: [8] Undefined index: price E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 426 行.
+NOTIC: [8] Undefined index: brand E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 440 行.
+NOTIC: [8] Undefined index: price E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 451 行.
+NOTIC: [8] Undefined index: attr_4 E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 462 行.
+NOTIC: [8] Undefined index: attr_6 E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 462 行.
+NOTIC: [8] Undefined index: attr_9 E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 462 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020478s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001312s ]
+
+[ 2016-10-17T12:39:03+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2016-10-17T12:39:03+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016751s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0048s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2016-10-17T12:39:03+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000608s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-10-17T14:15:01+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000956s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2016-10-17T14:15:01+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.041566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041697s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0065s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001038s ]
+
+[ 2016-10-17T14:15:01+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.046128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.046236s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000706s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000786s ]
+
+[ 2016-10-17T18:15:03+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+
+[ 2016-10-17T18:42:14+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+
+[ 2016-10-17T18:42:14+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003486s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0064s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2016-10-17T18:42:14+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.072762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.072853s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000636s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2016-10-17T18:42:14+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.121943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.122025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000903s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000983s ]
+
+[ 2016-10-17T18:54:33+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2016-10-17T18:54:33+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031017s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0036s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2016-10-17T18:54:33+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.024384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024468s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2016-10-17T18:55:04+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_begin ] --START--
+
+[ 2016-10-17T18:55:04+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0038s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2016-10-17T18:55:04+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019733s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2016-10-17T18:55:04+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.035836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035924s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2016-10-17T18:56:23+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0037s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000839s ]
+
+[ 2016-10-17T18:56:23+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.033335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033449s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000871s ]
+
+[ 2016-10-17T18:56:23+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.049870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.049960s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2016-10-17T18:57:02+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001740s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0035s ]
+SQL: SELECT `promote_price`,`goods_name`,`promote_price`,`sm_logo`,`id` FROM `php34_goods` WHERE `is_promote` = 1 AND `promote_start_time` < 1476701820 AND `promote_end_time` > 1476701820 ORDER BY id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `is_best` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `is_new` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `shop_price`,`sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `is_hot` = 1 AND `is_on_sale` = 1 ORDER BY id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0002s ]
+SQL: SELECT `goods_name`,`shop_price`,`sm_logo`,`id` FROM `php34_goods` WHERE `is_on_sale` = 1 AND `cat_id` = 16 LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0003s ]
+SQL: SELECT distinct b.logo,b.id,b.brand_name FROM php34_goods a INNER JOIN php34_brand as b on b.id=a.brand_id  WHERE a.cat_id IN ('161','351','352','353','354','355','356','357','358','162','163','164','165','166','167','16')  [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000372s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000521s ]
+NOTIC: [8] Undefined variable: hot E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 388 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\http\fuxi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 388 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002037s ]
+
+[ 2016-10-17T18:57:03+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0041s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2016-10-17T18:57:03+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.024961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025037s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2016-10-17T18:57:03+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.025879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025963s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2016-10-17T19:01:19+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_begin ] --START--
+
+[ 2016-10-17T19:01:19+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002148s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0206s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001275s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001389s ]
+
+[ 2016-10-17T19:01:19+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.054975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.055124s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2016-10-17T19:01:19+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2016-10-17T19:01:24+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0036s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000568s ]
+
+[ 2016-10-17T19:01:24+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018802s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000513s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2016-10-17T19:01:24+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028390s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000569s ]
+
+[ 2016-10-17T21:44:51+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001531s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0055s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000624s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2016-10-17T21:44:51+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018814s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2016-10-17T21:44:51+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.039595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000878s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2016-10-17T21:44:51+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+

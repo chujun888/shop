@@ -2,12 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/php/http/fuxi/Application/Home/Model/SearchModel.class.php</file>
-            <file>file:/E:/php/http/fuxi/Application/Back/Controller/GoodsController.class.php</file>
-            <file>file:/E:/php/http/fuxi/Application/Back/Model/GoodsModel.class.php</file>
-            <file>file:/E:/php/http/fuxi/Application/Back/View/Goods/add.html</file>
-            <file>file:/E:/php/http/fuxi/Application/Back/View/Goods/edit.html</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

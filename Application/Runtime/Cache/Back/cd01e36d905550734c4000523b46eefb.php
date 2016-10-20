@@ -1,0 +1,29 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div style='padding-top: 100px;padding-left: 400px;'>
+            <span>获取京东商品列表中的商品信息，插入数据库</span>
+        <form action="" method="post">
+            <input type="text" name="url"/>
+            <select name="cat_id">
+      <option value=''>请选择分类...</option>           
+ <?php  foreach($cats as $k=>$v):?>
+
+ <option value="<?php echo ($v["id"]); ?>">
+     <?php echo str_repeat('&nbsp;',$v['level']*4); echo ($v["cat_name"]); ?>
+ </option>
+ <?php endforeach;?>
+            </select>
+            <input type='submit' value='get'/>
+        </form>
+        </div>
+    </body>
+</html>

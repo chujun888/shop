@@ -10,7 +10,8 @@
 // +----------------------------------------------------------------------
 
 // 应用入口文件
-
+ini_set('session.save_handler','memcache');
+ini_set('session.save_path','tcp://127.0.0.1:11211');
 ini_set('session.cookie_lifetime', 86500);
 ini_set('session.gc_maxlifetime', 86500);
 

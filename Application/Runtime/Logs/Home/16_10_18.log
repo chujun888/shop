@@ -1,0 +1,1244 @@
+[ 2016-10-18T14:58:36+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+
+[ 2016-10-18T15:01:35+08:00 ] 127.0.0.1 /dede/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000824s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001993s ]
+ERR: 无法加载控制器:Dede
+
+[ 2016-10-18T15:01:39+08:00 ] 127.0.0.1 /dede/back
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+ERR: 无法加载控制器:Dede
+
+[ 2016-10-18T15:01:47+08:00 ] 127.0.0.1 /dede/back
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001423s ]
+ERR: 无法加载控制器:Dede
+
+[ 2016-10-18T15:01:47+08:00 ] 127.0.0.1 /dede/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001505s ]
+ERR: 无法加载控制器:Dede
+
+[ 2016-10-18T15:08:05+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000608s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2016-10-18T15:08:05+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014554s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2016-10-18T15:08:05+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.038008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000633s ]
+
+[ 2016-10-18T15:08:07+08:00 ] 127.0.0.1 /Home/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001223s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001408s ]
+
+[ 2016-10-18T15:08:07+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.216472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.216609s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001292s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005978s ]
+
+[ 2016-10-18T15:08:13+08:00 ] 127.0.0.1 /Home/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001267s ]
+SQL: SHOW COLUMNS FROM `php34_member` [ RunTime:0.0588s ]
+NOTIC: [8] Undefined index: auto E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `php34_member` WHERE `user` = 'admin' AND `password` = '202cb962ac59075b964b07152d234b70' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `php34_member_level` [ RunTime:0.0469s ]
+SQL: SELECT * FROM `php34_member_level` WHERE `bottom_num` <= '100' AND `top_num` >= '100' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0078s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057880s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000857s ]
+
+[ 2016-10-18T15:08:13+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2016-10-18T15:08:14+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `php34_cart` WHERE `member_id` = '9'  [ RunTime:0.0008s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 376 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0643s ]
+SQL: SELECT `goods_name`,`sm_logo` FROM `php34_goods` WHERE `id` = 60 LIMIT 1   [ RunTime:0.0048s ]
+SQL: SELECT * FROM `php34_goods` WHERE `id` = 60 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `php34_level_price` [ RunTime:0.0381s ]
+SQL: SELECT * FROM `php34_level_price` WHERE `goods_id` = '60' AND `level_id` = '1' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: D方法实例化没找到模型类Back\Model\GoodsAttrModel
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0341s ]
+SQL: SELECT b.attr_name,a.attr_value FROM php34_goods_attr a INNER JOIN php34_attr b on a.attr_id=b.id  WHERE a.id IN ('2','4')  [ RunTime:0.0582s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2016-10-18T15:08:14+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.241673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.241826s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-10-18T15:22:42+08:00 ] 127.0.0.1 /dede/dede/l
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+ERR: 无法加载控制器:Dede
+
+[ 2016-10-18T15:36:58+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2016-10-18T15:36:58+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001161s ]
+
+[ 2016-10-18T15:36:58+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007417s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-10-18T15:37:00+08:00 ] 127.0.0.1 /Home/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2016-10-18T15:37:00+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-10-18T15:37:10+08:00 ] 127.0.0.1 /Home/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `php34_member` [ RunTime:0.0113s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006670s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+
+[ 2016-10-18T15:37:11+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2016-10-18T15:37:14+08:00 ] 127.0.0.1 /Home/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-10-18T15:37:26+08:00 ] 127.0.0.1 /Home/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001547s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `php34_member` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017217s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000846s ]
+
+[ 2016-10-18T15:37:27+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001404s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1 (tcp 0) failed with: Failed to parse address &quot;127.0.0.1&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000909s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2016-10-18T15:37:45+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000933s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1; (tcp 0) failed with: Failed to parse address &quot;127.0.0.1;&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2016-10-18T15:37:45+08:00 ] 127.0.0.1 /Home/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1; (tcp 0) failed with: Failed to parse address &quot;127.0.0.1;&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2016-10-18T15:37:53+08:00 ] 127.0.0.1 /Home/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001587s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1; (tcp 0) failed with: Failed to parse address &quot;127.0.0.1;&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `php34_member` [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+
+[ 2016-10-18T15:37:54+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001549s ]
+NOTIC: [8] session_start() [<a href='function.session-start'>function.session-start</a>]: Server 127.0.0.1; (tcp 0) failed with: Failed to parse address &quot;127.0.0.1;&quot; (0) E:\php\http\fuxi\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000924s ]
+
+[ 2016-10-18T15:38:04+08:00 ] 127.0.0.1 /Home/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2016-10-18T15:38:04+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006086s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001047s ]
+
+[ 2016-10-18T15:38:13+08:00 ] 127.0.0.1 /Home/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001411s ]
+SQL: SHOW COLUMNS FROM `php34_member` [ RunTime:0.0034s ]
+NOTIC: [8] Undefined index: auto E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `php34_member` WHERE `user` = 'admin' AND `password` = '202cb962ac59075b964b07152d234b70' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_member_level` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `php34_member_level` WHERE `bottom_num` <= '100' AND `top_num` >= '100' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+
+[ 2016-10-18T15:38:13+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `php34_cart` WHERE `member_id` = '9'  [ RunTime:0.0001s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 376 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0053s ]
+SQL: SELECT `goods_name`,`sm_logo` FROM `php34_goods` WHERE `id` = 60 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `php34_goods` WHERE `id` = 60 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `php34_level_price` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `php34_level_price` WHERE `goods_id` = '60' AND `level_id` = '1' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: D方法实例化没找到模型类Back\Model\GoodsAttrModel
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0055s ]
+SQL: SELECT b.attr_name,a.attr_value FROM php34_goods_attr a INNER JOIN php34_attr b on a.attr_id=b.id  WHERE a.id IN ('2','4')  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2016-10-18T15:38:13+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.052910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.053116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2016-10-18T15:38:13+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.061462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.061540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000837s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000965s ]
+
+[ 2016-10-18T15:38:26+08:00 ] 127.0.0.1 /data/fab4c77e0c3febd516effae232486fdf.php?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+ERR: 无法加载控制器:Data
+
+[ 2016-10-18T15:38:26+08:00 ] 127.0.0.1 /uploads/9e61075f93a935a310f2cbc07349663e.php?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+ERR: 无法加载控制器:Uploads
+
+[ 2016-10-18T15:38:26+08:00 ] 127.0.0.1 /data/admin/ver.txt?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+ERR: 无法加载控制器:Data
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/img_05.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/img_09.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/hot_pro2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/reset.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003407s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/button.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/include.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/hot_pro1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/left.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002827s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002875s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/img_05.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/rtitleico.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /dede/rtitleico.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/leftcontentbg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/leftbg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2016-10-18T16:46:50+08:00 ] 127.0.0.1 /images/leftbt.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+
+[ 2016-10-18T16:47:22+08:00 ] 127.0.0.1 /images/reset.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001759s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:47:22+08:00 ] 127.0.0.1 /images/left.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005426s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:47:22+08:00 ] 127.0.0.1 /images/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008223s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:47:22+08:00 ] 127.0.0.1 /images/include.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012512s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:47:22+08:00 ] 127.0.0.1 /images/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019807s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:52:10+08:00 ] 127.0.0.1 /images/reset.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002762s ]
+ERR: 无法加载控制器:Images
+
+[ 2016-10-18T16:59:50+08:00 ] 127.0.0.1 /data/cc3359306507eb115edeb027f41330b5.php?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000950s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001335s ]
+ERR: 无法加载控制器:Data
+
+[ 2016-10-18T16:59:50+08:00 ] 127.0.0.1 /uploads/761b4cedf31383bf3352a8c6465a533f.php?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+ERR: 无法加载控制器:Uploads
+
+[ 2016-10-18T16:59:50+08:00 ] 127.0.0.1 /data/admin/ver.txt?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+ERR: 无法加载控制器:Data
+
+[ 2016-10-18T19:47:55+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001231s ]
+
+[ 2016-10-18T19:47:55+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000689s ]
+
+[ 2016-10-18T19:47:55+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016922s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-10-18T19:53:45+08:00 ] 127.0.0.1 /data/cc3359306507eb115edeb027f41330b5.php?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001265s ]
+ERR: 无法加载控制器:Data
+
+[ 2016-10-18T19:53:45+08:00 ] 127.0.0.1 /uploads/761b4cedf31383bf3352a8c6465a533f.php?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+ERR: 无法加载控制器:Uploads
+
+[ 2016-10-18T19:53:45+08:00 ] 127.0.0.1 /data/admin/ver.txt?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+ERR: 无法加载控制器:Data
+
+[ 2016-10-18T21:48:51+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001200s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0071s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000713s ]
+
+[ 2016-10-18T21:48:51+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020925s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2016-10-18T21:48:51+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Public/Home/style/qzoom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Goods/style/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+ERR: 无法加载控制器:Goods
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Home/member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Home/Index/ajaxPrice/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `php34_goods` WHERE `id` = 60 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000569s ]
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Home/Index/ajaxSetRecent/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040850s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Public/HOME/images/zoomloader.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Home/Comment/lst/page/1/goods_id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.042370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042490s ]
+SQL: SHOW COLUMNS FROM `php34_comment` [ RunTime:0.0603s ]
+SQL: SELECT `id`,`star` FROM `php34_comment` WHERE `goods_id` = '60'  [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `php34_impression` [ RunTime:0.0860s ]
+SQL: SELECT `id`,`imp_name`,`imp_count` FROM `php34_impression` WHERE `goods_id` = '60'  [ RunTime:0.0009s ]
+NOTIC: [8] Object of class Libs\PageAjax could not be converted to int E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php 第 67 行.
+SQL: SELECT a.*,b.user FROM php34_comment a INNER JOIN php34_member b on b.id=a.member_id  WHERE `goods_id` = '60' LIMIT 0,5   [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `php34_replay` [ RunTime:0.0762s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=1 )  [ RunTime:0.0007s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=2 )  [ RunTime:0.0006s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=3 )  [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=4 )  [ RunTime:0.0008s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=5 )  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001591s ]
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.426986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.427122s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001581s ]
+
+[ 2016-10-18T21:48:57+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.481400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.481544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001553s ]
+
+[ 2016-10-18T21:49:05+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0038s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2016-10-18T21:49:05+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.023728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023807s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2016-10-18T21:49:06+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.033422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2016-10-18T21:49:13+08:00 ] 127.0.0.1 /Home/member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2016-10-18T21:49:13+08:00 ] 127.0.0.1 /goods/style/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006341s ]
+ERR: 无法加载控制器:Goods
+
+[ 2016-10-18T21:49:13+08:00 ] 127.0.0.1 /Public/Home/style/qzoom.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012367s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-18T21:49:13+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0053s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2016-10-18T21:49:13+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040772s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2016-10-18T21:49:13+08:00 ] 127.0.0.1 /Home/Comment/lst/page/1/goods_id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.048132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048202s ]
+SQL: SHOW COLUMNS FROM `php34_comment` [ RunTime:0.0033s ]
+SQL: SELECT `id`,`star` FROM `php34_comment` WHERE `goods_id` = '60'  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `php34_impression` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`imp_name`,`imp_count` FROM `php34_impression` WHERE `goods_id` = '60'  [ RunTime:0.0001s ]
+NOTIC: [8] Object of class Libs\PageAjax could not be converted to int E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php 第 67 行.
+SQL: SELECT a.*,b.user FROM php34_comment a INNER JOIN php34_member b on b.id=a.member_id  WHERE `goods_id` = '60' LIMIT 0,5   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `php34_replay` [ RunTime:0.0032s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=1 )  [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=2 )  [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=3 )  [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=4 )  [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\php\http\fuxi\Application\Home\Model\CommentModel.class.php on line 72 and defined E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field E:\php\http\fuxi\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT b.user,a.* FROM php34_replay a INNER JOIN php34_member b on b.id=a.member_id  WHERE ( comment_id=5 )  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000569s ]
+
+[ 2016-10-18T21:49:13+08:00 ] 127.0.0.1 /Home/Index/ajaxSetRecent/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.078114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.078209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2016-10-18T21:49:13+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.067817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.067934s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2016-10-18T21:49:13+08:00 ] 127.0.0.1 /Home/Index/ajaxPrice/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.067227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.067339s ]
+NOTIC: [2048] Declaration of Back\Model\GoodsModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\GoodsModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `php34_goods` WHERE `id` = 60 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2016-10-18T21:49:17+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0039s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000649s ]
+
+[ 2016-10-18T21:49:17+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017726s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000870s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000933s ]
+
+[ 2016-10-18T21:49:17+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.044780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044853s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2016-10-18T21:49:22+08:00 ] 127.0.0.1 /Home/Search/cat/id/351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001332s ]
+NOTIC: [2048] Declaration of Back\Model\CategoryModel::_before_delete() should be compatible with that of Think\Model::_before_delete() E:\php\http\fuxi\Application\Back\Model\CategoryModel.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `php34_category` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0086s ]
+SQL: SELECT `id` FROM `php34_goods` WHERE `cat_id` IN ('351')  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `php34_goods_attr` [ RunTime:0.0106s ]
+NOTIC: [8] Undefined variable: arr E:\php\http\fuxi\Application\Home\Model\SearchModel.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0089s ]
+SQL: SELECT count(*) total,group_concat(id) ids FROM php34_goods a WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND a.id IN ('56','60') LIMIT 1   [ RunTime:0.0279s ]
+SQL: SELECT `sm_logo`,a.id,`goods_name`,`shop_price`,count(b.order_id) num FROM php34_goods a left join php34_order_goods b on b.goods_id=a.id left join php34_order c on b.order_id=c.id and c.pay_statu=1  WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND a.id IN ('56','60') GROUP BY a.id ORDER BY num desc LIMIT 0,6   [ RunTime:0.1385s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `php34_goods` WHERE `cat_id` IN ('351')  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `php34_brand` [ RunTime:0.0411s ]
+SQL: SELECT distinct a.id,a.brand_name FROM php34_brand a INNER JOIN php34_goods b on b.brand_id = a.id  WHERE b.id IN ('56','60')  [ RunTime:0.0013s ]
+SQL: SELECT max(shop_price) max,min(shop_price) min FROM `php34_goods` WHERE `id` IN ('56','60') LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT distinct a.attr_value,b.attr_name,b.id id FROM php34_goods_attr a INNER JOIN php34_attr b on b.id=a.attr_id  WHERE a.goods_id IN ('56','60')  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category` WHERE `id` = 351 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category` WHERE `id` = 161 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `php34_category` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `php34_category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000798s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000997s ]
+NOTIC: [8] Undefined variable: show E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 142 行.
+NOTIC: [8] Undefined variable: show E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 143 行.
+NOTIC: [8] Undefined variable: show E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 148 行.
+NOTIC: [8] Undefined index: brand E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 423 行.
+NOTIC: [8] Undefined index: price E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 426 行.
+NOTIC: [8] Undefined index: brand E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 440 行.
+NOTIC: [8] Undefined index: price E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 451 行.
+NOTIC: [8] Undefined index: attr_4 E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 462 行.
+NOTIC: [8] Undefined index: attr_6 E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 462 行.
+NOTIC: [8] Undefined index: attr_9 E:\php\http\fuxi\Application\Runtime\Cache\Home\1a78dd87b647a7ef4340ac5ce3ad3583.php 第 462 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.097263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097445s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007414s ]
+
+[ 2016-10-18T21:49:22+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0043s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2016-10-18T21:49:22+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2016-10-18T21:49:22+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2016-10-18T22:17:08+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0074s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2016-10-18T22:17:08+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030436s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0054s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2016-10-18T22:17:08+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.044416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000933s ]
+
+[ 2016-10-18T22:51:41+08:00 ] 127.0.0.1 /Home/Index/ajaxRecent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `php34_goods` [ RunTime:0.0065s ]
+SQL: SELECT `sm_logo`,`goods_name`,`id` FROM `php34_goods` WHERE `id` IN ('60')  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2016-10-18T22:51:41+08:00 ] 127.0.0.1 /Home/cart/ajaxCartList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.025188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025305s ]
+SQL: SHOW COLUMNS FROM `php34_cart` [ RunTime:0.0189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2016-10-18T22:51:41+08:00 ] 127.0.0.1 /Home/index/ajaxLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.042872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042972s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001034s ]
+

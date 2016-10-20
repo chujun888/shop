@@ -43,10 +43,13 @@ class PrivilegeController extends BaseController{
     
     //显示列表
     public function lst(){
+         
          $m_privilege=D('Back/privilege');   
        // $data=$m_privilege->search();
          $data=$m_privilege->getNest();
-        $this->assign('data',$data);
+         
+        
+         $this->assign('data',$data);
         #分页信息
       
         $this->display();

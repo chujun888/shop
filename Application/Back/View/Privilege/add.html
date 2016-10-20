@@ -28,7 +28,7 @@
   </tr>
   <tr>
     <td class="label">上级权限的ID :</td>
-    <td><select name='parent_id'><option value='0'>顶级权限</option><?php foreach($data as $k=>$v):?><option value='{$v.id}'><?php echo str_repeat('&nbsp;',($v['level']+1)*5);?>{$v.pri_name}</option><?php endforeach;?></select><span class="require-field"></span></td>
+    <td><select name='parent_id'><option value='0' selected>顶级权限</option><?php foreach($data as $k=>$v):?><option value='{$v.id}'><?php echo str_repeat('&nbsp;',($v['level']+1)*5);?>{$v.pri_name}</option><?php endforeach;?></select><span class="require-field"></span></td>
   </tr>
   <tr>
     <td class="label">模块名称:</td>
